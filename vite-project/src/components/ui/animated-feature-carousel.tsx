@@ -227,12 +227,12 @@ function FeatureCard({ children, step }: { children: React.ReactNode; step: numb
   }
   return (
     <motion.div
-      className="animated-cards group relative w-full rounded-2xl"
+      className="animated-cards group  w-[1100px] h-[600px] -ml-30 rounded-2xl"
       onMouseMove={handleMouseMove}
       style={{ "--x": useMotionTemplate`${mouseX}px`, "--y": useMotionTemplate`${mouseY}px` } as WrapperStyle}
     >
       <div className="relative w-full overflow-hidden rounded-3xl border border-neutral-200 bg-white transition-colors duration-300 dark:border-neutral-800 dark:bg-neutral-900">
-        <div className="m-10 min-h-[450px] w-full">
+        <div className="m-10 min-h-[550px] w-full">
           <AnimatePresence mode="wait">
             <motion.div
               key={step}
@@ -243,7 +243,7 @@ function FeatureCard({ children, step }: { children: React.ReactNode; step: numb
               transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
             >
               <motion.div
-                className="text-sm font-semibold uppercase tracking-wider text-sky-600 dark:text-sky-500"
+                className="text-sm  font-semibold uppercase tracking-wider text-sky-600 dark:text-sky-500"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.05, duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
@@ -415,7 +415,7 @@ function StepsNav({ steps: stepItems, current, onChange }: { steps: readonly Ste
         }
       `}</style>
       <nav aria-label="Progress" className="flex justify-center px-4">
-        <ol className="flex w-full flex-wrap items-center justify-center gap-4" role="list">
+        <ol className="flex w-full mt-15 flex-wrap items-center justify-center gap-4" role="list">
           {stepItems.map((step, stepIdx) => {
             const isCurrent = current === stepIdx;
             return (

@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "@splinetool/react-spline": "^4.1.0"
+    "@radix-ui/react-slot": "^1.2.3",
+    "@splinetool/react-spline": "^4.1.0",
+    "class-variance-authority": "^0.7.1"
   }
 }

@@ -92,13 +92,13 @@ export function HeroSection() {
                         </AnimatedGroup>
                         <div aria-hidden className="absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--background)_75%)]" />
                         <div className="max-w-7xl px-6 relative">
-                            <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
+                            <div className="">
                                 {/* Left side - Text content */}
                                 <div className="text-center lg:text-left sm:mx-auto lg:mr-auto lg:mt-0">
                                     <AnimatedGroup variants={transitionVariants}>
                                         <a
                                             href="#link"
-                                            className="mt-20 hover:border-t-border bg-white group mx-auto lg:mx-0 flex w-fit items-center gap-4 rounded-full border p-1 pl-4 shadow-md shadow-black/5 transition-all duration-300 dark:border-t-white/5 dark:shadow-zinc-950">
+                                            className="mt-20 ml-115 hover:border-t-border bg-white group  flex w-fit  gap-4 rounded-full border p-1 pl-4 shadow-md shadow-black/5 transition-all duration-300 dark:border-t-white/5 dark:shadow-zinc-950">
                                             <span className="text-black text-sm font-bold">Introducing WorkBee</span>
                                             <span className="dark:border-background block h-4 w-0.5 border-l bg-white dark:bg-zinc-700"></span>
 
@@ -115,37 +115,38 @@ export function HeroSection() {
                                         </a>
 
                                         <h1
-                                            className="julius-sans-one-regular mt-10 text-[3.25rem] leading-tight" 
+                                            className="julius-sans-one-regular ml-60 mt-10 text-[3.65rem] leading-tight" 
                                             style={{letterSpacing: '-0.05em'}}>
                                             Don't Let Your Dreams
                                         </h1>
                                         <h1
-                                            className="julius-sans-one-regular text-[3.25rem] leading-tight" 
+                                            className="julius-sans-one-regular ml-38 text-[3.65rem] leading-tight" 
                                             style={{letterSpacing: '-0.05em'}}>
                                             Fall Through The Hourglass
                                         </h1>
-                                        <p className="mt-8 text-xl">
-                                            Just like sand through an hourglass, career opportunities slip <br className="hidden lg:block" /> 
+                                        <p className=" mr-30 mt-8 text-xl relative text-center">
+                                            Just like sand through an hourglass, career opportunities slip <br className=" hidden lg:block" /> 
                                             away. Secure yours before time runs out
                                             
-                                            <span className="inline-block ml-2">
+                                            
+                                        </p>
+                                        <span className="inline-block  ml-185 -mt-7 absolute ">
                                                 <svg width="30" height="30" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M17 31.1667C15.2291 31.1667 13.5705 30.8302 12.0239 30.1573C10.4774 29.4844 9.13157 28.5753 7.98643 27.4302C6.8413 26.2851 5.93227 24.9392 5.25935 23.3927C4.58643 21.8462 4.24998 20.1875 4.24998 18.4167C4.24998 16.6458 4.58643 14.9871 5.25935 13.4406C5.93227 11.8941 6.8413 10.5483 7.98643 9.40312C9.13157 8.25798 10.4774 7.34895 12.0239 6.67604C13.5705 6.00312 15.2291 5.66666 17 5.66666C18.7708 5.66666 20.4295 6.00312 21.976 6.67604C23.5225 7.34895 24.8684 8.25798 26.0135 9.40312C27.1587 10.5483 28.0677 11.8941 28.7406 13.4406C29.4135 14.9871 29.75 16.6458 29.75 18.4167C29.75 20.1875 29.4135 21.8462 28.7406 23.3927C28.0677 24.9392 27.1587 26.2851 26.0135 27.4302C24.8684 28.5753 23.5225 29.4844 21.976 30.1573C20.4295 30.8302 18.7708 31.1667 17 31.1667ZM20.9666 24.3667L22.95 22.3833L18.4166 17.85V11.3333H15.5833V18.9833L20.9666 24.3667ZM7.93331 3.32916L9.91664 5.3125L3.89581 11.3333L1.91248 9.35L7.93331 3.32916ZM26.0666 3.32916L32.0875 9.35L30.1041 11.3333L24.0833 5.3125L26.0666 3.32916Z" fill="#FEF7FF" />
                                                 </svg>
                                             </span>
-                                        </p>
                                     </AnimatedGroup>
                                 </div>
 
                                 {/* Right side - Spline 3D Object */}
-                                <div className="relative h-[500px] lg:h-[600px] flex items-center justify-center pointer-events-none select-none">
-                                    <div className="w-full h-full">
+                                {/* <div className=" h-[600px]  flex ml-1   pointer-events-none select-none"> */}
+                                    <div className="w-full h-full ml-190 -mt-140">
                                         <Spline
                                             scene="https://prod.spline.design/t4rmChduw5J8uhUi/scene.splinecode"
                                             className="w-full h-full pointer-events-none select-none"
                                         />
                                     </div>
-                                </div>
+                                {/* </div> */}
                             </div>
                         </div>
 
@@ -189,9 +190,9 @@ export function HeroSection() {
                 <section className="bg-background pb-16 pt-16 md:pb-32">
                     <div className="group relative m-auto max-w-5xl px-6">
                         
-                        <div className="mx-auto mt-12 w-full">
-                            <div className="marquee-container marquee-mask relative z-20 min-h-[124px]  border-muted/40 bg-muted/10 py-3">
-                                <div className="marquee">
+                        <div className="mx-auto mt-12  w-full">
+                            <div className="marquee-container mt-20 marquee-mask relative z-20 min-h-[124px]  border-muted/40 bg-muted/10 py-3">
+                                <div className=" marquee">
                                     {customerLogos.concat(customerLogos).map((logo, index) => {
                                         // Map logo names to their SVG file names in public/logos
                                         const logoMap: Record<string, string> = {
@@ -206,11 +207,11 @@ export function HeroSection() {
                                         };
                                         const src = logoMap[logo];
                                         return (
-                                            <div key={`${logo}-${index}`} className="flex px-10 py-2 opacity-80 transition-opacity hover:opacity-100">
+                                            <div key={`${logo}-${index}`} className="flex  px-10 py-2 opacity-80 transition-opacity hover:opacity-100">
                                                 <img
                                                     src={src}
                                                     alt={`${logo} logo`}
-                                                    className="h-11 w-20"
+                                                    className="h-50 w-50"
                                                 />
                                             </div>
                                         );
@@ -218,18 +219,32 @@ export function HeroSection() {
                                 </div>
                             </div>
 
-                            <div className="marquee-container marquee-mask relative z-20 min-h-[124px]  border-muted/40 bg-muted/10 py-3">
-                                <div className="marquee-reverse">
-                                    {customerLogos.concat(customerLogos).map((logo, index) => (
-                                        <div key={`${logo}-${index}`} className=" flex px-10 py-2 opacity-80 transition-opacity hover:opacity-100">
-                                            <img
-                                                src={`https://cdn.simpleicons.org/${logo}/9ca3af`}
-                                                alt={`${logo} logo`}
-                                                className="h-11 w-20"
-                                            />
-                                        </div>
-                                        
-                                    ))}
+                            <div className="marquee-container marquee-mask -mt-17 relative z-20 min-h-[124px]  border-muted/40 bg-muted/10 py-3">
+                                <div className=" marquee-reverse">
+                                    {customerLogos.concat(customerLogos).map((logo, index) => {
+                                        // Map logo names to their SVG file names in public/logos
+                                        const logoMap: Record<string, string> = {
+                                            
+                                            'Spotify': '/logos/spotify.svg',
+                                            'Loom': '/logos/lom.svg',
+                                           'Microsoft': '/logos/microsoft.svg',
+                                            'Slack': '/logos/slack.svg',
+                                            'Razorpay': '/logos/razorpay.svg',
+                                            'Adobe': '/logos/adobe.svg',
+                                            'Whatsapp': '/logos/whatsapp.svg',
+                                           'Atlassian': '/logos/atlassian.svg',
+                                        };
+                                        const src = logoMap[logo];
+                                        return (
+                                            <div key={`${logo}-${index}`} className="flex  px-10 py-2 opacity-80 transition-opacity hover:opacity-100">
+                                                <img
+                                                    src={src}
+                                                    alt={`${logo} logo`}
+                                                    className="h-30 w-50"
+                                                />
+                                            </div>
+                                        );
+                                    })}
                                 </div>
                             </div>
                         </div>

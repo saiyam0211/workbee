@@ -55,14 +55,14 @@ function Connect() {
   }, [animate]);
 
   return (
-    <section className="relative mx-auto mb-20 mt-6 max-w-5xl">
+    <section className="relative mx-auto mb-20 mt-30 w-5xl ">
       <HighlightGroup className="group h-full">
         <div
           className="group/item h-full md:col-span-6 lg:col-span-12"
           data-aos="fade-down"
         >
           <HighlighterItem className="rounded-3xl p-6">
-            <div className="relative z-20 h-full overflow-hidden rounded-3xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-black">
+            <div className="relative z-20  overflow-hidden rounded-3xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-black">
               <Particles
                 className="absolute inset-0 -z-10 opacity-10 transition-opacity duration-1000 ease-in-out group-hover/item:opacity-100"
                 quantity={200}
@@ -80,25 +80,25 @@ function Connect() {
                       id="next-js"
                       className="absolute bottom-12 left-14 rounded-3xl border border-slate-400 bg-slate-200 px-2 py-1.5 text-xs opacity-50 dark:border-slate-600 dark:bg-slate-800"
                     >
-                      UI-UX
+                     Resume Building
                     </div>
                     <div
                       id="react-js"
                       className="absolute left-2 top-20 rounded-3xl border border-slate-400 bg-slate-200 px-2 py-1.5 text-xs opacity-50 dark:border-slate-600 dark:bg-slate-800"
                     >
-                      Graphic Design
+                     Job Alerts
                     </div>
                     <div
                       id="typescript"
                       className="absolute bottom-20 right-1 rounded-3xl border border-slate-400 bg-slate-200 px-2 py-1.5 text-xs opacity-50 dark:border-slate-600 dark:bg-slate-800"
                     >
-                      Web Application
+                      Career Counseling
                     </div>
                     <div
                       id="javascript"
                       className="absolute right-12 top-10 rounded-3xl border border-slate-400 bg-slate-200 px-2 py-1.5 text-xs opacity-50 dark:border-slate-600 dark:bg-slate-800"
                     >
-                      Branding
+                     Internships
                     </div>
 
                     <div id="pointer" className="absolute">
@@ -118,7 +118,7 @@ function Connect() {
                         />
                       </svg>
                       <span className="bg-ali relative -top-1 left-3 rounded-3xl px-2 py-1 text-xs text-white">
-                        Ali
+                        Bee
                       </span>
                     </div>
                   </div>
@@ -127,12 +127,12 @@ function Connect() {
                     <div className="flex flex-col items-center">
                       <h3 className="mt-6 pb-1 font-bold">
                         <span className="text-2xl md:text-4xl">
-                          Any questions about Design?
+                        Ready to unlock your dream career?
                         </span>
                       </h3>
                     </div>
                     <p className="mb-4 text-slate-400">
-                      Feel free to reach out to me!
+                      Feel free to reach out to Us!
                     </p>
                     <div className="flex flex-wrap gap-2">
                       <a
@@ -158,7 +158,7 @@ function Connect() {
                         </span>
                       </a>
                       <a
-                        href="https://wa.me/917678432186"
+                        href="https://wa.me/8901825390"
                         target="_blank"
                         rel="noopener noreferrer"
                         className={cn(
@@ -203,10 +203,104 @@ export function Demo() {
     <>
       <HeroSection />
       <FeatureCarousel image={images} />
+     
+
+
+      <section className=" mt-50  py-12">
+        <h2 className="text-6xl font-bold text-center text-white mb-12">Meet Our Team</h2>
+        <div className="flex mt-30 flex-wrap justify-center gap-45">
+          {/* Team Member 1 */}
+          <div className="flex flex-col items-center">
+            <div className="bg-gray-400 rounded-full w-40 h-40 mb-4"></div>
+            <div className="text-white text-2xl font-semibold">Saiyam Kumar</div>
+            <div className="text-gray-300 text-m mb-2">Deadline Driver</div>
+            <div className="flex mt-3 gap-8">
+                <img className="h-7" src="./public/logos/linkdin.png" alt="" />
+                <img className="h-7" src="./public/logos/insta.png" alt="" />
+                <img className="h-7" src="./public/logos/github.png" alt="" />
+              
+            </div>
+          </div>
+          {/* Team Member 2 */}
+          <div className="flex flex-col items-center">
+            <div className="bg-gray-400 rounded-full w-40 h-40 mb-4"></div>
+            <div className="text-white text-2xl font-semibold">Janvi Yadav</div>
+            <div className="text-gray-300 text-m mb-2">API Builder</div>
+            <div className="flex mt-3 gap-8">
+                <img className="h-7" src="./public/logos/linkdin.png" alt="" />
+                <img className="h-7" src="./public/logos/insta.png" alt="" />
+                <img className="h-7" src="./public/logos/github.png" alt="" />
+              
+            </div>
+          </div>
+          {/* Team Member 3 */}
+          <div className="flex flex-col items-center">
+            <div className="bg-gray-400 rounded-full w-40 h-40 mb-4"></div>
+            <div className="text-white text-2xl font-semibold">Ronak Jain</div>
+            <div className="text-gray-300 text-m mb-2">Code Commander</div>
+            <div className="flex mt-3 gap-8">
+                <img className="h-7" src="./public/logos/linkdin.png" alt="" />
+                <img className="h-7" src="./public/logos/insta.png" alt="" />
+                <img className="h-7" src="./public/logos/github.png" alt="" />
+              
+            </div>
+          </div>
+          {/* Team Member 4 */}
+          <div className="flex flex-col items-center">
+            <div className="bg-gray-400 rounded-full w-40 h-40 mb-4"></div>
+            <div className="text-white text-2xl font-semibold">Sonal Sonal</div>
+            <div className="text-gray-300 text-m mb-2">UI Ninja</div>
+            <div className="flex mt-3 gap-8">
+                <img className="h-7" src="./public/logos/linkdin.png" alt="" />
+                <img className="h-7" src="./public/logos/insta.png" alt="" />
+                <img className="h-7" src="./public/logos/github.png" alt="" />
+              
+            </div>
+          </div>
+        </div>
+      </section>
       <Connect />
+      <footer className="w-full py-12 flex flex-col items-center bg-background">
+        {/* Avatar */}
+        <div className="bg-gray-400 rounded-full w-32 h-32 mb-6"></div>
+        {/* Navigation */}
+        <nav className="flex flex-wrap justify-center gap-8 mb-4">
+          <a href="#" className="font-bold text-white">Home</a>
+          <a href="#" className="font-bold text-white">How it works?</a>
+          <a href="#" className="font-bold text-white">Our Team</a>
+          <a href="#" className="font-bold text-white">Explore Jobs</a>
+          <a href="#" className="font-bold text-white">Contact us</a>
+        </nav>
+        {/* Social Icons */}
+        <div className="flex mt-3 gap-8">
+                <img className="h-7" src="./public/logos/linkdin.png" alt="" />
+                <img className="h-7" src="./public/logos/insta.png" alt="" />
+                <img className="h-7" src="./public/logos/github.png" alt="" />
+              
+            </div>
+        {/* Subscribe Bar */}
+        <form className="flex items-center mb-6 mt-5">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            className="rounded-full px-6 py-2 bg-gray-300 text-black focus:outline-none"
+          />
+          <button
+            type="submit"
+            className="ml-2 px-6 py-2 rounded-full border-2 border-white text-white bg-black hover:bg-white hover:text-black transition"
+          >
+            Subscribe
+          </button>
+        </form>
+        {/* Copyright */}
+        <div className="text-white flex items-center gap-2">
+          <span className="text-xl">&copy;</span>
+          <span>2025 WorkBee. All rights reserved.</span>
+        </div>
+      </footer>
     </>
   );
 }
 
-// Export Connect as well if needed separately
+
 export { Connect };

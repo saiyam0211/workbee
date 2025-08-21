@@ -1,32 +1,9 @@
 'use client';
-import { ReactNode } from 'react';
-import { motion, Variants } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import React from 'react';
 
-type PresetType =
-  | 'fade'
-  | 'slide'
-  | 'scale'
-  | 'blur'
-  | 'blur-slide'
-  | 'zoom'
-  | 'flip'
-  | 'bounce'
-  | 'rotate'
-  | 'swing';
-
-type AnimatedGroupProps = {
-  children: ReactNode;
-  className?: string;
-  variants?: {
-    container?: Variants;
-    item?: Variants;
-  };
-  preset?: PresetType;
-};
-
-const defaultContainerVariants: Variants = {
+const defaultContainerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -36,15 +13,12 @@ const defaultContainerVariants: Variants = {
   },
 };
 
-const defaultItemVariants: Variants = {
+const defaultItemVariants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1 },
 };
 
-const presetVariants: Record<
-  PresetType,
-  { container: Variants; item: Variants }
-> = {
+const presetVariants = {
   fade: {
     container: defaultContainerVariants,
     item: {
@@ -142,7 +116,7 @@ function AnimatedGroup({
   className,
   variants,
   preset,
-}: AnimatedGroupProps) {
+}) {
   const selectedVariants = preset
     ? presetVariants[preset]
     : { container: defaultContainerVariants, item: defaultItemVariants };
@@ -166,5 +140,3 @@ function AnimatedGroup({
 }
 
 export { AnimatedGroup };
-
-

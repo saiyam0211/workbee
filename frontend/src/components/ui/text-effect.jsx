@@ -4,36 +4,16 @@ import { cn } from '@/lib/utils';
 import {
   AnimatePresence,
   motion,
-  TargetAndTransition,
-  Variants,
 } from 'framer-motion';
 import React from 'react';
 
-type PresetType = 'blur' | 'shake' | 'scale' | 'fade' | 'slide';
-
-type TextEffectProps = {
-  children: string;
-  per?: 'word' | 'char' | 'line';
-  as?: keyof React.JSX.IntrinsicElements;
-  variants?: {
-    container?: Variants;
-    item?: Variants;
-  };
-  className?: string;
-  preset?: PresetType;
-  delay?: number;
-  trigger?: boolean;
-  onAnimationComplete?: () => void;
-  segmentWrapperClassName?: string;
-};
-
-const defaultStaggerTimes: Record<'char' | 'word' | 'line', number> = {
+const defaultStaggerTimes = {
   char: 0.03,
   word: 0.05,
   line: 0.1,
 };
 
-const defaultContainerVariants: Variants = {
+const defaultContainerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -46,7 +26,7 @@ const defaultContainerVariants: Variants = {
   },
 };
 
-const defaultItemVariants: Variants = {
+const defaultItemVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -54,10 +34,7 @@ const defaultItemVariants: Variants = {
   exit: { opacity: 0 },
 };
 
-const presetVariants: Record<
-  PresetType,
-  { container: Variants; item: Variants }
-> = {
+const presetVariants = {
   blur: {
     container: defaultContainerVariants,
     item: {
@@ -100,12 +77,7 @@ const presetVariants: Record<
   },
 };
 
-const AnimationComponent: React.FC<{
-  segment: string;
-  variants: Variants;
-  per: 'line' | 'word' | 'char';
-  segmentWrapperClassName?: string;
-}> = React.memo(({ segment, variants, per, segmentWrapperClassName }) => {
+const AnimationComponent = React.memo(({ segment, variants, per, segmentWrapperClassName }) => {
   const content =
     per === 'line' ? (
       <motion.span variants={variants} className='block'>
@@ -160,8 +132,8 @@ export function TextEffect({
   trigger = true,
   onAnimationComplete,
   segmentWrapperClassName,
-}: TextEffectProps) {
-  let segments: string[];
+}) {
+  let segments;
 
   if (per === 'line') {
     segments = children.split('\n');
@@ -171,7 +143,7 @@ export function TextEffect({
     segments = children.split('');
   }
 
-  const MotionTag = motion[as as keyof typeof motion] as typeof motion.div;
+  const MotionTag = motion[as];
   const selectedVariants = preset
     ? presetVariants[preset]
     : { container: defaultContainerVariants, item: defaultItemVariants };
@@ -181,14 +153,14 @@ export function TextEffect({
 
   const stagger = defaultStaggerTimes[per];
 
-  const delayedContainerVariants: Variants = {
+  const delayedContainerVariants = {
     hidden: containerVariants.hidden,
     visible: {
       ...containerVariants.visible,
       transition: {
-        ...(containerVariants.visible as TargetAndTransition)?.transition,
+        ...containerVariants.visible?.transition,
         staggerChildren:
-          (containerVariants.visible as TargetAndTransition)?.transition
+          containerVariants.visible?.transition
             ?.staggerChildren || stagger,
         delayChildren: delay,
       },
@@ -222,5 +194,3 @@ export function TextEffect({
     </AnimatePresence>
   );
 }
-
-

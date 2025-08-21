@@ -6,22 +6,18 @@ import {
   useEffect,
   useRef,
   useState,
-  type MouseEvent,
 } from "react"
 import {
   AnimatePresence,
   motion,
   useMotionTemplate,
   useMotionValue,
-  type MotionStyle,
-  type MotionValue,
-  type Variants,
 } from "framer-motion"
 
 // --- Helper Functions and Fallbacks ---
 
 // A simple utility for class names, similar to cn/clsx
-const cn = (...classes: (string | boolean | undefined)[]) => {
+const cn = (...classes) => {
   return classes.filter(Boolean).join(" ")
 }
 
@@ -29,58 +25,10 @@ const cn = (...classes: (string | boolean | undefined)[]) => {
 const placeholderImage = (text = "Image") =>
   `https://placehold.co/600x400/1a1a1a/ffffff?text=${text}`
 
-// --- Types ---
-type StaticImageData = string;
-
-type WrapperStyle = MotionStyle & {
-  "--x": MotionValue<string>
-  "--y": MotionValue<string>
-}
-
-interface CardProps {
-  bgClass?: string
-}
-
-interface ImageSet {
-  step1img1: StaticImageData
-  step1img2: StaticImageData
-  step2img1: StaticImageData
-  step2img2: StaticImageData
-  step3img: StaticImageData
-  step4img: StaticImageData
-  alt: string
-}
-
-interface FeatureCarouselProps extends CardProps {
-  step1img1Class?: string
-  step1img2Class?: string
-  step2img1Class?: string
-  step2img2Class?: string
-  step3imgClass?: string
-  step4imgClass?: string
-  image: ImageSet
-}
-
-interface StepImageProps {
-  src: StaticImageData
-  alt: string
-  className?: string
-  style?: React.CSSProperties
-  width?: number
-  height?: number
-}
-
-interface Step {
-  id: string
-  name: string
-  title: string
-  description: string
-}
-
 // --- Constants ---
 const TOTAL_STEPS = 4
 
-const steps: readonly Step[] = [
+const steps = [
   {
     id: "1",
     name: "Step 1",
@@ -126,18 +74,10 @@ const ANIMATION_PRESETS = {
     exit: { opacity: 0, x: 20 },
     transition: { type: "spring", stiffness: 300, damping: 25, mass: 0.5 },
   },
-} as const
-
-type AnimationPreset = keyof typeof ANIMATION_PRESETS
-
-interface AnimatedStepImageProps extends StepImageProps {
-  preset?: AnimationPreset
-  delay?: number
-  onAnimationComplete?: () => void
 }
 
 // --- Hooks ---
-function useNumberCycler(totalSteps: number = TOTAL_STEPS, interval: number = 5000) {
+function useNumberCycler(totalSteps = TOTAL_STEPS, interval = 5000) {
   const [currentNumber, setCurrentNumber] = useState(0);
 
   // This effect handles the automatic cycling.
@@ -156,7 +96,7 @@ function useNumberCycler(totalSteps: number = TOTAL_STEPS, interval: number = 50
   // This function allows manual setting of the step.
   // When called, it updates `currentNumber`, which will trigger the useEffect
   // to reset the timer for the next cycle.
-  const setStep = useCallback((stepIndex: number) => {
+  const setStep = useCallback((stepIndex) => {
     setCurrentNumber(stepIndex % totalSteps);
   }, [totalSteps]);
 
@@ -178,7 +118,7 @@ function useIsMobile() {
 }
 
 // --- Components ---
-function IconCheck({ className, ...props }: React.ComponentProps<"svg">) {
+function IconCheck({ className, ...props }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" className={cn("h-4 w-4", className)} {...props} >
       <path d="m229.66 77.66-128 128a8 8 0 0 1-11.32 0l-56-56a8 8 0 0 1 11.32-11.32L96 188.69 218.34 66.34a8 8 0 0 1 11.32 11.32Z" />
@@ -186,12 +126,12 @@ function IconCheck({ className, ...props }: React.ComponentProps<"svg">) {
   )
 }
 
-const stepVariants: Variants = {
+const stepVariants = {
   inactive: { scale: 0.9, opacity: 0.7 },
   active: { scale: 1, opacity: 1 },
 }
 
-const StepImage = forwardRef<HTMLImageElement, StepImageProps>(
+const StepImage = forwardRef(
   ({ src, alt, className, style, ...props }, ref) => {
     return (
       <img
@@ -210,16 +150,16 @@ StepImage.displayName = "StepImage"
 
 const MotionStepImage = motion(StepImage)
 
-const AnimatedStepImage = ({ preset = "fadeInScale", delay = 0, ...props }: AnimatedStepImageProps) => {
+const AnimatedStepImage = ({ preset = "fadeInScale", delay = 0, ...props }) => {
   const presetConfig = ANIMATION_PRESETS[preset]
   return <MotionStepImage {...props} {...presetConfig} transition={{ ...presetConfig.transition, delay }} />
 }
 
-function FeatureCard({ children, step }: { children: React.ReactNode; step: number }) {
+function FeatureCard({ children, step }) {
   const mouseX = useMotionValue(0)
   const mouseY = useMotionValue(0)
   const isMobile = useIsMobile()
-  function handleMouseMove({ currentTarget, clientX, clientY }: MouseEvent) {
+  function handleMouseMove({ currentTarget, clientX, clientY }) {
     if (isMobile) return
     const { left, top } = currentTarget.getBoundingClientRect()
     mouseX.set(clientX - left)
@@ -229,7 +169,7 @@ function FeatureCard({ children, step }: { children: React.ReactNode; step: numb
     <motion.div
       className="animated-cards group  w-[1100px] h-[600px] -ml-30 rounded-2xl"
       onMouseMove={handleMouseMove}
-      style={{ "--x": useMotionTemplate`${mouseX}px`, "--y": useMotionTemplate`${mouseY}px` } as WrapperStyle}
+      style={{ "--x": useMotionTemplate`${mouseX}px`, "--y": useMotionTemplate`${mouseY}px` }}
     >
       <div className="relative w-full overflow-hidden rounded-3xl border border-neutral-200 bg-white transition-colors duration-300 dark:border-neutral-800 dark:bg-neutral-900">
         <div className="m-10 min-h-[550px] w-full">
@@ -276,7 +216,7 @@ function FeatureCard({ children, step }: { children: React.ReactNode; step: numb
   )
 }
 
-function StepsNav({ steps: stepItems, current, onChange }: { steps: readonly Step[]; current: number; onChange: (index: number) => void; }) {
+function StepsNav({ steps: stepItems, current, onChange }) {
   return (
     <>
       <style jsx>{`
@@ -451,7 +391,7 @@ const defaultClasses = {
   step2img2: "w-[40%] left-[55%] top-[45%]",
   step3img: "w-[90%] left-[5%] top-[25%]",
   step4img: "w-[90%] left-[5%] top-[25%]",
-} as const
+}
 
 export function FeatureCarousel({
   image,
@@ -462,7 +402,7 @@ export function FeatureCarousel({
   step3imgClass = defaultClasses.step3img,
   step4imgClass = defaultClasses.step4img,
   ...props
-}: FeatureCarouselProps) {
+}) {
   const { currentNumber: step, setStep } = useNumberCycler()
   const renderStepContent = () => {
     switch (step) {
@@ -505,7 +445,7 @@ export function FeatureCarousel({
 
 // Demo usage
 export default function App() {
-  const demoImages: ImageSet = {
+  const demoImages = {
     step1img1: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=entropy&auto=format",
     step1img2: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&crop=entropy&auto=format",
     step2img1: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=entropy&auto=format",

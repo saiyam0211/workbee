@@ -195,7 +195,7 @@ export function HeroSection() {
                                 <div className=" marquee">
                                     {customerLogos.concat(customerLogos).map((logo, index) => {
                                         // Map logo names to their SVG file names in public/logos
-                                        const logoMap: Record<string, string> = {
+                                        const logoMap = {
                                             'Whatsapp': '/logos/whatsapp.svg',
                                             'Spotify': '/logos/spotify.svg',
                                             'Loom': '/logos/lom.svg',
@@ -223,7 +223,7 @@ export function HeroSection() {
                                 <div className=" marquee-reverse">
                                     {customerLogos.concat(customerLogos).map((logo, index) => {
                                         // Map logo names to their SVG file names in public/logos
-                                        const logoMap: Record<string, string> = {
+                                        const logoMap = {
                                             
                                             'Spotify': '/logos/spotify.svg',
                                             'Loom': '/logos/lom.svg',
@@ -255,7 +255,7 @@ export function HeroSection() {
     )
 }
 
-const menuItems: Array<{ name: string; href: string }> = []
+const menuItems = []
 
 const HeroHeader = () => {
     const [menuState, setMenuState] = React.useState(false)
@@ -348,7 +348,7 @@ const HeroHeader = () => {
     )
 }
 
-const Logo = ({ className }: { className?: string }) => {
+const Logo = ({ className }) => {
     return (
         <svg
             viewBox="0 0 78 18"

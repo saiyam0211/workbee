@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 
-export function useNumberCycler(totalSteps: number = 4, interval: number = 5000) {
+export function useNumberCycler(totalSteps = 4, interval = 5000) {
   const [currentNumber, setCurrentNumber] = useState(0);
 
   useEffect(() => {
@@ -11,7 +11,7 @@ export function useNumberCycler(totalSteps: number = 4, interval: number = 5000)
     return () => clearTimeout(timerId);
   }, [currentNumber, totalSteps, interval]);
 
-  const setStep = useCallback((stepIndex: number) => {
+  const setStep = useCallback((stepIndex) => {
     setCurrentNumber(stepIndex % totalSteps);
   }, [totalSteps]);
 

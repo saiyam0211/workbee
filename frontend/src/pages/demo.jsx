@@ -55,7 +55,7 @@ function Connect() {
   }, [animate]);
 
   return (
-    <section className="relative mx-auto mb-20 mt-30 w-5xl ">
+    <section id="contact" className="relative mx-auto mb-20 mt-30 w-6xl ">
       <HighlightGroup className="group h-full">
         <div
           className="group/item h-full md:col-span-6 lg:col-span-12"
@@ -143,7 +143,7 @@ function Connect() {
                         <Button>Book a call</Button>
                       </a>
                       <a
-                        href="mailto:contact@designali.in"
+                        href="mailto:saiyamkumar2007+git@gmail.com"
                         target="_blank"
                         rel="noopener noreferrer"
                         className={cn(
@@ -158,7 +158,7 @@ function Connect() {
                         </span>
                       </a>
                       <a
-                        href="https://wa.me/8901825390"
+                        href="https://wa.me/918901825390"
                         target="_blank"
                         rel="noopener noreferrer"
                         className={cn(
@@ -205,53 +205,53 @@ export function Demo() {
       <FeatureCarousel image={images} />
      
 
-      <section className=" mt-50  py-12">
+      <section id="ourteam" className=" mt-50  py-12">
         <h2 className="text-6xl font-bold text-center text-white mb-12">Meet Our Team</h2>
         <div className="flex mt-30 flex-wrap justify-center gap-45">
           {/* Team Member 1 */}
           <div className="flex flex-col items-center">
-            <div className="bg-gray-400 rounded-full w-40 h-40 mb-4"></div>
+            <div className="bg-gray-400 rounded-full w-40 h-40 mb-4"><img className="rounded-full" src="./public/images/saiyam.png" alt="" /></div>
             <div className="text-white text-2xl font-semibold">Saiyam Kumar</div>
             <div className="text-gray-300 text-m mb-2">Deadline Driver</div>
             <div className="flex mt-3 gap-8">
-                <img className="h-7" src="./public/logos/linkdin.png" alt="" />
-                <img className="h-7" src="./public/logos/insta.png" alt="" />
-                <img className="h-7" src="./public/logos/github.png" alt="" />
+                <a href="https://www.instagram.com/fr_saiyam/"><img className="h-7" src="./public/logos/linkdin.png" alt="" /></a>
+                <a href="https://www.linkedin.com/in/saiyam0211/"><img className="h-7" src="./public/logos/insta.png" alt="" /></a>
+                <a href="https://github.com/saiyam0211"><img className="h-7" src="./public/logos/github.png" alt="" /></a>
               
             </div>
           </div>
           {/* Team Member 2 */}
           <div className="flex flex-col items-center">
-            <div className="bg-gray-400 rounded-full w-40 h-40 mb-4"></div>
+            <div className=" rounded-full w-40 h-40 mb-4"><img className="rounded-full" src="./public/images/janvi.jpg" alt="" /></div>
             <div className="text-white text-2xl font-semibold">Janvi Yadav</div>
             <div className="text-gray-300 text-m mb-2">API Builder</div>
             <div className="flex mt-3 gap-8">
-                <img className="h-7" src="./public/logos/linkdin.png" alt="" />
-                <img className="h-7" src="./public/logos/insta.png" alt="" />
-                <img className="h-7" src="./public/logos/github.png" alt="" />
+                <a href="https://www.instagram.com/janvi__yadav1205/"><img className="h-7" src="./public/logos/linkdin.png" alt="" /></a>
+                <a href="https://www.linkedin.com/in/janvi1205/"><img className="h-7" src="./public/logos/insta.png" alt="" /></a>
+                <a href="https://github.com/Janvi1205"><img className="h-7" src="./public/logos/github.png" alt="" /></a>
               
             </div>
           </div>
           {/* Team Member 3 */}
           <div className="flex flex-col items-center">
-            <div className="bg-gray-400 rounded-full w-40 h-40 mb-4"></div>
+            <div className="bg-gray-400 rounded-full w-40 h-40 mb-4"><img className="rounded-full" src="./public/images/ronak.jpg" alt="" /></div>
             <div className="text-white text-2xl font-semibold">Ronak Jain</div>
             <div className="text-gray-300 text-m mb-2">Code Commander</div>
             <div className="flex mt-3 gap-8">
-                <img className="h-7" src="./public/logos/linkdin.png" alt="" />
-                <img className="h-7" src="./public/logos/insta.png" alt="" />
-                <img className="h-7" src="./public/logos/github.png" alt="" />
+                <a href="https://www.instagram.com/ronak_._jain/"><img className="h-7" src="./public/logos/linkdin.png" alt="" /></a>
+                <a href="https://www.linkedin.com/in/reachronakofficial756/"><img className="h-7" src="./public/logos/insta.png" alt="" /></a>
+                <a href="https://github.com/reachronakofficial756"><img className="h-7" src="./public/logos/github.png" alt="" /></a>
               
             </div>
           </div>
           {/* Team Member 4 */}
           <div className="flex flex-col items-center">
-            <div className="bg-gray-400 rounded-full w-40 h-40 mb-4"></div>
+            <div className="bg-gray-400 rounded-full w-40 h-40 mb-4"><img className="rounded-full" src="./public/images/sonal.png" alt="" /></div>
             <div className="text-white text-2xl font-semibold">Sonal Sonal</div>
             <div className="text-gray-300 text-m mb-2">UI Ninja</div>
             <div className="flex mt-3 gap-8">
-                <img className="h-7" src="./public/logos/linkdin.png" alt="" />
-                <img className="h-7" src="./public/logos/insta.png" alt="" />
+                <a href="https://www.instagram.com/sonal__2810/"><img className="h-7" src="./public/logos/linkdin.png" alt="" /></a>
+                <a href="https://www.linkedin.com/in/sonal-singh28/"><img className="h-7" src="./public/logos/insta.png" alt="" /></a>
                 <img className="h-7" src="./public/logos/github.png" alt="" />
               
             </div>
@@ -265,10 +265,10 @@ export function Demo() {
         {/* Navigation */}
         <nav className="flex flex-wrap justify-center gap-8 mb-4">
           <a href="#" className="font-bold text-white">Home</a>
-          <a href="#" className="font-bold text-white">How it works?</a>
-          <a href="#" className="font-bold text-white">Our Team</a>
-          <a href="#" className="font-bold text-white">Explore Jobs</a>
-          <a href="#" className="font-bold text-white">Contact us</a>
+          <a href="#howitworks" className="font-bold text-white">How it works?</a>
+          <a href="#ourteam" className="font-bold text-white">Our Team</a>
+          
+          <a href="#contact" className="font-bold text-white">Contact us</a>
         </nav>
         {/* Social Icons */}
         <div className="flex mt-3 gap-8">

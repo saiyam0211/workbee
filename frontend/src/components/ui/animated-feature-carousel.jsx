@@ -32,26 +32,26 @@ const steps = [
   {
     id: "1",
     name: "Step 1",
-    title: "Seamless Integration",
-    description: "Connect your tools and workflows effortlessly. Our platform integrates with hundreds of popular apps.",
+    title: "Get Started Instantly",
+    description: "Sign up with your email or social accounts and unlock access to thousands of curated job opportunities. No lengthy forms, just quick access to your career path.",
   },
   {
     id: "2",
     name: "Step 2",
-    title: "Powerful Analytics",
-    description: "Gain deep insights with our advanced analytics dashboard. Track your performance and make data-driven decisions.",
+    title: "Personalize Your Experience",
+    description: "Create a profile highlighting your skills, experience, and career goals. Our system uses this to tailor job recommendations just for you",
   },
   {
     id: "3",
     name: "Step 3",
-    title: "Collaborative Workspace",
-    description: "Work together in real-time. Share, comment, and edit with your team from anywhere in the world.",
+    title: "Discover Curated Opportunities",
+    description: "Navigate through a personalized job feed updated in real-time from company career pages. Use smart filters to zero in on roles that fit your aspirations.",
   },
   {
     id: "4",
     name: "Step 4",
-    title: "Automated Workflows",
-    description: "Put your tasks on autopilot. Create custom automations to save time and reduce manual work.",
+    title: "Apply Directly & Securely",
+    description:"When you find the right fit, apply directly through the company’s official job portal. Fast, secure, and trusted.",
   },
 ]
 
@@ -166,12 +166,12 @@ function FeatureCard({ children, step }) {
     mouseY.set(clientY - top)
   }
   return (
-    <motion.div
+    <motion.div id="howitworks"
       className="animated-cards group  w-[1100px] h-[600px] -ml-30 rounded-2xl"
       onMouseMove={handleMouseMove}
       style={{ "--x": useMotionTemplate`${mouseX}px`, "--y": useMotionTemplate`${mouseY}px` }}
     >
-      <div className="relative w-full overflow-hidden rounded-3xl border border-neutral-200 bg-white transition-colors duration-300 dark:border-neutral-800 dark:bg-neutral-900">
+      <div  className="relative w-full overflow-hidden rounded-3xl border border-neutral-200 bg-white transition-colors duration-300 dark:border-neutral-800 dark:bg-neutral-900">
         <div className="m-10 min-h-[550px] w-full">
           <AnimatePresence mode="wait">
             <motion.div

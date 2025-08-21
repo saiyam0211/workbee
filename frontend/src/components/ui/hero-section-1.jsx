@@ -140,7 +140,7 @@ export function HeroSection() {
 
                                 {/* Right side - Spline 3D Object */}
                                 {/* <div className=" h-[600px]  flex ml-1   pointer-events-none select-none"> */}
-                                    <div className="w-full h-full ml-190 -mt-140">
+                                    <div className="w-full h-full ml-190 -mt-120">
                                         <Spline
                                             scene="https://prod.spline.design/t4rmChduw5J8uhUi/scene.splinecode"
                                             className="w-full h-full pointer-events-none select-none"
@@ -187,7 +187,7 @@ export function HeroSection() {
                         </AnimatedGroup>
                     </div>
                 </section>
-                <section className="bg-background pb-16 pt-16 md:pb-32">
+                <section  className="bg-background pb-16 pt-16 md:pb-32">
                     <div className="group relative m-auto max-w-5xl px-6">
                         
                         <div className="mx-auto mt-12  w-full">

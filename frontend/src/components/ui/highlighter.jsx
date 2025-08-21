@@ -1,21 +1,15 @@
 "use client";
 
-import type { PropsWithChildren } from "react";
 import React, { useEffect, useRef, useState } from "react";
 
-interface MousePosition {
-  x: number;
-  y: number;
-}
-
-export default function useMousePosition(): MousePosition {
-  const [mousePosition, setMousePosition] = useState<MousePosition>({
+export default function useMousePosition() {
+  const [mousePosition, setMousePosition] = useState({
     x: 0,
     y: 0,
   });
 
   useEffect(() => {
-    const handleMouseMove = (event: MouseEvent) => {
+    const handleMouseMove = (event) => {
       setMousePosition({ x: event.clientX, y: event.clientY });
     };
 
@@ -29,28 +23,22 @@ export default function useMousePosition(): MousePosition {
   return mousePosition;
 }
 
-interface HighlightGroupProps {
-  children: React.ReactNode;
-  className?: string;
-  refresh?: boolean;
-}
-
-export const HighlightGroup: React.FC<HighlightGroupProps> = ({
+export const HighlightGroup = ({
   children,
   className = "",
   refresh = false,
 }) => {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef(null);
   const mousePosition = useMousePosition();
-  const mouse = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
-  const containerSize = useRef<{ w: number; h: number }>({ w: 0, h: 0 });
-  const [boxes, setBoxes] = useState<HTMLElement[]>([]);
+  const mouse = useRef({ x: 0, y: 0 });
+  const containerSize = useRef({ w: 0, h: 0 });
+  const [boxes, setBoxes] = useState([]);
 
   useEffect(() => {
     containerRef.current &&
       setBoxes(
         Array.from(containerRef.current.children).map(
-          (el) => el as HTMLElement,
+          (el) => el,
         ),
       );
   }, []);
@@ -109,14 +97,7 @@ export const HighlightGroup: React.FC<HighlightGroupProps> = ({
   );
 };
 
-interface HighlighterItemProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-export const HighlighterItem: React.FC<
-  PropsWithChildren<HighlighterItemProps>
-> = ({ children, className = "" }) => {
+export const HighlighterItem = ({ children, className = "" }) => {
   return (
     <div
       className={`relative overflow-hidden p-px before:pointer-events-none before:absolute before:-left-48 before:-top-48 before:z-30 before:h-96 before:w-96 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:bg-lime-500 before:opacity-0 before:blur-[100px] before:transition-opacity before:duration-500 after:absolute after:inset-0 after:z-10 after:rounded-3xl after:opacity-0 after:transition-opacity after:duration-500  before:hover:opacity-20 after:group-hover:opacity-100 dark:before:bg-white/50  ${className}`}
@@ -126,17 +107,7 @@ export const HighlighterItem: React.FC<
   );
 };
 
-interface ParticlesProps {
-  className?: string;
-  quantity?: number;
-  staticity?: number;
-  ease?: number;
-  refresh?: boolean;
-  color?: string;
-  vx?: number;
-  vy?: number;
-}
-function hexToRgb(hex: string): number[] {
+function hexToRgb(hex) {
   // Remove the "#" character from the beginning of the hex color code
   hex = hex.replace("#", "");
 
@@ -152,7 +123,7 @@ function hexToRgb(hex: string): number[] {
   return [red, green, blue];
 }
 
-export const Particles: React.FC<ParticlesProps> = ({
+export const Particles = ({
   className = "",
   quantity = 30,
   staticity = 50,
@@ -162,13 +133,13 @@ export const Particles: React.FC<ParticlesProps> = ({
   vx = 0,
   vy = 0,
 }) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const canvasContainerRef = useRef<HTMLDivElement>(null);
-  const context = useRef<CanvasRenderingContext2D | null>(null);
-  const circles = useRef<any[]>([]);
+  const canvasRef = useRef(null);
+  const canvasContainerRef = useRef(null);
+  const context = useRef(null);
+  const circles = useRef([]);
   const mousePosition = useMousePosition();
-  const mouse = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
-  const canvasSize = useRef<{ w: number; h: number }>({ w: 0, h: 0 });
+  const mouse = useRef({ x: 0, y: 0 });
+  const canvasSize = useRef({ w: 0, h: 0 });
   const dpr = typeof window !== "undefined" ? window.devicePixelRatio : 1;
 
   useEffect(() => {
@@ -214,19 +185,6 @@ export const Particles: React.FC<ParticlesProps> = ({
     }
   };
 
-  type Circle = {
-    x: number;
-    y: number;
-    translateX: number;
-    translateY: number;
-    size: number;
-    alpha: number;
-    targetAlpha: number;
-    dx: number;
-    dy: number;
-    magnetism: number;
-  };
-
   const resizeCanvas = () => {
     if (canvasContainerRef.current && canvasRef.current && context.current) {
       circles.current.length = 0;
@@ -240,7 +198,7 @@ export const Particles: React.FC<ParticlesProps> = ({
     }
   };
 
-  const circleParams = (): Circle => {
+  const circleParams = () => {
     const x = Math.floor(Math.random() * canvasSize.current.w);
     const y = Math.floor(Math.random() * canvasSize.current.h);
     const translateX = 0;
@@ -267,7 +225,7 @@ export const Particles: React.FC<ParticlesProps> = ({
 
   const rgb = hexToRgb(color);
 
-  const drawCircle = (circle: Circle, update = false) => {
+  const drawCircle = (circle, update = false) => {
     if (context.current) {
       const { x, y, translateX, translateY, size, alpha } = circle;
       context.current.translate(translateX, translateY);
@@ -304,12 +262,12 @@ export const Particles: React.FC<ParticlesProps> = ({
   };
 
   const remapValue = (
-    value: number,
-    start1: number,
-    end1: number,
-    start2: number,
-    end2: number,
-  ): number => {
+    value,
+    start1,
+    end1,
+    start2,
+    end2,
+  ) => {
     const remapped =
       ((value - start1) * (end2 - start2)) / (end1 - start1) + start2;
     return remapped > 0 ? remapped : 0;
@@ -317,7 +275,7 @@ export const Particles: React.FC<ParticlesProps> = ({
 
   const animate = () => {
     clearContext();
-    circles.current.forEach((circle: Circle, i: number) => {
+    circles.current.forEach((circle, i) => {
       // Handle the alpha value
       const edge = [
         circle.x + circle.translateX - circle.size, // distance from left edge
@@ -381,4 +339,3 @@ export const Particles: React.FC<ParticlesProps> = ({
     </div>
   );
 };
-

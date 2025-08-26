@@ -1,0 +1,1598 @@
+{
+  "company": "amazon",
+  "total_jobs": 318,
+  "scraping_time": "154.67 seconds",
+  "jobs_per_second": "2.06",
+  "data": [
+    {
+      "job_title": "Sr. Business Intelligence Engineer",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3065815"
+    },
+    {
+      "job_title": "Business Analyst, Pay on Delivery",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3065357"
+    },
+    {
+      "job_title": "Business Analyst I",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3065200"
+    },
+    {
+      "job_title": "Business Analyst I",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3065191"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, APAC Retail BI",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3021847"
+    },
+    {
+      "job_title": "Business Intel Engineer, WW Stores IPAT - SWIFT",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3063256"
+    },
+    {
+      "job_title": "Business Intelligence Engineer I, Ship Tech | Labeling",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3062892"
+    },
+    {
+      "job_title": "Business Intel Engineer, WW Stores IPAT - SWIFT",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3062877"
+    },
+    {
+      "job_title": "Data Engineer, DSP Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2913020"
+    },
+    {
+      "job_title": "Data Engineer II, Flex Analytics",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3049654"
+    },
+    {
+      "job_title": "Data Engineer II, SPT Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3056641"
+    },
+    {
+      "job_title": "Business Analyst, RBS",
+      "job_location": "Chennai, TN, IND",
+      "job_link": "https://amazon.jobs/jobs/2968091"
+    },
+    {
+      "job_title": "Business Research Analyst – II, RBS ACCX Program",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3004629"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, RBS ARTS",
+      "job_location": "Chennai, TN, IND",
+      "job_link": "https://amazon.jobs/jobs/2899180"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, RBS ARTS",
+      "job_location": "Chennai, TN, IND",
+      "job_link": "https://amazon.jobs/jobs/2994013"
+    },
+    {
+      "job_title": "Business Analyst, Cross Border Selection Technology",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3030158"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, Last Mile Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3059449"
+    },
+    {
+      "job_title": "Business Research Analyst - II, RBS Brand Experience",
+      "job_location": "Chennai, TN, IND",
+      "job_link": "https://amazon.jobs/jobs/3058987"
+    },
+    {
+      "job_title": "Systems Admin, Global Data Analytics (GDA)",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3057188"
+    },
+    {
+      "job_title": "Business Analyst, RBS Size/Fit",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2969726"
+    },
+    {
+      "job_title": "Data Engineer II, SPT Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3056641"
+    },
+    {
+      "job_title": "Business Analyst, RBS",
+      "job_location": "Chennai, TN, IND",
+      "job_link": "https://amazon.jobs/jobs/2968091"
+    },
+    {
+      "job_title": "Business Research Analyst – II, RBS ACCX Program",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3004629"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, RBS ARTS",
+      "job_location": "Chennai, TN, IND",
+      "job_link": "https://amazon.jobs/jobs/2899180"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, RBS ARTS",
+      "job_location": "Chennai, TN, IND",
+      "job_link": "https://amazon.jobs/jobs/2994013"
+    },
+    {
+      "job_title": "Business Analyst, Cross Border Selection Technology",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3030158"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, Last Mile Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3059449"
+    },
+    {
+      "job_title": "Business Research Analyst - II, RBS Brand Experience",
+      "job_location": "Chennai, TN, IND",
+      "job_link": "https://amazon.jobs/jobs/3058987"
+    },
+    {
+      "job_title": "Systems Admin, Global Data Analytics (GDA)",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3057188"
+    },
+    {
+      "job_title": "Business Analyst, RBS Size/Fit",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2969726"
+    },
+    {
+      "job_title": "Business Intel Engineer I, CMT",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2951982"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, DSP Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2906908"
+    },
+    {
+      "job_title": "Data Scientist II, Data Scientist II - AOP Team",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2847486"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, DSP Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2915475"
+    },
+    {
+      "job_title": "BIE I, Analytics Operations and Programs",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2877925"
+    },
+    {
+      "job_title": "Business Intel Engineer I, CMT",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2951982"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, DSP Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2906908"
+    },
+    {
+      "job_title": "Data Scientist II, Data Scientist II - AOP Team",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2847486"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, DSP Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2915475"
+    },
+    {
+      "job_title": "BIE I, Analytics Operations and Programs",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2877925"
+    },
+    {
+      "job_title": "Sr. Business Intelligence Engineer",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3065815"
+    },
+    {
+      "job_title": "Business Analyst, Pay on Delivery",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3065357"
+    },
+    {
+      "job_title": "Business Analyst I",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3065200"
+    },
+    {
+      "job_title": "Business Analyst I",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3065191"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, APAC Retail BI",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3021847"
+    },
+    {
+      "job_title": "Business Intel Engineer, WW Stores IPAT - SWIFT",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3063256"
+    },
+    {
+      "job_title": "Business Intelligence Engineer I, Ship Tech | Labeling",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3062892"
+    },
+    {
+      "job_title": "Business Intel Engineer, WW Stores IPAT - SWIFT",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3062877"
+    },
+    {
+      "job_title": "Data Engineer, DSP Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2913020"
+    },
+    {
+      "job_title": "Data Engineer II, Flex Analytics",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3049654"
+    },
+    {
+      "job_title": "Data Engineer II, SPT Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3056641"
+    },
+    {
+      "job_title": "Business Analyst, RBS",
+      "job_location": "Chennai, TN, IND",
+      "job_link": "https://amazon.jobs/jobs/2968091"
+    },
+    {
+      "job_title": "Business Research Analyst – II, RBS ACCX Program",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3004629"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, RBS ARTS",
+      "job_location": "Chennai, TN, IND",
+      "job_link": "https://amazon.jobs/jobs/2899180"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, RBS ARTS",
+      "job_location": "Chennai, TN, IND",
+      "job_link": "https://amazon.jobs/jobs/2994013"
+    },
+    {
+      "job_title": "Business Analyst, Cross Border Selection Technology",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3030158"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, Last Mile Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3059449"
+    },
+    {
+      "job_title": "Business Research Analyst - II, RBS Brand Experience",
+      "job_location": "Chennai, TN, IND",
+      "job_link": "https://amazon.jobs/jobs/3058987"
+    },
+    {
+      "job_title": "Systems Admin, Global Data Analytics (GDA)",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3057188"
+    },
+    {
+      "job_title": "Business Analyst, RBS Size/Fit",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2969726"
+    },
+    {
+      "job_title": "Data Engineer II, SPT Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3056641"
+    },
+    {
+      "job_title": "Business Analyst, RBS",
+      "job_location": "Chennai, TN, IND",
+      "job_link": "https://amazon.jobs/jobs/2968091"
+    },
+    {
+      "job_title": "Business Research Analyst – II, RBS ACCX Program",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3004629"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, RBS ARTS",
+      "job_location": "Chennai, TN, IND",
+      "job_link": "https://amazon.jobs/jobs/2899180"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, RBS ARTS",
+      "job_location": "Chennai, TN, IND",
+      "job_link": "https://amazon.jobs/jobs/2994013"
+    },
+    {
+      "job_title": "Business Analyst, Cross Border Selection Technology",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3030158"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, Last Mile Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3059449"
+    },
+    {
+      "job_title": "Business Research Analyst - II, RBS Brand Experience",
+      "job_location": "Chennai, TN, IND",
+      "job_link": "https://amazon.jobs/jobs/3058987"
+    },
+    {
+      "job_title": "Systems Admin, Global Data Analytics (GDA)",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3057188"
+    },
+    {
+      "job_title": "Business Analyst, RBS Size/Fit",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2969726"
+    },
+    {
+      "job_title": "Business Intel Engineer I, CMT",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2951982"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, DSP Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2906908"
+    },
+    {
+      "job_title": "Data Scientist II, Data Scientist II - AOP Team",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2847486"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, DSP Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2915475"
+    },
+    {
+      "job_title": "BIE I, Analytics Operations and Programs",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2877925"
+    },
+    {
+      "job_title": "Sr. Business Intelligence Engineer",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3065815"
+    },
+    {
+      "job_title": "Business Analyst, Pay on Delivery",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3065357"
+    },
+    {
+      "job_title": "Business Analyst I",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3065200"
+    },
+    {
+      "job_title": "Business Analyst I",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3065191"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, APAC Retail BI",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3021847"
+    },
+    {
+      "job_title": "Business Intel Engineer, WW Stores IPAT - SWIFT",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3063256"
+    },
+    {
+      "job_title": "Business Intelligence Engineer I, Ship Tech | Labeling",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3062892"
+    },
+    {
+      "job_title": "Business Intel Engineer, WW Stores IPAT - SWIFT",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3062877"
+    },
+    {
+      "job_title": "Data Engineer, DSP Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2913020"
+    },
+    {
+      "job_title": "Data Engineer II, Flex Analytics",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3049654"
+    },
+    {
+      "job_title": "Data Engineer II, SPT Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3056641"
+    },
+    {
+      "job_title": "Business Analyst, RBS",
+      "job_location": "Chennai, TN, IND",
+      "job_link": "https://amazon.jobs/jobs/2968091"
+    },
+    {
+      "job_title": "Business Research Analyst – II, RBS ACCX Program",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3004629"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, RBS ARTS",
+      "job_location": "Chennai, TN, IND",
+      "job_link": "https://amazon.jobs/jobs/2899180"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, RBS ARTS",
+      "job_location": "Chennai, TN, IND",
+      "job_link": "https://amazon.jobs/jobs/2994013"
+    },
+    {
+      "job_title": "Business Analyst, Cross Border Selection Technology",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3030158"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, Last Mile Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3059449"
+    },
+    {
+      "job_title": "Business Research Analyst - II, RBS Brand Experience",
+      "job_location": "Chennai, TN, IND",
+      "job_link": "https://amazon.jobs/jobs/3058987"
+    },
+    {
+      "job_title": "Systems Admin, Global Data Analytics (GDA)",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3057188"
+    },
+    {
+      "job_title": "Business Analyst, RBS Size/Fit",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2969726"
+    },
+    {
+      "job_title": "Data Engineer II, SPT Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3056641"
+    },
+    {
+      "job_title": "Business Analyst, RBS",
+      "job_location": "Chennai, TN, IND",
+      "job_link": "https://amazon.jobs/jobs/2968091"
+    },
+    {
+      "job_title": "Business Research Analyst – II, RBS ACCX Program",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3004629"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, RBS ARTS",
+      "job_location": "Chennai, TN, IND",
+      "job_link": "https://amazon.jobs/jobs/2899180"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, RBS ARTS",
+      "job_location": "Chennai, TN, IND",
+      "job_link": "https://amazon.jobs/jobs/2994013"
+    },
+    {
+      "job_title": "Business Analyst, Cross Border Selection Technology",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3030158"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, Last Mile Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3059449"
+    },
+    {
+      "job_title": "Business Research Analyst - II, RBS Brand Experience",
+      "job_location": "Chennai, TN, IND",
+      "job_link": "https://amazon.jobs/jobs/3058987"
+    },
+    {
+      "job_title": "Systems Admin, Global Data Analytics (GDA)",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3057188"
+    },
+    {
+      "job_title": "Business Analyst, RBS Size/Fit",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2969726"
+    },
+    {
+      "job_title": "Business Intel Engineer I, CMT",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2951982"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, DSP Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2906908"
+    },
+    {
+      "job_title": "Data Scientist II, Data Scientist II - AOP Team",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2847486"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, DSP Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2915475"
+    },
+    {
+      "job_title": "BIE I, Analytics Operations and Programs",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2877925"
+    },
+    {
+      "job_title": "Sr. Business Intelligence Engineer",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3065815"
+    },
+    {
+      "job_title": "Business Analyst, Pay on Delivery",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3065357"
+    },
+    {
+      "job_title": "Business Analyst I",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3065200"
+    },
+    {
+      "job_title": "Business Analyst I",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3065191"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, APAC Retail BI",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3021847"
+    },
+    {
+      "job_title": "Business Intel Engineer, WW Stores IPAT - SWIFT",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3063256"
+    },
+    {
+      "job_title": "Business Intelligence Engineer I, Ship Tech | Labeling",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3062892"
+    },
+    {
+      "job_title": "Business Intel Engineer, WW Stores IPAT - SWIFT",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3062877"
+    },
+    {
+      "job_title": "Data Engineer, DSP Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2913020"
+    },
+    {
+      "job_title": "Data Engineer II, Flex Analytics",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3049654"
+    },
+    {
+      "job_title": "Data Engineer II, SPT Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3056641"
+    },
+    {
+      "job_title": "Business Analyst, RBS",
+      "job_location": "Chennai, TN, IND",
+      "job_link": "https://amazon.jobs/jobs/2968091"
+    },
+    {
+      "job_title": "Business Research Analyst – II, RBS ACCX Program",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3004629"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, RBS ARTS",
+      "job_location": "Chennai, TN, IND",
+      "job_link": "https://amazon.jobs/jobs/2899180"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, RBS ARTS",
+      "job_location": "Chennai, TN, IND",
+      "job_link": "https://amazon.jobs/jobs/2994013"
+    },
+    {
+      "job_title": "Business Analyst, Cross Border Selection Technology",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3030158"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, Last Mile Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3059449"
+    },
+    {
+      "job_title": "Business Research Analyst - II, RBS Brand Experience",
+      "job_location": "Chennai, TN, IND",
+      "job_link": "https://amazon.jobs/jobs/3058987"
+    },
+    {
+      "job_title": "Systems Admin, Global Data Analytics (GDA)",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3057188"
+    },
+    {
+      "job_title": "Business Analyst, RBS Size/Fit",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2969726"
+    },
+    {
+      "job_title": "Business Intel Engineer I, CMT",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2951982"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, DSP Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2906908"
+    },
+    {
+      "job_title": "Data Scientist II, Data Scientist II - AOP Team",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2847486"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, DSP Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2915475"
+    },
+    {
+      "job_title": "BIE I, Analytics Operations and Programs",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2877925"
+    },
+    {
+      "job_title": "Business Intel Engineer I, CMT",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2951982"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, DSP Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2906908"
+    },
+    {
+      "job_title": "Data Scientist II, Data Scientist II - AOP Team",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2847486"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, DSP Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2915475"
+    },
+    {
+      "job_title": "BIE I, Analytics Operations and Programs",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2877925"
+    },
+    {
+      "job_title": "Sr. Business Intelligence Engineer",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3065815"
+    },
+    {
+      "job_title": "Business Analyst, Pay on Delivery",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3065357"
+    },
+    {
+      "job_title": "Business Analyst I",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3065200"
+    },
+    {
+      "job_title": "Business Analyst I",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3065191"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, APAC Retail BI",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3021847"
+    },
+    {
+      "job_title": "Business Intel Engineer, WW Stores IPAT - SWIFT",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3063256"
+    },
+    {
+      "job_title": "Business Intelligence Engineer I, Ship Tech | Labeling",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3062892"
+    },
+    {
+      "job_title": "Business Intel Engineer, WW Stores IPAT - SWIFT",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3062877"
+    },
+    {
+      "job_title": "Data Engineer, DSP Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2913020"
+    },
+    {
+      "job_title": "Data Engineer II, Flex Analytics",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3049654"
+    },
+    {
+      "job_title": "Data Engineer II, SPT Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3056641"
+    },
+    {
+      "job_title": "Business Analyst, RBS",
+      "job_location": "Chennai, TN, IND",
+      "job_link": "https://amazon.jobs/jobs/2968091"
+    },
+    {
+      "job_title": "Business Research Analyst – II, RBS ACCX Program",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3004629"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, RBS ARTS",
+      "job_location": "Chennai, TN, IND",
+      "job_link": "https://amazon.jobs/jobs/2899180"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, RBS ARTS",
+      "job_location": "Chennai, TN, IND",
+      "job_link": "https://amazon.jobs/jobs/2994013"
+    },
+    {
+      "job_title": "Business Analyst, Cross Border Selection Technology",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3030158"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, Last Mile Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3059449"
+    },
+    {
+      "job_title": "Business Research Analyst - II, RBS Brand Experience",
+      "job_location": "Chennai, TN, IND",
+      "job_link": "https://amazon.jobs/jobs/3058987"
+    },
+    {
+      "job_title": "Systems Admin, Global Data Analytics (GDA)",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3057188"
+    },
+    {
+      "job_title": "Business Analyst, RBS Size/Fit",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2969726"
+    },
+    {
+      "job_title": "Business Intel Engineer I, CMT",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2951982"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, DSP Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2906908"
+    },
+    {
+      "job_title": "Data Scientist II, Data Scientist II - AOP Team",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2847486"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, DSP Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2915475"
+    },
+    {
+      "job_title": "BIE I, Analytics Operations and Programs",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2877925"
+    },
+    {
+      "job_title": "Business Intel Engineer I, CMT",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2951982"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, DSP Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2906908"
+    },
+    {
+      "job_title": "Data Scientist II, Data Scientist II - AOP Team",
+      "job_location": "Bengaluru, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2847486"
+    },
+    {
+      "job_title": "Business Intelligence Engineer, DSP Analytics",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2915475"
+    },
+    {
+      "job_title": "BIE I, Analytics Operations and Programs",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2877925"
+    },
+    {
+      "job_title": "Sr. Solution Architect, Startups",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3065246"
+    },
+    {
+      "job_title": "Principal Solutions Architect, FSI, WW FSI GTM Solutions Architecture Team",
+      "job_location": "Mumbai, MH, IND",
+      "job_link": "https://amazon.jobs/jobs/2828047"
+    },
+    {
+      "job_title": "Senior Delivery Practice Manager - Global Accounts, AWS Industries",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2941048"
+    },
+    {
+      "job_title": "Snr DevSecOps, Global Accounts, AWSI Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2879170"
+    },
+    {
+      "job_title": "Delivery Consultant, Customer Experience, Tech & Industry",
+      "job_location": "Mumbai, MH, IND",
+      "job_link": "https://amazon.jobs/jobs/3050562"
+    },
+    {
+      "job_title": "Solution Architect, Startups, Startups",
+      "job_location": "Mumbai, MH, IND",
+      "job_link": "https://amazon.jobs/jobs/3017041"
+    },
+    {
+      "job_title": "Senior GenAI Solutions Architect, Startups",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3017037"
+    },
+    {
+      "job_title": "Delivery Consultant, Customer Experience, Professional Services",
+      "job_location": "Mumbai, MH, IND",
+      "job_link": "https://amazon.jobs/jobs/3052524"
+    },
+    {
+      "job_title": "Senior Delivery Consultant - Application Architect, AWS Proserve",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3049749"
+    },
+    {
+      "job_title": "Delivery Consultant, Customer Experience, Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3050561"
+    },
+    {
+      "job_title": "Sr. Delivery Consultant, Customer Experience, Tech & Industry",
+      "job_location": "Bangalore, IND",
+      "job_link": "https://amazon.jobs/jobs/3024907"
+    },
+    {
+      "job_title": "Sr. Application Architect, Professional Services",
+      "job_location": "Mumbai, MH, IND",
+      "job_link": "https://amazon.jobs/jobs/2809253"
+    },
+    {
+      "job_title": "Application Developer, Professional Services",
+      "job_location": "Gurugram, HR, IND",
+      "job_link": "https://amazon.jobs/jobs/3021188"
+    },
+    {
+      "job_title": "Senior Cloud Architect, Global Accounts, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2934241"
+    },
+    {
+      "job_title": "Delivery Consultant Cloud, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2941069"
+    },
+    {
+      "job_title": "Delivery Consultant Cloud, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2941062"
+    },
+    {
+      "job_title": "Anaplan BIE Manager, GFS Services FP&A",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2943480"
+    },
+    {
+      "job_title": "Sr. Delivery Consultant, Customer Experience, Tech & Industry",
+      "job_location": "Bangalore, IND",
+      "job_link": "https://amazon.jobs/jobs/3024907"
+    },
+    {
+      "job_title": "Sr. Application Architect, Professional Services",
+      "job_location": "Mumbai, MH, IND",
+      "job_link": "https://amazon.jobs/jobs/2809253"
+    },
+    {
+      "job_title": "Application Developer, Professional Services",
+      "job_location": "Gurugram, HR, IND",
+      "job_link": "https://amazon.jobs/jobs/3021188"
+    },
+    {
+      "job_title": "Senior Cloud Architect, Global Accounts, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2934241"
+    },
+    {
+      "job_title": "Delivery Consultant Cloud, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2941069"
+    },
+    {
+      "job_title": "Delivery Consultant Cloud, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2941062"
+    },
+    {
+      "job_title": "Anaplan BIE Manager, GFS Services FP&A",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2943480"
+    },
+    {
+      "job_title": "Sr. Delivery Consultant, Customer Experience, Tech & Industry",
+      "job_location": "Bangalore, IND",
+      "job_link": "https://amazon.jobs/jobs/3024907"
+    },
+    {
+      "job_title": "Sr. Application Architect, Professional Services",
+      "job_location": "Mumbai, MH, IND",
+      "job_link": "https://amazon.jobs/jobs/2809253"
+    },
+    {
+      "job_title": "Application Developer, Professional Services",
+      "job_location": "Gurugram, HR, IND",
+      "job_link": "https://amazon.jobs/jobs/3021188"
+    },
+    {
+      "job_title": "Senior Cloud Architect, Global Accounts, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2934241"
+    },
+    {
+      "job_title": "Delivery Consultant Cloud, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2941069"
+    },
+    {
+      "job_title": "Delivery Consultant Cloud, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2941062"
+    },
+    {
+      "job_title": "Anaplan BIE Manager, GFS Services FP&A",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2943480"
+    },
+    {
+      "job_title": "Sr. Solution Architect, Startups",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3065246"
+    },
+    {
+      "job_title": "Principal Solutions Architect, FSI, WW FSI GTM Solutions Architecture Team",
+      "job_location": "Mumbai, MH, IND",
+      "job_link": "https://amazon.jobs/jobs/2828047"
+    },
+    {
+      "job_title": "Senior Delivery Practice Manager - Global Accounts, AWS Industries",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2941048"
+    },
+    {
+      "job_title": "Snr DevSecOps, Global Accounts, AWSI Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2879170"
+    },
+    {
+      "job_title": "Delivery Consultant, Customer Experience, Tech & Industry",
+      "job_location": "Mumbai, MH, IND",
+      "job_link": "https://amazon.jobs/jobs/3050562"
+    },
+    {
+      "job_title": "Solution Architect, Startups, Startups",
+      "job_location": "Mumbai, MH, IND",
+      "job_link": "https://amazon.jobs/jobs/3017041"
+    },
+    {
+      "job_title": "Senior GenAI Solutions Architect, Startups",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3017037"
+    },
+    {
+      "job_title": "Delivery Consultant, Customer Experience, Professional Services",
+      "job_location": "Mumbai, MH, IND",
+      "job_link": "https://amazon.jobs/jobs/3052524"
+    },
+    {
+      "job_title": "Senior Delivery Consultant - Application Architect, AWS Proserve",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3049749"
+    },
+    {
+      "job_title": "Delivery Consultant, Customer Experience, Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3050561"
+    },
+    {
+      "job_title": "Sr. Delivery Consultant, Customer Experience, Tech & Industry",
+      "job_location": "Bangalore, IND",
+      "job_link": "https://amazon.jobs/jobs/3024907"
+    },
+    {
+      "job_title": "Sr. Application Architect, Professional Services",
+      "job_location": "Mumbai, MH, IND",
+      "job_link": "https://amazon.jobs/jobs/2809253"
+    },
+    {
+      "job_title": "Application Developer, Professional Services",
+      "job_location": "Gurugram, HR, IND",
+      "job_link": "https://amazon.jobs/jobs/3021188"
+    },
+    {
+      "job_title": "Senior Cloud Architect, Global Accounts, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2934241"
+    },
+    {
+      "job_title": "Delivery Consultant Cloud, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2941069"
+    },
+    {
+      "job_title": "Delivery Consultant Cloud, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2941062"
+    },
+    {
+      "job_title": "Anaplan BIE Manager, GFS Services FP&A",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2943480"
+    },
+    {
+      "job_title": "Sr. Delivery Consultant, Customer Experience, Tech & Industry",
+      "job_location": "Bangalore, IND",
+      "job_link": "https://amazon.jobs/jobs/3024907"
+    },
+    {
+      "job_title": "Sr. Application Architect, Professional Services",
+      "job_location": "Mumbai, MH, IND",
+      "job_link": "https://amazon.jobs/jobs/2809253"
+    },
+    {
+      "job_title": "Application Developer, Professional Services",
+      "job_location": "Gurugram, HR, IND",
+      "job_link": "https://amazon.jobs/jobs/3021188"
+    },
+    {
+      "job_title": "Senior Cloud Architect, Global Accounts, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2934241"
+    },
+    {
+      "job_title": "Delivery Consultant Cloud, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2941069"
+    },
+    {
+      "job_title": "Delivery Consultant Cloud, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2941062"
+    },
+    {
+      "job_title": "Anaplan BIE Manager, GFS Services FP&A",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2943480"
+    },
+    {
+      "job_title": "Sr. Delivery Consultant, Customer Experience, Tech & Industry",
+      "job_location": "Bangalore, IND",
+      "job_link": "https://amazon.jobs/jobs/3024907"
+    },
+    {
+      "job_title": "Sr. Application Architect, Professional Services",
+      "job_location": "Mumbai, MH, IND",
+      "job_link": "https://amazon.jobs/jobs/2809253"
+    },
+    {
+      "job_title": "Application Developer, Professional Services",
+      "job_location": "Gurugram, HR, IND",
+      "job_link": "https://amazon.jobs/jobs/3021188"
+    },
+    {
+      "job_title": "Senior Cloud Architect, Global Accounts, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2934241"
+    },
+    {
+      "job_title": "Delivery Consultant Cloud, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2941069"
+    },
+    {
+      "job_title": "Delivery Consultant Cloud, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2941062"
+    },
+    {
+      "job_title": "Anaplan BIE Manager, GFS Services FP&A",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2943480"
+    },
+    {
+      "job_title": "Sr. Solution Architect, Startups",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3065246"
+    },
+    {
+      "job_title": "Principal Solutions Architect, FSI, WW FSI GTM Solutions Architecture Team",
+      "job_location": "Mumbai, MH, IND",
+      "job_link": "https://amazon.jobs/jobs/2828047"
+    },
+    {
+      "job_title": "Senior Delivery Practice Manager - Global Accounts, AWS Industries",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2941048"
+    },
+    {
+      "job_title": "Snr DevSecOps, Global Accounts, AWSI Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2879170"
+    },
+    {
+      "job_title": "Delivery Consultant, Customer Experience, Tech & Industry",
+      "job_location": "Mumbai, MH, IND",
+      "job_link": "https://amazon.jobs/jobs/3050562"
+    },
+    {
+      "job_title": "Solution Architect, Startups, Startups",
+      "job_location": "Mumbai, MH, IND",
+      "job_link": "https://amazon.jobs/jobs/3017041"
+    },
+    {
+      "job_title": "Senior GenAI Solutions Architect, Startups",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3017037"
+    },
+    {
+      "job_title": "Delivery Consultant, Customer Experience, Professional Services",
+      "job_location": "Mumbai, MH, IND",
+      "job_link": "https://amazon.jobs/jobs/3052524"
+    },
+    {
+      "job_title": "Senior Delivery Consultant - Application Architect, AWS Proserve",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3049749"
+    },
+    {
+      "job_title": "Delivery Consultant, Customer Experience, Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3050561"
+    },
+    {
+      "job_title": "Sr. Delivery Consultant, Customer Experience, Tech & Industry",
+      "job_location": "Bangalore, IND",
+      "job_link": "https://amazon.jobs/jobs/3024907"
+    },
+    {
+      "job_title": "Sr. Application Architect, Professional Services",
+      "job_location": "Mumbai, MH, IND",
+      "job_link": "https://amazon.jobs/jobs/2809253"
+    },
+    {
+      "job_title": "Application Developer, Professional Services",
+      "job_location": "Gurugram, HR, IND",
+      "job_link": "https://amazon.jobs/jobs/3021188"
+    },
+    {
+      "job_title": "Senior Cloud Architect, Global Accounts, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2934241"
+    },
+    {
+      "job_title": "Delivery Consultant Cloud, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2941069"
+    },
+    {
+      "job_title": "Delivery Consultant Cloud, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2941062"
+    },
+    {
+      "job_title": "Anaplan BIE Manager, GFS Services FP&A",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2943480"
+    },
+    {
+      "job_title": "Sr. Delivery Consultant, Customer Experience, Tech & Industry",
+      "job_location": "Bangalore, IND",
+      "job_link": "https://amazon.jobs/jobs/3024907"
+    },
+    {
+      "job_title": "Sr. Application Architect, Professional Services",
+      "job_location": "Mumbai, MH, IND",
+      "job_link": "https://amazon.jobs/jobs/2809253"
+    },
+    {
+      "job_title": "Application Developer, Professional Services",
+      "job_location": "Gurugram, HR, IND",
+      "job_link": "https://amazon.jobs/jobs/3021188"
+    },
+    {
+      "job_title": "Senior Cloud Architect, Global Accounts, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2934241"
+    },
+    {
+      "job_title": "Delivery Consultant Cloud, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2941069"
+    },
+    {
+      "job_title": "Delivery Consultant Cloud, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2941062"
+    },
+    {
+      "job_title": "Anaplan BIE Manager, GFS Services FP&A",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2943480"
+    },
+    {
+      "job_title": "Sr. Delivery Consultant, Customer Experience, Tech & Industry",
+      "job_location": "Bangalore, IND",
+      "job_link": "https://amazon.jobs/jobs/3024907"
+    },
+    {
+      "job_title": "Sr. Application Architect, Professional Services",
+      "job_location": "Mumbai, MH, IND",
+      "job_link": "https://amazon.jobs/jobs/2809253"
+    },
+    {
+      "job_title": "Application Developer, Professional Services",
+      "job_location": "Gurugram, HR, IND",
+      "job_link": "https://amazon.jobs/jobs/3021188"
+    },
+    {
+      "job_title": "Senior Cloud Architect, Global Accounts, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2934241"
+    },
+    {
+      "job_title": "Delivery Consultant Cloud, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2941069"
+    },
+    {
+      "job_title": "Delivery Consultant Cloud, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2941062"
+    },
+    {
+      "job_title": "Anaplan BIE Manager, GFS Services FP&A",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2943480"
+    },
+    {
+      "job_title": "Sr. Solution Architect, Startups",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3065246"
+    },
+    {
+      "job_title": "Principal Solutions Architect, FSI, WW FSI GTM Solutions Architecture Team",
+      "job_location": "Mumbai, MH, IND",
+      "job_link": "https://amazon.jobs/jobs/2828047"
+    },
+    {
+      "job_title": "Senior Delivery Practice Manager - Global Accounts, AWS Industries",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2941048"
+    },
+    {
+      "job_title": "Snr DevSecOps, Global Accounts, AWSI Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2879170"
+    },
+    {
+      "job_title": "Delivery Consultant, Customer Experience, Tech & Industry",
+      "job_location": "Mumbai, MH, IND",
+      "job_link": "https://amazon.jobs/jobs/3050562"
+    },
+    {
+      "job_title": "Solution Architect, Startups, Startups",
+      "job_location": "Mumbai, MH, IND",
+      "job_link": "https://amazon.jobs/jobs/3017041"
+    },
+    {
+      "job_title": "Senior GenAI Solutions Architect, Startups",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3017037"
+    },
+    {
+      "job_title": "Delivery Consultant, Customer Experience, Professional Services",
+      "job_location": "Mumbai, MH, IND",
+      "job_link": "https://amazon.jobs/jobs/3052524"
+    },
+    {
+      "job_title": "Senior Delivery Consultant - Application Architect, AWS Proserve",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3049749"
+    },
+    {
+      "job_title": "Delivery Consultant, Customer Experience, Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3050561"
+    },
+    {
+      "job_title": "Sr. Delivery Consultant, Customer Experience, Tech & Industry",
+      "job_location": "Bangalore, IND",
+      "job_link": "https://amazon.jobs/jobs/3024907"
+    },
+    {
+      "job_title": "Sr. Application Architect, Professional Services",
+      "job_location": "Mumbai, MH, IND",
+      "job_link": "https://amazon.jobs/jobs/2809253"
+    },
+    {
+      "job_title": "Application Developer, Professional Services",
+      "job_location": "Gurugram, HR, IND",
+      "job_link": "https://amazon.jobs/jobs/3021188"
+    },
+    {
+      "job_title": "Senior Cloud Architect, Global Accounts, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2934241"
+    },
+    {
+      "job_title": "Delivery Consultant Cloud, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2941069"
+    },
+    {
+      "job_title": "Delivery Consultant Cloud, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2941062"
+    },
+    {
+      "job_title": "Anaplan BIE Manager, GFS Services FP&A",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2943480"
+    },
+    {
+      "job_title": "Sr. Delivery Consultant, Customer Experience, Tech & Industry",
+      "job_location": "Bangalore, IND",
+      "job_link": "https://amazon.jobs/jobs/3024907"
+    },
+    {
+      "job_title": "Sr. Application Architect, Professional Services",
+      "job_location": "Mumbai, MH, IND",
+      "job_link": "https://amazon.jobs/jobs/2809253"
+    },
+    {
+      "job_title": "Application Developer, Professional Services",
+      "job_location": "Gurugram, HR, IND",
+      "job_link": "https://amazon.jobs/jobs/3021188"
+    },
+    {
+      "job_title": "Senior Cloud Architect, Global Accounts, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2934241"
+    },
+    {
+      "job_title": "Delivery Consultant Cloud, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2941069"
+    },
+    {
+      "job_title": "Delivery Consultant Cloud, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2941062"
+    },
+    {
+      "job_title": "Anaplan BIE Manager, GFS Services FP&A",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2943480"
+    },
+    {
+      "job_title": "Sr. Solution Architect, Startups",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3065246"
+    },
+    {
+      "job_title": "Principal Solutions Architect, FSI, WW FSI GTM Solutions Architecture Team",
+      "job_location": "Mumbai, MH, IND",
+      "job_link": "https://amazon.jobs/jobs/2828047"
+    },
+    {
+      "job_title": "Senior Delivery Practice Manager - Global Accounts, AWS Industries",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2941048"
+    },
+    {
+      "job_title": "Snr DevSecOps, Global Accounts, AWSI Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2879170"
+    },
+    {
+      "job_title": "Delivery Consultant, Customer Experience, Tech & Industry",
+      "job_location": "Mumbai, MH, IND",
+      "job_link": "https://amazon.jobs/jobs/3050562"
+    },
+    {
+      "job_title": "Solution Architect, Startups, Startups",
+      "job_location": "Mumbai, MH, IND",
+      "job_link": "https://amazon.jobs/jobs/3017041"
+    },
+    {
+      "job_title": "Senior GenAI Solutions Architect, Startups",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3017037"
+    },
+    {
+      "job_title": "Delivery Consultant, Customer Experience, Professional Services",
+      "job_location": "Mumbai, MH, IND",
+      "job_link": "https://amazon.jobs/jobs/3052524"
+    },
+    {
+      "job_title": "Senior Delivery Consultant - Application Architect, AWS Proserve",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/3049749"
+    },
+    {
+      "job_title": "Delivery Consultant, Customer Experience, Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/3050561"
+    },
+    {
+      "job_title": "Sr. Delivery Consultant, Customer Experience, Tech & Industry",
+      "job_location": "Bangalore, IND",
+      "job_link": "https://amazon.jobs/jobs/3024907"
+    },
+    {
+      "job_title": "Sr. Application Architect, Professional Services",
+      "job_location": "Mumbai, MH, IND",
+      "job_link": "https://amazon.jobs/jobs/2809253"
+    },
+    {
+      "job_title": "Application Developer, Professional Services",
+      "job_location": "Gurugram, HR, IND",
+      "job_link": "https://amazon.jobs/jobs/3021188"
+    },
+    {
+      "job_title": "Senior Cloud Architect, Global Accounts, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2934241"
+    },
+    {
+      "job_title": "Delivery Consultant Cloud, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2941069"
+    },
+    {
+      "job_title": "Delivery Consultant Cloud, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2941062"
+    },
+    {
+      "job_title": "Anaplan BIE Manager, GFS Services FP&A",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2943480"
+    },
+    {
+      "job_title": "Sr. Delivery Consultant, Customer Experience, Tech & Industry",
+      "job_location": "Bangalore, IND",
+      "job_link": "https://amazon.jobs/jobs/3024907"
+    },
+    {
+      "job_title": "Sr. Application Architect, Professional Services",
+      "job_location": "Mumbai, MH, IND",
+      "job_link": "https://amazon.jobs/jobs/2809253"
+    },
+    {
+      "job_title": "Application Developer, Professional Services",
+      "job_location": "Gurugram, HR, IND",
+      "job_link": "https://amazon.jobs/jobs/3021188"
+    },
+    {
+      "job_title": "Senior Cloud Architect, Global Accounts, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2934241"
+    },
+    {
+      "job_title": "Delivery Consultant Cloud, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2941069"
+    },
+    {
+      "job_title": "Delivery Consultant Cloud, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2941062"
+    },
+    {
+      "job_title": "Anaplan BIE Manager, GFS Services FP&A",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2943480"
+    },
+    {
+      "job_title": "Sr. Delivery Consultant, Customer Experience, Tech & Industry",
+      "job_location": "Bangalore, IND",
+      "job_link": "https://amazon.jobs/jobs/3024907"
+    },
+    {
+      "job_title": "Sr. Application Architect, Professional Services",
+      "job_location": "Mumbai, MH, IND",
+      "job_link": "https://amazon.jobs/jobs/2809253"
+    },
+    {
+      "job_title": "Application Developer, Professional Services",
+      "job_location": "Gurugram, HR, IND",
+      "job_link": "https://amazon.jobs/jobs/3021188"
+    },
+    {
+      "job_title": "Senior Cloud Architect, Global Accounts, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2934241"
+    },
+    {
+      "job_title": "Delivery Consultant Cloud, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2941069"
+    },
+    {
+      "job_title": "Delivery Consultant Cloud, AWS Industries Professional Services",
+      "job_location": "Bangalore, KA, IND",
+      "job_link": "https://amazon.jobs/jobs/2941062"
+    },
+    {
+      "job_title": "Anaplan BIE Manager, GFS Services FP&A",
+      "job_location": "Hyderabad, TS, IND",
+      "job_link": "https://amazon.jobs/jobs/2943480"
+    }
+  ]
+}

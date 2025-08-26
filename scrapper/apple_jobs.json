@@ -2,72 +2,408 @@
   "company": "apple",
   "data": [
     {
-      "job_title": "UAE-Specialist",
-      "job_location": "Various locations within United Arab Emirates",
-      "job_link": "https://jobs.apple.com/en-in/details/114438225/uae-specialist?team=APPST",
+      "job_title": "BE-Specialist: Full-Time, Part-Time, and Part-Time Temporary",
+      "job_location": "Various locations within Belgium",
+      "job_link": "https://jobs.apple.com/en-in/details/114438251/be-specialist-full-time-part-time-and-part-time-temporary?team=APPST",
       "team": "Apple Retail",
       "posted_date": "26 Aug 2025"
     },
     {
-      "job_title": "MO-Technical Specialist",
-      "job_location": "Various locations within Macao",
-      "job_link": "https://jobs.apple.com/en-in/details/114438281/mo-technical-specialist?team=APPST",
+      "job_title": "BE-Expert",
+      "job_location": "Various locations within Belgium",
+      "job_link": "https://jobs.apple.com/en-in/details/114438244/be-expert?team=APPST",
       "team": "Apple Retail",
       "posted_date": "26 Aug 2025"
     },
     {
-      "job_title": "TW-Expert",
-      "job_location": "Various locations within Taiwan",
-      "job_link": "https://jobs.apple.com/en-in/details/114438305/tw-expert?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "TW-Operations Expert",
-      "job_location": "Various locations within Taiwan",
-      "job_link": "https://jobs.apple.com/en-in/details/114438307/tw-operations-expert?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "DE-Specialist (m/f/d)",
-      "job_location": "Various locations within Germany",
-      "job_link": "https://jobs.apple.com/en-in/details/114438043/de-specialist-m-f-d?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "ES-Creative",
+      "job_title": "ES-Business Pro",
       "job_location": "Various locations within Spain",
-      "job_link": "https://jobs.apple.com/en-in/details/114438047/es-creative?team=APPST",
+      "job_link": "https://jobs.apple.com/en-in/details/200125431/es-business-pro?team=APPST",
       "team": "Apple Retail",
       "posted_date": "26 Aug 2025"
     },
     {
-      "job_title": "SE-Business Expert",
+      "job_title": "TW-Business Pro",
+      "job_location": "Various locations within Taiwan",
+      "job_link": "https://jobs.apple.com/en-in/details/200125447/tw-business-pro?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "BR-Operations Expert",
+      "job_location": "Various locations within Brazil",
+      "job_link": "https://jobs.apple.com/en-in/details/114438180/br-operations-expert?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "BR-Expert",
+      "job_location": "Various locations within Brazil",
+      "job_link": "https://jobs.apple.com/en-in/details/114438177/br-expert?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "IT-Expert",
+      "job_location": "Various locations within Italy",
+      "job_link": "https://jobs.apple.com/en-in/details/114438087/it-expert?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "IT-Operations Expert",
+      "job_location": "Various locations within Italy",
+      "job_link": "https://jobs.apple.com/en-in/details/114438089/it-operations-expert?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "MO-Creative",
+      "job_location": "Various locations within Macao",
+      "job_link": "https://jobs.apple.com/en-in/details/114438274/mo-creative?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "TW-Technical Specialist",
+      "job_location": "Various locations within Taiwan",
+      "job_link": "https://jobs.apple.com/en-in/details/114438313/tw-technical-specialist?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "HK-Technical Specialist",
+      "job_location": "Various locations within Hong Kong",
+      "job_link": "https://jobs.apple.com/en-in/details/114438208/hk-technical-specialist?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "SE-Genius",
       "job_location": "Various locations within Sweden",
-      "job_link": "https://jobs.apple.com/en-in/details/114438122/se-business-expert?team=APPST",
+      "job_link": "https://jobs.apple.com/en-in/details/114438125/se-genius?team=APPST",
       "team": "Apple Retail",
       "posted_date": "26 Aug 2025"
     },
     {
-      "job_title": "SE-Expert",
+      "job_title": "SE-Operations Expert",
       "job_location": "Various locations within Sweden",
-      "job_link": "https://jobs.apple.com/en-in/details/114438124/se-expert?team=APPST",
+      "job_link": "https://jobs.apple.com/en-in/details/114438126/se-operations-expert?team=APPST",
       "team": "Apple Retail",
       "posted_date": "26 Aug 2025"
     },
     {
-      "job_title": "AT-Specialist (m/f/d)",
-      "job_location": "Various locations within Austria",
-      "job_link": "https://jobs.apple.com/en-in/details/114438340/at-specialist-m-f-d?team=APPST",
+      "job_title": "HK-Expert",
+      "job_location": "Various locations within Hong Kong",
+      "job_link": "https://jobs.apple.com/en-in/details/114438074/hk-expert?team=APPST",
       "team": "Apple Retail",
       "posted_date": "26 Aug 2025"
     },
     {
-      "job_title": "CH-Technical Specialist (m/f/d)",
+      "job_title": "HK-Operations Expert",
+      "job_location": "Various locations within Hong Kong",
+      "job_link": "https://jobs.apple.com/en-in/details/114438076/hk-operations-expert?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "ES-Genius",
+      "job_location": "Various locations within Spain",
+      "job_link": "https://jobs.apple.com/en-in/details/114438049/es-genius?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "CA-Specialist: Full-Time, Part-Time, and Part-Time Temporary",
+      "job_location": "Various locations within Canada",
+      "job_link": "https://jobs.apple.com/en-in/details/114438004/ca-specialist-full-time-part-time-and-part-time-temporary?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "FR-Operations Expert",
+      "job_location": "Various locations within France",
+      "job_link": "https://jobs.apple.com/en-in/details/114438063/fr-operations-expert?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "TR-Genius",
+      "job_location": "Various locations within Turkiye",
+      "job_link": "https://jobs.apple.com/en-in/details/114438166/tr-genius?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "NL-Business Expert",
+      "job_location": "Various locations within Netherlands",
+      "job_link": "https://jobs.apple.com/en-in/details/114438109/nl-business-expert?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "iPhone/Mac PRQ OPM",
+      "job_location": "Various locations within San Francisco Bay Area",
+      "job_link": "https://jobs.apple.com/en-in/details/200608731-3401/iphone-mac-prq-opm?team=OPMFG",
+      "team": "Operations and Supply Chain",
+      "posted_date": "25 Aug 2025"
+    },
+    {
+      "job_title": "Senior  / Staff Software Engineer - Apple Data Platform",
+      "job_location": "Location not specified",
+      "job_link": "https://jobs.apple.com/en-in/details/200616686-0836/senior-staff-software-engineer-apple-data-platform?team=SFTWR",
+      "team": "Software and Services",
+      "posted_date": "25 Aug 2025"
+    },
+    {
+      "job_title": "VisionOS UI Frameworks Engineer",
+      "job_location": "Location not specified",
+      "job_link": "https://jobs.apple.com/en-in/details/200613884-3956/visionos-ui-frameworks-engineer?team=SFTWR",
+      "team": "Software and Services",
+      "posted_date": "25 Aug 2025"
+    },
+    {
+      "job_title": "Site Reliability Engineer, Enterprise Technology Services",
+      "job_location": "Location not specified",
+      "job_link": "https://jobs.apple.com/en-in/details/200576572-0157/site-reliability-engineer-enterprise-technology-services?team=SFTWR",
+      "team": "Software and Services",
+      "posted_date": "25 Aug 2025"
+    },
+    {
+      "job_title": "AIML - Machine Learning Engineer, Machine Learning Platform Technologies",
+      "job_location": "Location not specified",
+      "job_link": "https://jobs.apple.com/en-in/details/200609811-0836/aiml-machine-learning-engineer-machine-learning-platform-technologies?team=MLAI",
+      "team": "Machine Learning and AI",
+      "posted_date": "25 Aug 2025"
+    },
+    {
+      "job_title": "AIML - Machine Learning Engineer, Machine Learning Platform Technologies",
+      "job_location": "Location not specified",
+      "job_link": "https://jobs.apple.com/en-in/details/200609811-3760/aiml-machine-learning-engineer-machine-learning-platform-technologies?team=MLAI",
+      "team": "Machine Learning and AI",
+      "posted_date": "25 Aug 2025"
+    },
+    {
+      "job_title": "Display Driver Engineer",
+      "job_location": "Location not specified",
+      "job_link": "https://jobs.apple.com/en-in/details/200617343-0836/display-driver-engineer?team=SFTWR",
+      "team": "Software and Services",
+      "posted_date": "25 Aug 2025"
+    },
+    {
+      "job_title": "Software Engineering Applications",
+      "job_location": "Location not specified",
+      "job_link": "https://jobs.apple.com/en-in/details/200617741-0836/software-engineering-applications?team=SFTWR",
+      "team": "Software and Services",
+      "posted_date": "25 Aug 2025"
+    },
+    {
+      "job_title": "Neural Engine Compiler & Modeling Engineer, Platform Architecture",
+      "job_location": "Location not specified",
+      "job_link": "https://jobs.apple.com/en-in/details/200617762-0836/neural-engine-compiler-modeling-engineer-platform-architecture?team=HRDWR",
+      "team": "Hardware",
+      "posted_date": "25 Aug 2025"
+    },
+    {
+      "job_title": "Neural Engine Compiler & Modeling Engineer, Platform Architecture",
+      "job_location": "Location not specified",
+      "job_link": "https://jobs.apple.com/en-in/details/200617762-3337/neural-engine-compiler-modeling-engineer-platform-architecture?team=HRDWR",
+      "team": "Hardware",
+      "posted_date": "25 Aug 2025"
+    },
+    {
+      "job_title": "Neural Engine Compiler & Modeling Architect, Platform Architecture",
+      "job_location": "Location not specified",
+      "job_link": "https://jobs.apple.com/en-in/details/200617770-0836/neural-engine-compiler-modeling-architect-platform-architecture?team=HRDWR",
+      "team": "Hardware",
+      "posted_date": "25 Aug 2025"
+    },
+    {
+      "job_title": "Neural Engine Compiler & Modeling Architect, Platform Architecture",
+      "job_location": "Location not specified",
+      "job_link": "https://jobs.apple.com/en-in/details/200617770-3337/neural-engine-compiler-modeling-architect-platform-architecture?team=HRDWR",
+      "team": "Hardware",
+      "posted_date": "25 Aug 2025"
+    },
+    {
+      "job_title": "Reliability Engineer, Ai & Data Platforms",
+      "job_location": "Location not specified",
+      "job_link": "https://jobs.apple.com/en-in/details/200617570-3956/reliability-engineer-ai-data-platforms?team=SFTWR",
+      "team": "Software and Services",
+      "posted_date": "25 Aug 2025"
+    },
+    {
+      "job_title": "Reliability Engineer, Ai & Data Platforms",
+      "job_location": "Location not specified",
+      "job_link": "https://jobs.apple.com/en-in/details/200617570-0157/reliability-engineer-ai-data-platforms?team=SFTWR",
+      "team": "Software and Services",
+      "posted_date": "25 Aug 2025"
+    },
+    {
+      "job_title": "Software QA Engineer Security,  Enterprise Technology Services",
+      "job_location": "Location not specified",
+      "job_link": "https://jobs.apple.com/en-in/details/200604037-0157/software-qa-engineer-security-enterprise-technology-services?team=SFTWR",
+      "team": "Software and Services",
+      "posted_date": "25 Aug 2025"
+    },
+    {
+      "job_title": "Software Triage Engineer",
+      "job_location": "Location not specified",
+      "job_link": "https://jobs.apple.com/en-in/details/200617279-3337/software-triage-engineer?team=SFTWR",
+      "team": "Software and Services",
+      "posted_date": "25 Aug 2025"
+    },
+    {
+      "job_title": "Software Triage Engineering Manager",
+      "job_location": "Location not specified",
+      "job_link": "https://jobs.apple.com/en-in/details/200617283-3337/software-triage-engineering-manager?team=SFTWR",
+      "team": "Software and Services",
+      "posted_date": "25 Aug 2025"
+    },
+    {
+      "job_title": "QA Engineer - TVOS",
+      "job_location": "Location not specified",
+      "job_link": "https://jobs.apple.com/en-in/details/200617378-0836/qa-engineer-tvos?team=SFTWR",
+      "team": "Software and Services",
+      "posted_date": "25 Aug 2025"
+    },
+    {
+      "job_title": "ML Engineer - Evaluation Automation, Siri AI Quality Engineering",
+      "job_location": "Location not specified",
+      "job_link": "https://jobs.apple.com/en-in/details/200617757-0836/ml-engineer-evaluation-automation-siri-ai-quality-engineering?team=MLAI",
+      "team": "Machine Learning and AI",
+      "posted_date": "25 Aug 2025"
+    },
+    {
+      "job_title": "Siri Systems Software Engineer",
+      "job_location": "Location not specified",
+      "job_link": "https://jobs.apple.com/en-in/details/200617751-3956/siri-systems-software-engineer?team=SFTWR",
+      "team": "Software and Services",
+      "posted_date": "25 Aug 2025"
+    },
+    {
+      "job_title": "BE-Creative",
+      "job_location": "Various locations within Belgium",
+      "job_link": "https://jobs.apple.com/en-in/details/114438243/be-creative?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "TR-Creative",
+      "job_location": "Various locations within Turkiye",
+      "job_link": "https://jobs.apple.com/en-in/details/114438167/tr-creative?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "FR-Genius",
+      "job_location": "Various locations within France",
+      "job_link": "https://jobs.apple.com/en-in/details/114438062/fr-genius?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "FR-Business Expert",
+      "job_location": "Various locations within France",
+      "job_link": "https://jobs.apple.com/en-in/details/114438059/fr-business-expert?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "FR-Creative",
+      "job_location": "Various locations within France",
+      "job_link": "https://jobs.apple.com/en-in/details/114438060/fr-creative?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "UK - Specialist: Full-Time, Part-Time, and Part-Time Temporary",
+      "job_location": "Various locations within United Kingdom",
+      "job_link": "https://jobs.apple.com/en-in/details/114438145/uk-specialist-full-time-part-time-and-part-time-temporary?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "NL-Business Pro",
+      "job_location": "Various locations within Netherlands",
+      "job_link": "https://jobs.apple.com/en-in/details/200125427/nl-business-pro?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "CH-Business Pro (m/f/d)",
       "job_location": "Various locations within Switzerland",
-      "job_link": "https://jobs.apple.com/en-in/details/114438204/ch-technical-specialist-m-f-d?team=APPST",
+      "job_link": "https://jobs.apple.com/en-in/details/200125441/ch-business-pro-m-f-d?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "BR-Business Pro",
+      "job_location": "Various locations within Brazil",
+      "job_link": "https://jobs.apple.com/en-in/details/200125322/br-business-pro?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "DE-Business Expert (m/f/d)",
+      "job_location": "Various locations within Germany",
+      "job_link": "https://jobs.apple.com/en-in/details/114438033/de-business-expert-m-f-d?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "DE-Expert (m/f/d)",
+      "job_location": "Various locations within Germany",
+      "job_link": "https://jobs.apple.com/en-in/details/114438035/de-expert-m-f-d?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "CH-Genius (m/f/d)",
+      "job_location": "Various locations within Switzerland",
+      "job_link": "https://jobs.apple.com/en-in/details/114438010/ch-genius-m-f-d?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "IT-Business Expert",
+      "job_location": "Various locations within Italy",
+      "job_link": "https://jobs.apple.com/en-in/details/114438085/it-business-expert?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "IT-Genius",
+      "job_location": "Various locations within Italy",
+      "job_link": "https://jobs.apple.com/en-in/details/114438088/it-genius?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "MO-Business Expert",
+      "job_location": "Various locations within Macao",
+      "job_link": "https://jobs.apple.com/en-in/details/114438273/mo-business-expert?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "MO-Genius",
+      "job_location": "Various locations within Macao",
+      "job_link": "https://jobs.apple.com/en-in/details/114438276/mo-genius?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "MX - Specialist: Full-Time, Part-Time, and Part-Time Temporary",
+      "job_location": "Various locations within Mexico",
+      "job_link": "https://jobs.apple.com/en-in/details/114438297/mx-specialist-full-time-part-time-and-part-time-temporary?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "TW-Creative",
+      "job_location": "Various locations within Taiwan",
+      "job_link": "https://jobs.apple.com/en-in/details/114438314/tw-creative?team=APPST",
       "team": "Apple Retail",
       "posted_date": "26 Aug 2025"
     },
@@ -79,65 +415,9 @@
       "posted_date": "26 Aug 2025"
     },
     {
-      "job_title": "NL-Creative",
-      "job_location": "Various locations within Netherlands",
-      "job_link": "https://jobs.apple.com/en-in/details/114438110/nl-creative?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "TR-Specialist",
-      "job_location": "Various locations within Turkiye",
-      "job_link": "https://jobs.apple.com/en-in/details/114438164/tr-specialist?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "BE-Genius",
-      "job_location": "Various locations within Belgium",
-      "job_link": "https://jobs.apple.com/en-in/details/114438245/be-genius?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "SE-Specialist",
-      "job_location": "Various locations within Sweden",
-      "job_link": "https://jobs.apple.com/en-in/details/114438132/se-specialist?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "FR- Specialist",
-      "job_location": "Various locations within France",
-      "job_link": "https://jobs.apple.com/en-in/details/114438069/fr-specialist?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "HK-Business Pro",
-      "job_location": "Various locations within Hong Kong",
-      "job_link": "https://jobs.apple.com/en-in/details/200125406/hk-business-pro?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "DE-Business Pro (m/f/d)",
-      "job_location": "Various locations within Germany",
-      "job_link": "https://jobs.apple.com/en-in/details/200125393/de-business-pro-m-f-d?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "BE-Business Expert",
-      "job_location": "Various locations within Belgium",
-      "job_link": "https://jobs.apple.com/en-in/details/114438242/be-business-expert?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "AT-Business Pro (m/f/d)",
-      "job_location": "Various locations within Austria",
-      "job_link": "https://jobs.apple.com/en-in/details/200125465/at-business-pro-m-f-d?team=APPST",
+      "job_title": "CH-Technical Specialist (m/f/d)",
+      "job_location": "Various locations within Switzerland",
+      "job_link": "https://jobs.apple.com/en-in/details/114438204/ch-technical-specialist-m-f-d?team=APPST",
       "team": "Apple Retail",
       "posted_date": "26 Aug 2025"
     },
@@ -275,6 +555,34 @@
       "posted_date": "26 Aug 2025"
     },
     {
+      "job_title": "CH-Expert (m/f/d)",
+      "job_location": "Various locations within Switzerland",
+      "job_link": "https://jobs.apple.com/en-in/details/114438009/ch-expert-m-f-d?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "BR-Business Expert",
+      "job_location": "Various locations within Brazil",
+      "job_link": "https://jobs.apple.com/en-in/details/114438175/br-business-expert?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "BR-Creative",
+      "job_location": "Various locations within Brazil",
+      "job_link": "https://jobs.apple.com/en-in/details/114438179/br-creative?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "IT-Creative",
+      "job_location": "Various locations within Italy",
+      "job_link": "https://jobs.apple.com/en-in/details/114438086/it-creative?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
       "job_title": "MX-Creative",
       "job_location": "Various locations within Mexico",
       "job_link": "https://jobs.apple.com/en-in/details/114438295/mx-creative?team=APPST",
@@ -282,142 +590,240 @@
       "posted_date": "26 Aug 2025"
     },
     {
-      "job_title": "CH-Specialist (m/f/d)",
-      "job_location": "Various locations within Switzerland",
-      "job_link": "https://jobs.apple.com/en-in/details/114438017/ch-specialist-m-f-d?team=APPST",
+      "job_title": "MX-Genius",
+      "job_location": "Various locations within Mexico",
+      "job_link": "https://jobs.apple.com/en-in/details/114438291/mx-genius?team=APPST",
       "team": "Apple Retail",
       "posted_date": "26 Aug 2025"
     },
     {
-      "job_title": "CH-Business Expert (m/f/d)",
-      "job_location": "Various locations within Switzerland",
-      "job_link": "https://jobs.apple.com/en-in/details/114438007/ch-business-expert-m-f-d?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "CH-Creative (m/f/d)",
-      "job_location": "Various locations within Switzerland",
-      "job_link": "https://jobs.apple.com/en-in/details/114438008/ch-creative-m-f-d?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "HK-Specialist: Full-Time and Part-Time",
-      "job_location": "Various locations within Hong Kong",
-      "job_link": "https://jobs.apple.com/en-in/details/114438082/hk-specialist-full-time-and-part-time?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "AT-Creative (m/f/d)",
+      "job_title": "AT-Operations Expert (m/f/d)",
       "job_location": "Various locations within Austria",
-      "job_link": "https://jobs.apple.com/en-in/details/114438332/at-creative-m-f-d?team=APPST",
+      "job_link": "https://jobs.apple.com/en-in/details/114438335/at-operations-expert-m-f-d?team=APPST",
       "team": "Apple Retail",
       "posted_date": "26 Aug 2025"
     },
     {
-      "job_title": "AT-Genius (m/f/d)",
-      "job_location": "Various locations within Austria",
-      "job_link": "https://jobs.apple.com/en-in/details/114438334/at-genius-m-f-d?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "IT-Technical Specialist",
-      "job_location": "Various locations within Italy",
-      "job_link": "https://jobs.apple.com/en-in/details/114438209/it-technical-specialist?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "DE-Creative (m/f/d)",
-      "job_location": "Various locations within Germany",
-      "job_link": "https://jobs.apple.com/en-in/details/114438034/de-creative-m-f-d?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "DE-Genius (m/f/d)",
-      "job_location": "Various locations within Germany",
-      "job_link": "https://jobs.apple.com/en-in/details/114438036/de-genius-m-f-d?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "BR-Genius",
-      "job_location": "Various locations within Brazil",
-      "job_link": "https://jobs.apple.com/en-in/details/114438178/br-genius?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "MO-Operations Expert",
-      "job_location": "Various locations within Macao",
-      "job_link": "https://jobs.apple.com/en-in/details/114438277/mo-operations-expert?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "ES - Technical Specialist: Full-Time, Part-Time, and Part-Time Temporary",
+      "job_title": "ES-Operations Expert",
       "job_location": "Various locations within Spain",
-      "job_link": "https://jobs.apple.com/en-in/details/114438212/es-technical-specialist-full-time-part-time-and-part-time-temporary?team=APPST",
+      "job_link": "https://jobs.apple.com/en-in/details/114438050/es-operations-expert?team=APPST",
       "team": "Apple Retail",
       "posted_date": "26 Aug 2025"
     },
     {
-      "job_title": "UAE-Technical Specialist",
+      "job_title": "UAE-Creative",
       "job_location": "Various locations within United Arab Emirates",
-      "job_link": "https://jobs.apple.com/en-in/details/114438224/uae-technical-specialist?team=APPST",
+      "job_link": "https://jobs.apple.com/en-in/details/114438217/uae-creative?team=APPST",
       "team": "Apple Retail",
       "posted_date": "26 Aug 2025"
     },
     {
-      "job_title": "TW-Business Expert",
-      "job_location": "Various locations within Taiwan",
-      "job_link": "https://jobs.apple.com/en-in/details/114438303/tw-business-expert?team=APPST",
+      "job_title": "MO-Specialist: Full Time or Part Time, Permanent or Temporary",
+      "job_location": "Various locations within Macao",
+      "job_link": "https://jobs.apple.com/en-in/details/114438282/mo-specialist-full-time-or-part-time-permanent-or-temporary?team=APPST",
       "team": "Apple Retail",
       "posted_date": "26 Aug 2025"
     },
     {
-      "job_title": "HK-Creative",
-      "job_location": "Various locations within Hong Kong",
-      "job_link": "https://jobs.apple.com/en-in/details/114438073/hk-creative?team=APPST",
+      "job_title": "MX-Operations Expert",
+      "job_location": "Various locations within Mexico",
+      "job_link": "https://jobs.apple.com/en-in/details/114438285/mx-operations-expert?team=APPST",
       "team": "Apple Retail",
       "posted_date": "26 Aug 2025"
     },
     {
-      "job_title": "HK-Genius",
-      "job_location": "Various locations within Hong Kong",
-      "job_link": "https://jobs.apple.com/en-in/details/114438075/hk-genius?team=APPST",
+      "job_title": "MX-Technical Specialist",
+      "job_location": "Various locations within Mexico",
+      "job_link": "https://jobs.apple.com/en-in/details/114438287/mx-technical-specialist?team=APPST",
       "team": "Apple Retail",
       "posted_date": "26 Aug 2025"
     },
     {
-      "job_title": "HK-Business Expert",
-      "job_location": "Various locations within Hong Kong",
-      "job_link": "https://jobs.apple.com/en-in/details/114438072/hk-business-expert?team=APPST",
+      "job_title": "SE-Creative",
+      "job_location": "Various locations within Sweden",
+      "job_link": "https://jobs.apple.com/en-in/details/114438123/se-creative?team=APPST",
       "team": "Apple Retail",
       "posted_date": "26 Aug 2025"
     },
     {
-      "job_title": "BE-Expert",
-      "job_location": "Various locations within Belgium",
-      "job_link": "https://jobs.apple.com/en-in/details/114438244/be-expert?team=APPST",
+      "job_title": "CN-Specialist: Full-Time and Part-Time",
+      "job_location": "Various locations within China",
+      "job_link": "https://jobs.apple.com/en-in/details/114438030/cn-specialist-full-time-and-part-time?team=APPST",
       "team": "Apple Retail",
       "posted_date": "26 Aug 2025"
     },
     {
-      "job_title": "BE-Specialist: Full-Time, Part-Time, and Part-Time Temporary",
-      "job_location": "Various locations within Belgium",
-      "job_link": "https://jobs.apple.com/en-in/details/114438251/be-specialist-full-time-part-time-and-part-time-temporary?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "TR-Technical Specialist",
+      "job_title": "TR-Expert",
       "job_location": "Various locations within Turkiye",
-      "job_link": "https://jobs.apple.com/en-in/details/114438203/tr-technical-specialist?team=APPST",
+      "job_link": "https://jobs.apple.com/en-in/details/114438165/tr-expert?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "NL-Genius",
+      "job_location": "Various locations within Netherlands",
+      "job_link": "https://jobs.apple.com/en-in/details/114438112/nl-genius?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "TR-Business Expert",
+      "job_location": "Various locations within Turkiye",
+      "job_link": "https://jobs.apple.com/en-in/details/114438163/tr-business-expert?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "BE-Technical Specialist",
+      "job_location": "Various locations within Belgium",
+      "job_link": "https://jobs.apple.com/en-in/details/114438250/be-technical-specialist?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "NL-Operations Expert",
+      "job_location": "Various locations within Netherlands",
+      "job_link": "https://jobs.apple.com/en-in/details/114438113/nl-operations-expert?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "SE-Technical Specialist",
+      "job_location": "Various locations within Sweden",
+      "job_link": "https://jobs.apple.com/en-in/details/114438205/se-technical-specialist?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "FR-Expert",
+      "job_location": "Various locations within France",
+      "job_link": "https://jobs.apple.com/en-in/details/114438061/fr-expert?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "UAE-Specialist",
+      "job_location": "Various locations within United Arab Emirates",
+      "job_link": "https://jobs.apple.com/en-in/details/114438225/uae-specialist?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "MO-Technical Specialist",
+      "job_location": "Various locations within Macao",
+      "job_link": "https://jobs.apple.com/en-in/details/114438281/mo-technical-specialist?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "TW-Expert",
+      "job_location": "Various locations within Taiwan",
+      "job_link": "https://jobs.apple.com/en-in/details/114438305/tw-expert?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "TW-Operations Expert",
+      "job_location": "Various locations within Taiwan",
+      "job_link": "https://jobs.apple.com/en-in/details/114438307/tw-operations-expert?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "DE-Specialist (m/f/d)",
+      "job_location": "Various locations within Germany",
+      "job_link": "https://jobs.apple.com/en-in/details/114438043/de-specialist-m-f-d?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "ES-Creative",
+      "job_location": "Various locations within Spain",
+      "job_link": "https://jobs.apple.com/en-in/details/114438047/es-creative?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "SE-Business Expert",
+      "job_location": "Various locations within Sweden",
+      "job_link": "https://jobs.apple.com/en-in/details/114438122/se-business-expert?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "SE-Expert",
+      "job_location": "Various locations within Sweden",
+      "job_link": "https://jobs.apple.com/en-in/details/114438124/se-expert?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "AT-Specialist (m/f/d)",
+      "job_location": "Various locations within Austria",
+      "job_link": "https://jobs.apple.com/en-in/details/114438340/at-specialist-m-f-d?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "NL-Creative",
+      "job_location": "Various locations within Netherlands",
+      "job_link": "https://jobs.apple.com/en-in/details/114438110/nl-creative?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "TR-Specialist",
+      "job_location": "Various locations within Turkiye",
+      "job_link": "https://jobs.apple.com/en-in/details/114438164/tr-specialist?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "BE-Genius",
+      "job_location": "Various locations within Belgium",
+      "job_link": "https://jobs.apple.com/en-in/details/114438245/be-genius?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "SE-Specialist",
+      "job_location": "Various locations within Sweden",
+      "job_link": "https://jobs.apple.com/en-in/details/114438132/se-specialist?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "FR- Specialist",
+      "job_location": "Various locations within France",
+      "job_link": "https://jobs.apple.com/en-in/details/114438069/fr-specialist?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "HK-Business Pro",
+      "job_location": "Various locations within Hong Kong",
+      "job_link": "https://jobs.apple.com/en-in/details/200125406/hk-business-pro?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "DE-Business Pro (m/f/d)",
+      "job_location": "Various locations within Germany",
+      "job_link": "https://jobs.apple.com/en-in/details/200125393/de-business-pro-m-f-d?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "BE-Business Expert",
+      "job_location": "Various locations within Belgium",
+      "job_link": "https://jobs.apple.com/en-in/details/114438242/be-business-expert?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "AT-Business Pro (m/f/d)",
+      "job_location": "Various locations within Austria",
+      "job_link": "https://jobs.apple.com/en-in/details/200125465/at-business-pro-m-f-d?team=APPST",
       "team": "Apple Retail",
       "posted_date": "26 Aug 2025"
     },
@@ -562,6 +968,132 @@
       "posted_date": "26 Aug 2025"
     },
     {
+      "job_title": "CH-Specialist (m/f/d)",
+      "job_location": "Various locations within Switzerland",
+      "job_link": "https://jobs.apple.com/en-in/details/114438017/ch-specialist-m-f-d?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "CH-Business Expert (m/f/d)",
+      "job_location": "Various locations within Switzerland",
+      "job_link": "https://jobs.apple.com/en-in/details/114438007/ch-business-expert-m-f-d?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "CH-Creative (m/f/d)",
+      "job_location": "Various locations within Switzerland",
+      "job_link": "https://jobs.apple.com/en-in/details/114438008/ch-creative-m-f-d?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "HK-Specialist: Full-Time and Part-Time",
+      "job_location": "Various locations within Hong Kong",
+      "job_link": "https://jobs.apple.com/en-in/details/114438082/hk-specialist-full-time-and-part-time?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "AT-Creative (m/f/d)",
+      "job_location": "Various locations within Austria",
+      "job_link": "https://jobs.apple.com/en-in/details/114438332/at-creative-m-f-d?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "AT-Genius (m/f/d)",
+      "job_location": "Various locations within Austria",
+      "job_link": "https://jobs.apple.com/en-in/details/114438334/at-genius-m-f-d?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "IT-Technical Specialist",
+      "job_location": "Various locations within Italy",
+      "job_link": "https://jobs.apple.com/en-in/details/114438209/it-technical-specialist?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "DE-Creative (m/f/d)",
+      "job_location": "Various locations within Germany",
+      "job_link": "https://jobs.apple.com/en-in/details/114438034/de-creative-m-f-d?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "DE-Genius (m/f/d)",
+      "job_location": "Various locations within Germany",
+      "job_link": "https://jobs.apple.com/en-in/details/114438036/de-genius-m-f-d?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "BR-Genius",
+      "job_location": "Various locations within Brazil",
+      "job_link": "https://jobs.apple.com/en-in/details/114438178/br-genius?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "MO-Operations Expert",
+      "job_location": "Various locations within Macao",
+      "job_link": "https://jobs.apple.com/en-in/details/114438277/mo-operations-expert?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "ES - Technical Specialist: Full-Time, Part-Time, and Part-Time Temporary",
+      "job_location": "Various locations within Spain",
+      "job_link": "https://jobs.apple.com/en-in/details/114438212/es-technical-specialist-full-time-part-time-and-part-time-temporary?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "UAE-Technical Specialist",
+      "job_location": "Various locations within United Arab Emirates",
+      "job_link": "https://jobs.apple.com/en-in/details/114438224/uae-technical-specialist?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "TW-Business Expert",
+      "job_location": "Various locations within Taiwan",
+      "job_link": "https://jobs.apple.com/en-in/details/114438303/tw-business-expert?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "HK-Creative",
+      "job_location": "Various locations within Hong Kong",
+      "job_link": "https://jobs.apple.com/en-in/details/114438073/hk-creative?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "HK-Genius",
+      "job_location": "Various locations within Hong Kong",
+      "job_link": "https://jobs.apple.com/en-in/details/114438075/hk-genius?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "HK-Business Expert",
+      "job_location": "Various locations within Hong Kong",
+      "job_link": "https://jobs.apple.com/en-in/details/114438072/hk-business-expert?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
+      "job_title": "TR-Technical Specialist",
+      "job_location": "Various locations within Turkiye",
+      "job_link": "https://jobs.apple.com/en-in/details/114438203/tr-technical-specialist?team=APPST",
+      "team": "Apple Retail",
+      "posted_date": "26 Aug 2025"
+    },
+    {
       "job_title": "NL-Specialist: Full-Time, Part-Time, and Part-Time Temporary",
       "job_location": "Various locations within Netherlands",
       "job_link": "https://jobs.apple.com/en-in/details/114438119/nl-specialist-full-time-part-time-and-part-time-temporary?team=APPST",
@@ -579,13 +1111,6 @@
       "job_title": "TR-Operations Expert",
       "job_location": "Various locations within Turkiye",
       "job_link": "https://jobs.apple.com/en-in/details/114438168/tr-operations-expert?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "FR-Operations Expert",
-      "job_location": "Various locations within France",
-      "job_link": "https://jobs.apple.com/en-in/details/114438063/fr-operations-expert?team=APPST",
       "team": "Apple Retail",
       "posted_date": "26 Aug 2025"
     },
@@ -699,419 +1224,6 @@
       "job_location": "Various locations within San Francisco Bay Area",
       "job_link": "https://jobs.apple.com/en-in/details/200591493-3401/operations-program-manager-post-ramp-qualification?team=OPMFG",
       "team": "Operations and Supply Chain",
-      "posted_date": "25 Aug 2025"
-    },
-    {
-      "job_title": "BE-Creative",
-      "job_location": "Various locations within Belgium",
-      "job_link": "https://jobs.apple.com/en-in/details/114438243/be-creative?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "TR-Creative",
-      "job_location": "Various locations within Turkiye",
-      "job_link": "https://jobs.apple.com/en-in/details/114438167/tr-creative?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "FR-Genius",
-      "job_location": "Various locations within France",
-      "job_link": "https://jobs.apple.com/en-in/details/114438062/fr-genius?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "FR-Creative",
-      "job_location": "Various locations within France",
-      "job_link": "https://jobs.apple.com/en-in/details/114438060/fr-creative?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "UK - Specialist: Full-Time, Part-Time, and Part-Time Temporary",
-      "job_location": "Various locations within United Kingdom",
-      "job_link": "https://jobs.apple.com/en-in/details/114438145/uk-specialist-full-time-part-time-and-part-time-temporary?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "NL-Business Pro",
-      "job_location": "Various locations within Netherlands",
-      "job_link": "https://jobs.apple.com/en-in/details/200125427/nl-business-pro?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "FR-Business Expert",
-      "job_location": "Various locations within France",
-      "job_link": "https://jobs.apple.com/en-in/details/114438059/fr-business-expert?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "BR-Business Pro",
-      "job_location": "Various locations within Brazil",
-      "job_link": "https://jobs.apple.com/en-in/details/200125322/br-business-pro?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "CH-Business Pro (m/f/d)",
-      "job_location": "Various locations within Switzerland",
-      "job_link": "https://jobs.apple.com/en-in/details/200125441/ch-business-pro-m-f-d?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "IT-Business Expert",
-      "job_location": "Various locations within Italy",
-      "job_link": "https://jobs.apple.com/en-in/details/114438085/it-business-expert?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "IT-Genius",
-      "job_location": "Various locations within Italy",
-      "job_link": "https://jobs.apple.com/en-in/details/114438088/it-genius?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "DE-Business Expert (m/f/d)",
-      "job_location": "Various locations within Germany",
-      "job_link": "https://jobs.apple.com/en-in/details/114438033/de-business-expert-m-f-d?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "DE-Expert (m/f/d)",
-      "job_location": "Various locations within Germany",
-      "job_link": "https://jobs.apple.com/en-in/details/114438035/de-expert-m-f-d?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "CH-Genius (m/f/d)",
-      "job_location": "Various locations within Switzerland",
-      "job_link": "https://jobs.apple.com/en-in/details/114438010/ch-genius-m-f-d?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "MO-Business Expert",
-      "job_location": "Various locations within Macao",
-      "job_link": "https://jobs.apple.com/en-in/details/114438273/mo-business-expert?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "MO-Genius",
-      "job_location": "Various locations within Macao",
-      "job_link": "https://jobs.apple.com/en-in/details/114438276/mo-genius?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "TW-Creative",
-      "job_location": "Various locations within Taiwan",
-      "job_link": "https://jobs.apple.com/en-in/details/114438314/tw-creative?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "MX - Specialist: Full-Time, Part-Time, and Part-Time Temporary",
-      "job_location": "Various locations within Mexico",
-      "job_link": "https://jobs.apple.com/en-in/details/114438297/mx-specialist-full-time-part-time-and-part-time-temporary?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "UAE-Genius",
-      "job_location": "Various locations within United Arab Emirates",
-      "job_link": "https://jobs.apple.com/en-in/details/114438219/uae-genius?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "UAE-Operations Expert",
-      "job_location": "Various locations within United Arab Emirates",
-      "job_link": "https://jobs.apple.com/en-in/details/114438220/uae-operations-expert?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "BR-Business Expert",
-      "job_location": "Various locations within Brazil",
-      "job_link": "https://jobs.apple.com/en-in/details/114438175/br-business-expert?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "BR-Creative",
-      "job_location": "Various locations within Brazil",
-      "job_link": "https://jobs.apple.com/en-in/details/114438179/br-creative?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "IT-Creative",
-      "job_location": "Various locations within Italy",
-      "job_link": "https://jobs.apple.com/en-in/details/114438086/it-creative?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "MX-Genius",
-      "job_location": "Various locations within Mexico",
-      "job_link": "https://jobs.apple.com/en-in/details/114438291/mx-genius?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "AT-Operations Expert (m/f/d)",
-      "job_location": "Various locations within Austria",
-      "job_link": "https://jobs.apple.com/en-in/details/114438335/at-operations-expert-m-f-d?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "ES-Operations Expert",
-      "job_location": "Various locations within Spain",
-      "job_link": "https://jobs.apple.com/en-in/details/114438050/es-operations-expert?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "UAE-Creative",
-      "job_location": "Various locations within United Arab Emirates",
-      "job_link": "https://jobs.apple.com/en-in/details/114438217/uae-creative?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "MO-Specialist: Full Time or Part Time, Permanent or Temporary",
-      "job_location": "Various locations within Macao",
-      "job_link": "https://jobs.apple.com/en-in/details/114438282/mo-specialist-full-time-or-part-time-permanent-or-temporary?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "MX-Operations Expert",
-      "job_location": "Various locations within Mexico",
-      "job_link": "https://jobs.apple.com/en-in/details/114438285/mx-operations-expert?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "MX-Technical Specialist",
-      "job_location": "Various locations within Mexico",
-      "job_link": "https://jobs.apple.com/en-in/details/114438287/mx-technical-specialist?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "SE-Creative",
-      "job_location": "Various locations within Sweden",
-      "job_link": "https://jobs.apple.com/en-in/details/114438123/se-creative?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "CN-Specialist: Full-Time and Part-Time",
-      "job_location": "Various locations within China",
-      "job_link": "https://jobs.apple.com/en-in/details/114438030/cn-specialist-full-time-and-part-time?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "TR-Expert",
-      "job_location": "Various locations within Turkiye",
-      "job_link": "https://jobs.apple.com/en-in/details/114438165/tr-expert?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "NL-Genius",
-      "job_location": "Various locations within Netherlands",
-      "job_link": "https://jobs.apple.com/en-in/details/114438112/nl-genius?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "TR-Business Expert",
-      "job_location": "Various locations within Turkiye",
-      "job_link": "https://jobs.apple.com/en-in/details/114438163/tr-business-expert?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "BE-Technical Specialist",
-      "job_location": "Various locations within Belgium",
-      "job_link": "https://jobs.apple.com/en-in/details/114438250/be-technical-specialist?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "NL-Operations Expert",
-      "job_location": "Various locations within Netherlands",
-      "job_link": "https://jobs.apple.com/en-in/details/114438113/nl-operations-expert?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "SE-Technical Specialist",
-      "job_location": "Various locations within Sweden",
-      "job_link": "https://jobs.apple.com/en-in/details/114438205/se-technical-specialist?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "FR-Expert",
-      "job_location": "Various locations within France",
-      "job_link": "https://jobs.apple.com/en-in/details/114438061/fr-expert?team=APPST",
-      "team": "Apple Retail",
-      "posted_date": "26 Aug 2025"
-    },
-    {
-      "job_title": "iPhone/Mac PRQ OPM",
-      "job_location": "Various locations within San Francisco Bay Area",
-      "job_link": "https://jobs.apple.com/en-in/details/200608731-3401/iphone-mac-prq-opm?team=OPMFG",
-      "team": "Operations and Supply Chain",
-      "posted_date": "25 Aug 2025"
-    },
-    {
-      "job_title": "Senior  / Staff Software Engineer - Apple Data Platform",
-      "job_location": "Location not specified",
-      "job_link": "https://jobs.apple.com/en-in/details/200616686-0836/senior-staff-software-engineer-apple-data-platform?team=SFTWR",
-      "team": "Software and Services",
-      "posted_date": "25 Aug 2025"
-    },
-    {
-      "job_title": "VisionOS UI Frameworks Engineer",
-      "job_location": "Location not specified",
-      "job_link": "https://jobs.apple.com/en-in/details/200613884-3956/visionos-ui-frameworks-engineer?team=SFTWR",
-      "team": "Software and Services",
-      "posted_date": "25 Aug 2025"
-    },
-    {
-      "job_title": "Site Reliability Engineer, Enterprise Technology Services",
-      "job_location": "Location not specified",
-      "job_link": "https://jobs.apple.com/en-in/details/200576572-0157/site-reliability-engineer-enterprise-technology-services?team=SFTWR",
-      "team": "Software and Services",
-      "posted_date": "25 Aug 2025"
-    },
-    {
-      "job_title": "AIML - Machine Learning Engineer, Machine Learning Platform Technologies",
-      "job_location": "Location not specified",
-      "job_link": "https://jobs.apple.com/en-in/details/200609811-0836/aiml-machine-learning-engineer-machine-learning-platform-technologies?team=MLAI",
-      "team": "Machine Learning and AI",
-      "posted_date": "25 Aug 2025"
-    },
-    {
-      "job_title": "AIML - Machine Learning Engineer, Machine Learning Platform Technologies",
-      "job_location": "Location not specified",
-      "job_link": "https://jobs.apple.com/en-in/details/200609811-3760/aiml-machine-learning-engineer-machine-learning-platform-technologies?team=MLAI",
-      "team": "Machine Learning and AI",
-      "posted_date": "25 Aug 2025"
-    },
-    {
-      "job_title": "Display Driver Engineer",
-      "job_location": "Location not specified",
-      "job_link": "https://jobs.apple.com/en-in/details/200617343-0836/display-driver-engineer?team=SFTWR",
-      "team": "Software and Services",
-      "posted_date": "25 Aug 2025"
-    },
-    {
-      "job_title": "Software Engineering Applications",
-      "job_location": "Location not specified",
-      "job_link": "https://jobs.apple.com/en-in/details/200617741-0836/software-engineering-applications?team=SFTWR",
-      "team": "Software and Services",
-      "posted_date": "25 Aug 2025"
-    },
-    {
-      "job_title": "Neural Engine Compiler & Modeling Engineer, Platform Architecture",
-      "job_location": "Location not specified",
-      "job_link": "https://jobs.apple.com/en-in/details/200617762-0836/neural-engine-compiler-modeling-engineer-platform-architecture?team=HRDWR",
-      "team": "Hardware",
-      "posted_date": "25 Aug 2025"
-    },
-    {
-      "job_title": "Neural Engine Compiler & Modeling Engineer, Platform Architecture",
-      "job_location": "Location not specified",
-      "job_link": "https://jobs.apple.com/en-in/details/200617762-3337/neural-engine-compiler-modeling-engineer-platform-architecture?team=HRDWR",
-      "team": "Hardware",
-      "posted_date": "25 Aug 2025"
-    },
-    {
-      "job_title": "Neural Engine Compiler & Modeling Architect, Platform Architecture",
-      "job_location": "Location not specified",
-      "job_link": "https://jobs.apple.com/en-in/details/200617770-0836/neural-engine-compiler-modeling-architect-platform-architecture?team=HRDWR",
-      "team": "Hardware",
-      "posted_date": "25 Aug 2025"
-    },
-    {
-      "job_title": "Neural Engine Compiler & Modeling Architect, Platform Architecture",
-      "job_location": "Location not specified",
-      "job_link": "https://jobs.apple.com/en-in/details/200617770-3337/neural-engine-compiler-modeling-architect-platform-architecture?team=HRDWR",
-      "team": "Hardware",
-      "posted_date": "25 Aug 2025"
-    },
-    {
-      "job_title": "Reliability Engineer, Ai & Data Platforms",
-      "job_location": "Location not specified",
-      "job_link": "https://jobs.apple.com/en-in/details/200617570-3956/reliability-engineer-ai-data-platforms?team=SFTWR",
-      "team": "Software and Services",
-      "posted_date": "25 Aug 2025"
-    },
-    {
-      "job_title": "Reliability Engineer, Ai & Data Platforms",
-      "job_location": "Location not specified",
-      "job_link": "https://jobs.apple.com/en-in/details/200617570-0157/reliability-engineer-ai-data-platforms?team=SFTWR",
-      "team": "Software and Services",
-      "posted_date": "25 Aug 2025"
-    },
-    {
-      "job_title": "Software QA Engineer Security,  Enterprise Technology Services",
-      "job_location": "Location not specified",
-      "job_link": "https://jobs.apple.com/en-in/details/200604037-0157/software-qa-engineer-security-enterprise-technology-services?team=SFTWR",
-      "team": "Software and Services",
-      "posted_date": "25 Aug 2025"
-    },
-    {
-      "job_title": "Software Triage Engineer",
-      "job_location": "Location not specified",
-      "job_link": "https://jobs.apple.com/en-in/details/200617279-3337/software-triage-engineer?team=SFTWR",
-      "team": "Software and Services",
-      "posted_date": "25 Aug 2025"
-    },
-    {
-      "job_title": "Software Triage Engineering Manager",
-      "job_location": "Location not specified",
-      "job_link": "https://jobs.apple.com/en-in/details/200617283-3337/software-triage-engineering-manager?team=SFTWR",
-      "team": "Software and Services",
-      "posted_date": "25 Aug 2025"
-    },
-    {
-      "job_title": "QA Engineer - TVOS",
-      "job_location": "Location not specified",
-      "job_link": "https://jobs.apple.com/en-in/details/200617378-0836/qa-engineer-tvos?team=SFTWR",
-      "team": "Software and Services",
-      "posted_date": "25 Aug 2025"
-    },
-    {
-      "job_title": "ML Engineer - Evaluation Automation, Siri AI Quality Engineering",
-      "job_location": "Location not specified",
-      "job_link": "https://jobs.apple.com/en-in/details/200617757-0836/ml-engineer-evaluation-automation-siri-ai-quality-engineering?team=MLAI",
-      "team": "Machine Learning and AI",
-      "posted_date": "25 Aug 2025"
-    },
-    {
-      "job_title": "Siri Systems Software Engineer",
-      "job_location": "Location not specified",
-      "job_link": "https://jobs.apple.com/en-in/details/200617751-3956/siri-systems-software-engineer?team=SFTWR",
-      "team": "Software and Services",
       "posted_date": "25 Aug 2025"
     },
     {

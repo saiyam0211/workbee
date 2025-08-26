@@ -7,8 +7,11 @@ from selenium.common.exceptions import TimeoutException, NoSuchElementException
 from bs4 import BeautifulSoup
 import json
 import time
+import requests
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import logging
+import threading
+from urllib.parse import urljoin
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -20,8 +23,12 @@ class AmazonJobsScraper:
         self.data = []
         self.PAGINATION_LIST_CLASS_NAME = "ehuj7it0"
         self.UNORDERED_LIST_CLASS_NAME = "jobs-module_root__gY8Hp"
+        self.session = requests.Session()
+        self.session.headers.update({
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        })
         
-        # Optimized Chrome options
+        # Optimized Chrome options for faster performance
         self.chrome_options = Options()
         if headless:
             self.chrome_options.add_argument("--headless")
@@ -29,13 +36,16 @@ class AmazonJobsScraper:
         self.chrome_options.add_argument("--disable-dev-shm-usage")
         self.chrome_options.add_argument("--disable-gpu")
         self.chrome_options.add_argument("--disable-extensions")
-        self.chrome_options.add_argument("--disable-images")  # Don't load images
-        self.chrome_options.add_argument("--disable-javascript")  # Disable JS if not needed
+        self.chrome_options.add_argument("--disable-images")
+        self.chrome_options.add_argument("--disable-plugins")
+        self.chrome_options.add_argument("--disable-web-security")
+        self.chrome_options.add_argument("--disable-features=VizDisplayCompositor")
         self.chrome_options.add_experimental_option("useAutomationExtension", False)
         self.chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
         
         self.driver = None
         self.wait = None
+        self.lock = threading.Lock()
     
     def init_driver(self):
         """Initialize driver and wait object"""
@@ -66,8 +76,8 @@ class AmazonJobsScraper:
         jobs_data = []
         
         try:
-            # Wait for job listings to load
-            ul = self.safe_find_element(By.CLASS_NAME, self.UNORDERED_LIST_CLASS_NAME, timeout=15)
+            # Wait for job listings to load with reduced timeout
+            ul = self.safe_find_element(By.CLASS_NAME, self.UNORDERED_LIST_CLASS_NAME, timeout=8)
             if not ul:
                 logger.warning("Job listings container not found")
                 return jobs_data
@@ -111,7 +121,7 @@ class AmazonJobsScraper:
     def get_total_pages(self):
         """Get total number of pages"""
         try:
-            pagination_list = self.safe_find_element(By.CLASS_NAME, self.PAGINATION_LIST_CLASS_NAME, timeout=10)
+            pagination_list = self.safe_find_element(By.CLASS_NAME, self.PAGINATION_LIST_CLASS_NAME, timeout=5)
             if not pagination_list:
                 logger.warning("Pagination not found, assuming single page")
                 return 1
@@ -133,34 +143,87 @@ class AmazonJobsScraper:
     def navigate_to_next_page(self):
         """Navigate to next page"""
         try:
-            next_button = self.safe_find_element(By.CSS_SELECTOR, 'button[data-test-id="next-page"]', timeout=5)
+            next_button = self.safe_find_element(By.CSS_SELECTOR, 'button[data-test-id="next-page"]', timeout=3)
             if next_button and next_button.is_enabled():
                 self.driver.execute_script("arguments[0].click();", next_button)
-                # Wait for page to load
-                time.sleep(2)
+                # Reduced wait time
+                time.sleep(1)
                 return True
             return False
         except Exception as e:
             logger.warning(f"Error navigating to next page: {str(e)}")
             return False
     
-    def scrape_category(self, url):
-        """Scrape all jobs from a category"""
+    def scrape_category_fast(self, url):
+        """Fast scraping using requests where possible"""
+        category_data = []
+        
+        try:
+            # Try to get initial page with requests first
+            response = self.session.get(url, timeout=10)
+            if response.status_code == 200:
+                soup = BeautifulSoup(response.content, "html.parser")
+                
+                # Check if we can extract jobs directly from HTML
+                job_list = soup.find_all("li")
+                if job_list:
+                    for job in job_list:
+                        try:
+                            h3 = job.find("h3")
+                            if not h3:
+                                continue
+                                
+                            title = h3.get_text(strip=True)
+                            link_elem = h3.find("a")
+                            if not link_elem:
+                                continue
+                                
+                            link = "https://amazon.jobs" + link_elem.get("href")
+                            
+                            location_elem = job.find("div", class_="metadatum-module_text__ncKFr")
+                            location = location_elem.get_text(strip=True) if location_elem else "Location not specified"
+                            
+                            category_data.append({
+                                "job_title": title,
+                                "job_location": location,
+                                "job_link": link
+                            })
+                            
+                        except Exception as e:
+                            continue
+                    
+                    if category_data:
+                        logger.info(f"Fast scraping successful for {url}: {len(category_data)} jobs")
+                        return category_data
+            
+            # Fallback to Selenium if requests method fails
+            logger.info(f"Falling back to Selenium for {url}")
+            return self.scrape_category_selenium(url)
+            
+        except Exception as e:
+            logger.error(f"Error in fast scraping {url}: {str(e)}")
+            return self.scrape_category_selenium(url)
+    
+    def scrape_category_selenium(self, url):
+        """Original Selenium-based scraping as fallback"""
         category_data = []
         
         try:
             self.init_driver()
-            logger.info(f"Scraping category: {url}")
+            logger.info(f"Scraping category with Selenium: {url}")
             
             self.driver.get(url)
-            time.sleep(3)  # Initial page load
+            time.sleep(2)  # Reduced initial page load time
             
             total_pages = self.get_total_pages()
             logger.info(f"Found {total_pages} pages to scrape")
             
+            # Limit pages for faster scraping
+            max_pages = min(total_pages, 5)  # Limit to 5 pages per category for speed
+            
             current_page = 1
-            while current_page <= total_pages:
-                logger.info(f"Scraping page {current_page}/{total_pages}")
+            while current_page <= max_pages:
+                logger.info(f"Scraping page {current_page}/{max_pages}")
                 
                 # Extract jobs from current page
                 page_jobs = self.extract_job_data_from_page()
@@ -168,7 +231,7 @@ class AmazonJobsScraper:
                 logger.info(f"Extracted {len(page_jobs)} jobs from page {current_page}")
                 
                 # Navigate to next page if not the last page
-                if current_page < total_pages:
+                if current_page < max_pages:
                     if not self.navigate_to_next_page():
                         logger.warning(f"Failed to navigate to page {current_page + 1}")
                         break
@@ -185,20 +248,47 @@ class AmazonJobsScraper:
         
         return category_data
     
-    def scrape_all_categories(self, urls, max_workers=3):
-        """Scrape multiple categories with threading"""
+    def scrape_category(self, url):
+        """Main category scraping method"""
+        return self.scrape_category_fast(url)
+    
+    def scrape_all_categories_parallel(self, urls, max_workers=5):
+        """Scrape multiple categories with parallel processing"""
         all_data = []
+        start_time = time.time()
         
-        # Sequential processing (more stable for Selenium)
-        for url in urls:
-            category_url = url + "?country%5B%5D=IN"
-            category_data = self.scrape_category(category_url)
-            all_data.extend(category_data)
+        # Prepare URLs with country filter
+        category_urls = [url + "?country%5B%5D=IN" for url in urls]
+        
+        logger.info(f"Starting parallel scraping of {len(category_urls)} categories with {max_workers} workers")
+        
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            # Submit all category scraping tasks
+            future_to_url = {
+                executor.submit(self.scrape_category, url): url 
+                for url in category_urls
+            }
             
-            # Brief pause between categories to avoid rate limiting
-            time.sleep(2)
+            # Collect results as they complete
+            for future in as_completed(future_to_url):
+                url = future_to_url[future]
+                try:
+                    category_data = future.result()
+                    with self.lock:
+                        all_data.extend(category_data)
+                        logger.info(f"Completed {url}: {len(category_data)} jobs (Total: {len(all_data)})")
+                        
+                except Exception as e:
+                    logger.error(f"Error processing {url}: {str(e)}")
+        
+        end_time = time.time()
+        logger.info(f"Parallel scraping completed in {end_time - start_time:.2f} seconds")
         
         return all_data
+    
+    def scrape_all_categories(self, urls, max_workers=5):
+        """Main method for scraping all categories"""
+        return self.scrape_all_categories_parallel(urls, max_workers)
 
 def main():
     """Main execution function"""
@@ -216,34 +306,38 @@ def main():
         "https://amazon.jobs/content/en/job-categories/systems-quality-security-engineering"
     ]
     
-    scraper = AmazonJobsScraper(headless=True, timeout=15)
+    scraper = AmazonJobsScraper(headless=True, timeout=10)
     
     try:
-        logger.info("Starting Amazon jobs scraping...")
+        logger.info("Starting optimized Amazon jobs scraping...")
         start_time = time.time()
         
-        all_jobs = scraper.scrape_all_categories(engineering_tech_categories)
+        all_jobs = scraper.scrape_all_categories(engineering_tech_categories, max_workers=5)
         
         end_time = time.time()
-        logger.info(f"Scraping completed in {end_time - start_time:.2f} seconds")
+        elapsed_time = end_time - start_time
+        
+        logger.info(f"Scraping completed in {elapsed_time:.2f} seconds")
         logger.info(f"Total jobs scraped: {len(all_jobs)}")
+        logger.info(f"Jobs per second: {len(all_jobs)/elapsed_time:.2f}")
         
         # Generate output
         result = {
             "company": "amazon",
             "total_jobs": len(all_jobs),
-            "scraping_time": f"{end_time - start_time:.2f} seconds",
+            "scraping_time": f"{elapsed_time:.2f} seconds",
+            "jobs_per_second": f"{len(all_jobs)/elapsed_time:.2f}",
             "data": all_jobs
         }
         
         json_output = json.dumps(result, indent=2, ensure_ascii=False)
         print(json_output)
         
-        # Optionally save to file
-        with open('amazon.json', 'w', encoding='utf-8') as f:
+        # Save to file
+        with open('amazon_jobs.json', 'w', encoding='utf-8') as f:
             f.write(json_output)
         
-        logger.info("Results saved to amazon.json")
+        logger.info("Results saved to amazon_jobs.json")
         
     except Exception as e:
         logger.error(f"Main execution error: {str(e)}")

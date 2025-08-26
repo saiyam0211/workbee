@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
-import { ArrowRight, ChevronRight, Menu, X } from 'lucide-react'
+import { Link } from 'react-router-dom'
+
 import { Button } from '@/components/ui/button'
 import { AnimatedGroup } from '@/components/ui/animated-group'
 import { cn } from '@/lib/utils'
@@ -120,10 +121,10 @@ export function HeroSection() {
                                             <div className="bg-background group-hover:bg-muted size-6 overflow-hidden rounded-full duration-500">
                                                 <div className="flex w-12 -translate-x-1/2 duration-500 ease-in-out group-hover:translate-x-0">
                                                     <span className="flex size-6">
-                                                        <ArrowRight className="m-auto size-3" />
+                                                        <span className="m-auto text-xs">→</span>
                                                     </span>
                                                     <span className="flex size-6">
-                                                        <ArrowRight className="m-auto size-3" />
+                                                        <span className="m-auto text-xs">→</span>
                                                     </span>
                                                 </div>
                                             </div>
@@ -302,8 +303,8 @@ const HeroHeader = () => {
                                 onClick={() => setMenuState(!menuState)}
                                 aria-label={menuState == true ? 'Close Menu' : 'Open Menu'}
                                 className="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden">
-                                <Menu className="in-data-[state=active]:rotate-180 group-data-[state=active]:scale-0 group-data-[state=active]:opacity-0 m-auto size-6 duration-200" />
-                                <X className="group-data-[state=active]:rotate-0 group-data-[state=active]:scale-100 group-data-[state=active]:opacity-100 absolute inset-0 m-auto size-6 -rotate-180 scale-0 opacity-0 duration-200" />
+                                <span className="in-data-[state=active]:rotate-180 group-data-[state=active]:scale-0 group-data-[state=active]:opacity-0 m-auto size-6 duration-200">☰</span>
+                                <span className="group-data-[state=active]:rotate-0 group-data-[state=active]:scale-100 group-data-[state=active]:opacity-100 absolute inset-0 m-auto size-6 -rotate-180 scale-0 opacity-0 duration-200">✕</span>
                             </button>
                         </div>
 
@@ -341,18 +342,18 @@ const HeroHeader = () => {
                                     variant="outline"
                                     size="sm"
                                     className={cn(isScrolled && 'lg:hidden')}>
-                                    <a href="#">
+                                    <Link to="/dashboard">
                                         <span>Dashboard</span>
-                                    </a>
+                                    </Link>
                                 </Button>
 
                                 <Button
                                     asChild
                                     size="sm"
                                     className={cn(isScrolled ? 'lg:inline-flex' : 'hidden')}>
-                                    <a href="#">
+                                    <Link to="/dashboard">
                                         <span>Get Started</span>
-                                    </a>
+                                    </Link>
                                 </Button>
                             </div>
                         </div>

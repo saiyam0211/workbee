@@ -1,0 +1,8 @@
+services:
+  - name: web-scraper-service
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    cron:
+      - schedule: "0 0 * * *"
+        command: node path/to/your/scraping-script.js

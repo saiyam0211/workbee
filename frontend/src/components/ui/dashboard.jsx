@@ -229,15 +229,16 @@ const WorkBeeJobCard = () => {
             </div>
 
             {/* Action Buttons */}
-            <div className="flex ml-135 mt-20 items-center justify-center space-x-4">
+            <div className="flex ml-135 mt-24 items-center justify-center space-x-4 ">
               <button
                 onClick={handleFavorite}
-                className="w-15 h-15 bg-gray-400 rounded-full flex items-center justify-center hover:bg-gray-500 transition-colors">
-                <span className=" text-3xl"><Heart /></span>
+                
+                className="w-15 h-15 apply-button  rounded-full flex items-center justify-center glassmorphic-base transition-colors">
+                <span className=" text-3xl"><Heart className='text-white' /></span>
               </button>
               <button
                 onClick={handleApply}
-                className="px-8 w-45 h-15 py-3 bg-gray-700 text-white rounded-full font-semibold hover:bg-gray-600 transition-colors text-xl">
+                className="px-8 -45 h-15 py-3 apply-button glassmorphic-base text-white rounded-full font-semibold hover:bg-gray-600 transition-colors text-xl">
                 Apply Now
               </button>
             </div>

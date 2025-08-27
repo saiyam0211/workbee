@@ -171,6 +171,21 @@ html {
   letter-spacing: 0.01em;
 }
 
+/* 3-line clamp utility for descriptions */
+.clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.readmore-link {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: hsl(var(--accent-foreground));
+  text-decoration: underline;
+}
+
 .glassmorphic-base {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);

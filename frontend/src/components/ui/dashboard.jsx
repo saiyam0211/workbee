@@ -83,7 +83,7 @@ const jobData = [
     title: "Full Stack Developer - Payments",
     location: "Bangalore, Karnataka, India",
     level: "Mid",
-    description: "Build payment solutions that power businesses across India. Work on fintech products that handle millions of transactions securely and efficiently.",
+    description: "Build payment solutions that power businesses across India. Work on fintech products that handle millions of transactions securely and efficiently jkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk.",
     postedDate: "2 days ago"
   }
 ];
@@ -96,6 +96,7 @@ const WorkBeeJobCard = () => {
   const [currentJobIndex, setCurrentJobIndex] = useState(0);
   const [activeTab, setActiveTab] = useState('home');
   const currentJob = jobData[currentJobIndex];
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const handlePrevious = () => {
     setCurrentJobIndex((prev) => (prev === 0 ? jobData.length - 1 : prev - 1));
@@ -224,9 +225,15 @@ const WorkBeeJobCard = () => {
               <div className="mb-2">
                 <span className="font-semibold text-xl ml-6">About the job</span>
               </div>
-              <p className="text-xl ml-6 text-gray-700 leading-relaxed">
+              <p className={`text-xl ml-6 text-gray-700 leading-relaxed ${isExpanded ? '' : 'clamp-3'}`}>
                 {currentJob.description}
               </p>
+              <button
+                className="ml-6 mt-2 readmore-link"
+                onClick={() => setIsExpanded((v) => !v)}
+              >
+                {isExpanded ? 'Read less' : 'Read more'}
+              </button>
 
             </div>
 

@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Home, Search, FileText, Bell, User } from 'lucide-react';
 
 const GlassFooter = ({ activeTab, setActiveTab }) => {
+  const navigate = useNavigate();
   const navigationItems = [
     { id: 'home', icon: Home, label: 'Home' },
     { id: 'search', icon: Search, label: 'Search' },
@@ -22,7 +24,15 @@ const GlassFooter = ({ activeTab, setActiveTab }) => {
             return (
               <button
                 key={item.id}
-                onClick={() => setActiveTab(item.id)}
+                onClick={() => {
+                  setActiveTab(item.id);
+                  if (item.id === 'home') {
+                    navigate('/dashboard');
+                  }
+                  if (item.id === 'jobs') {
+                    navigate('/fav-companies');
+                  }
+                }}
                 className="glass-nav-item flex flex-col items-center gap-1 group relative"
               >
                 <div className="relative">

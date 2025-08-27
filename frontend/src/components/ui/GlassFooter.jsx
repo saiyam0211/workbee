@@ -26,7 +26,10 @@ const GlassFooter = ({ activeTab, setActiveTab }) => {
                 key={item.id}
                 onClick={() => {
                   setActiveTab(item.id);
-                  if (item.id === 'saved') navigate('/favorites');
+                  if (item.id === 'home') {
+                    navigate('/dashboard');
+                  }
+                  if (item.id === 'saved') navigate('/fav-companies');
                   if (item.id === 'alerts') navigate('/notifications');
                   if (item.id === 'home') navigate('/');
                 }}

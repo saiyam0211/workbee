@@ -188,3 +188,87 @@ html {
       0 12px 40px rgba(0, 0, 0, 0.15),
       inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
+
+/* Floating Dock (Liquid Blur / Glass) */
+.dock {
+  position: relative;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  background: color-mix(in oklab, hsl(var(--background)) 55%, rgba(255,255,255,0));
+  border: 1px solid hsl(var(--border));
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.35),
+    inset 0 1px 0 rgba(255,255,255,0.08),
+    inset 0 -1px 0 rgba(0,0,0,0.12);
+}
+
+.dock::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(255,255,255,0.16), rgba(255,255,255,0.04));
+}
+
+.dock::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 10%;
+  right: 10%;
+  height: 8px;
+  border-radius: 9999px;
+  background: radial-gradient(100% 100% at 50% 0%, rgba(255,255,255,0.28) 0%, rgba(255,255,255,0) 70%);
+  pointer-events: none;
+}
+
+.dock-item {
+  transition: transform 0.15s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+.dock-item:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.dock-indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+}
+
+/* New Glassmorphism Footer */
+.glass-footer-container {
+  position: relative;
+  border-radius: 1000px;
+  overflow: hidden;
+}
+
+.glass-footer-background {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.20);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 1000px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.glass-nav-item {
+  position: relative;
+  z-index: 1;
+  transition: all 0.2s ease;
+  padding: 8px;
+  border-radius: 12px;
+}
+
+.glass-nav-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.glass-nav-item:active {
+  transform: scale(0.95);
+}

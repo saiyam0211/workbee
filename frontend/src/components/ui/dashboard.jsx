@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Heart } from 'lucide-react';
+import GlassFooter from './GlassFooter';
 
 
 
@@ -93,6 +94,7 @@ const WorkBeeJobCard = () => {
     return () => document.body.classList.remove('dark');
   }, []);
   const [currentJobIndex, setCurrentJobIndex] = useState(0);
+  const [activeTab, setActiveTab] = useState('home');
   const currentJob = jobData[currentJobIndex];
 
   const handlePrevious = () => {
@@ -130,7 +132,7 @@ const WorkBeeJobCard = () => {
     return () => window.removeEventListener('keydown', handleKeyPress);
   }, []);
   return (
-    <div className="min-h-screen bg-background text-foreground font-sans">
+    <div className="min-h-screen bg-background text-foreground font-sans pb-20">
       {/* Background Effects */}
       <div
         aria-hidden
@@ -246,29 +248,8 @@ const WorkBeeJobCard = () => {
         </div>
       </div>
 
-      {/* Bottom Navigation - Glassmorphic */}
-      <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2">
-        <div className="bg-black/30 backdrop-blur-xl border border-white/10 rounded-full px-6 py-3 shadow-2xl">
-          <div className="flex items-center space-x-8">
-            <button className="flex flex-col items-center space-y-1 text-blue-400">
-              <span className="text-2xl">🏠</span>
-              <span className="text-xs underline">Home</span>
-            </button>
-            <button className="flex flex-col items-center space-y-1 text-gray-400 hover:text-white transition-colors">
-              <span className="text-2xl">📄</span>
-            </button>
-            <button className="flex flex-col items-center space-y-1 text-gray-400 hover:text-white transition-colors">
-              <span className="text-2xl">❤️</span>
-            </button>
-            <button className="flex flex-col items-center space-y-1 text-gray-400 hover:text-white transition-colors">
-              <span className="text-2xl">🔔</span>
-            </button>
-            <button className="flex flex-col items-center space-y-1 text-gray-400 hover:text-white transition-colors">
-              <span className="text-2xl">👤</span>
-            </button>
-          </div>
-        </div>
-      </div>
+      {/* Glass Footer Navigation */}
+      <GlassFooter activeTab={activeTab} setActiveTab={setActiveTab} />
     </div>
   );
 };

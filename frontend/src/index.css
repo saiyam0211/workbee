@@ -287,3 +287,59 @@ html {
 .glass-nav-item:active {
   transform: scale(0.95);
 }
+
+
+.view-job{
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  /* background: rgba(14, 14, 14, 0.97); */
+  border: 1px solid rgba(255, 255, 255, 0.167);
+  box-shadow: 
+      0 8px 32px rgba(118, 115, 115, 0.077),
+      inset 0 1px 0 rgba(212, 210, 210, 0.642);
+  transition: all 0.3s ease;
+
+  background: rgba(0, 0, 0, 0.2);
+  background-blend-mode: screen;
+  border-radius: 296px;
+
+
+}
+
+.view-job-btn:hover{
+  background: rgba(16, 15, 15, 0.3);
+  transform: translateY(2px);
+  box-shadow: 
+      0 12px 40px rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.notification-text{
+  
+font-style: normal;
+
+
+
+background: linear-gradient(90deg, #727171cf 0%, #FFFFFF 21.73%, #949494 35.99%, #FFFFFF 49.53%, #505050cc 71.22%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+
+
+}
+
+.notification-logo {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  /* background: rgba(14, 14, 14, 0.97); */
+  border: 1px solid rgba(255, 255, 255, 0.267);
+  box-shadow: 
+      0 8px 32px rgba(118, 115, 115, 0.056),
+      inset 0 1px 0 rgba(212, 210, 210, 0.642);
+  transition: all 0.3s ease;
+
+  background: rgba(0, 0, 0, 0.2);
+  background-blend-mode: screen;
+  border-radius: 296px;
+}

@@ -97,7 +97,7 @@ const WorkBeeJobCard = () => {
   const [activeTab, setActiveTab] = useState('home');
   const currentJob = jobData[currentJobIndex];
   const [isExpanded, setIsExpanded] = useState(false);
-
+  const [isFavorited, setIsFavorited] = useState(false);
   const handlePrevious = () => {
     setCurrentJobIndex((prev) => (prev === 0 ? jobData.length - 1 : prev - 1));
   };
@@ -162,7 +162,7 @@ const WorkBeeJobCard = () => {
           {/* Navigation Arrows */}
           <button
             onClick={handlePrevious}
-            className="absolute -left-16 top-1/2 transform -translate-y-1/2 w-16 h-16 bg-gray-800 border border-gray-600 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors -ml-95">
+            className="absolute -left-16 glassmorphic-base cursor-pointer top-1/2 transform -translate-y-1/2 w-16 h-16  border  rounded-full flex items-center justify-center transition-colors -ml-95">
             <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M63.5413 50H36.458M36.458 50L46.8747 39.5833M36.458 50L46.8747 60.4167" stroke="#CDCDCD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
               <path d="M70.8333 18.8148C64.8746 14.8261 57.7089 12.5 50 12.5C29.2893 12.5 12.5 29.2893 12.5 50C12.5 70.7107 29.2893 87.5 50 87.5C70.7107 87.5 87.5 70.7107 87.5 50C87.5 43.1696 85.6739 36.7657 82.4832 31.25" stroke="#CDCDCD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -172,7 +172,7 @@ const WorkBeeJobCard = () => {
 
           <button
             onClick={handleNext}
-            className="absolute -right-16 top-1/2 transform -translate-y-1/2 w-16 h-16 bg-gray-800 border border-gray-600 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors -mr-95">
+            className="absolute cursor-pointer -right-16 top-1/2 transform -translate-y-1/2 w-16 h-16 glassmorphic-base border border-gray-600 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors -mr-95">
             <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M36.4587 50H63.542M63.542 50L53.1253 60.4167M63.542 50L53.1253 39.5833" stroke="#CDCDCD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
               <path d="M29.1667 81.1852C35.1254 85.1739 42.2911 87.5 50 87.5C70.7107 87.5 87.5 70.7107 87.5 50C87.5 29.2893 70.7107 12.5 50 12.5C29.2893 12.5 12.5 29.2893 12.5 50C12.5 56.8304 14.3261 63.2343 17.5168 68.75" stroke="#CDCDCD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -181,7 +181,7 @@ const WorkBeeJobCard = () => {
           </button>
 
           {/* Job Card */}
-          <div className="bg-gradient-to-br from-[#D9D9D9] to-[#737373] -ml-55 rounded-[60px] p-15 text-black shadow-2xl border-4 -mt-10  w-230 h-140">
+          <div className="bg-gradient-to-br from-[#D9D9D9] to-[#737373] -ml-55 rounded-[60px] p-15 text-black shadow-2xl border-4 -mt-17  w-230 h-140">
             {/* Company Logo */}
             <div className="flex justify-end mb-4">
               <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center p-2">
@@ -220,7 +220,7 @@ const WorkBeeJobCard = () => {
             </div>
 
             {/* Job Description Section */}
-            <div className="mb-8">
+            <div className="mb-8 h-40">
               <h3 className="text-3xl ml-6 mt-10 font-bold mb-2">Job Description</h3>
               <div className="mb-2">
                 <span className="font-semibold text-xl ml-6">About the job</span>
@@ -228,22 +228,28 @@ const WorkBeeJobCard = () => {
               <p className={`text-xl ml-6 text-gray-700 leading-relaxed ${isExpanded ? '' : 'clamp-3'}`}>
                 {currentJob.description}
               </p>
-              <button
-                className="ml-6 mt-2 readmore-link"
-                onClick={() => setIsExpanded((v) => !v)}
-              >
-                {isExpanded ? 'Read less' : 'Read more'}
-              </button>
+             
 
             </div>
 
             {/* Action Buttons */}
+            {/*
+              Add isFavorited state to control the button fill.
+              Place this near the other useState hooks:
+              const [isFavorited, setIsFavorited] = useState(false);
+            */}
             <div className="flex ml-135 mt-24 items-center justify-center space-x-4 ">
               <button
-                onClick={handleFavorite}
-                
-                className="w-15 h-15 apply-button  rounded-full flex items-center justify-center glassmorphic-base transition-colors">
-                <span className=" text-3xl"><Heart className='text-white' /></span>
+                onClick={() => {
+                  handleFavorite();
+                  setIsFavorited((prev) => !prev);
+                }}
+                className={`w-15 h-15 cursor-pointer apply-button rounded-full flex items-center justify-center glassmorphic-base transition-colors ${isFavorited ? 'bg-red-600' : ''}`}
+                style={isFavorited ? { backgroundColor: '#ef4444' } : {}}
+              >
+                <span className="text-3xl">
+                  <Heart className={isFavorited ? 'text-white fill-white' : 'text-white'} fill={isFavorited ? '#fff' : 'none'} />
+                </span>
               </button>
               <button
                 onClick={handleApply}

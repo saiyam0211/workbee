@@ -1,13 +1,13 @@
 import React from 'react';
+import { Home, Search, FileText, Bell, User, Heart } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { Home, Search, FileText, Bell, User } from 'lucide-react';
 
 const GlassFooter = ({ activeTab, setActiveTab }) => {
   const navigate = useNavigate();
   const navigationItems = [
     { id: 'home', icon: Home, label: 'Home' },
     { id: 'search', icon: Search, label: 'Search' },
-    { id: 'jobs', icon: FileText, label: 'Jobs' },
+    { id: 'saved', icon: Heart, label: 'Favourites' },
     { id: 'alerts', icon: Bell, label: 'Alerts', hasNotification: true },
     { id: 'profile', icon: User, label: 'Profile' }
   ];
@@ -29,9 +29,9 @@ const GlassFooter = ({ activeTab, setActiveTab }) => {
                   if (item.id === 'home') {
                     navigate('/dashboard');
                   }
-                  if (item.id === 'jobs') {
-                    navigate('/fav-companies');
-                  }
+                  if (item.id === 'saved') navigate('/fav-companies');
+                  if (item.id === 'alerts') navigate('/notifications');
+                  if (item.id === 'home') navigate('/');
                 }}
                 className="glass-nav-item flex flex-col items-center gap-1 group relative"
               >

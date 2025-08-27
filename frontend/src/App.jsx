@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Landing from '@/pages/Landing'
 import Dashboard from '@/pages/Dashboard'
 import FavCompanies from '@/pages/fav-companies'
+import Notifications from '@/pages/Notifications'
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/fav-companies" element={<FavCompanies />} />
+        <Route path="/notifications" element={<Notifications />} />
       </Routes>
     </Router>
   )

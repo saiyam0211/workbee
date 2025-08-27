@@ -17,28 +17,7 @@ export default function FavCompanies() {
   return (
     <div className="min-h-screen bg-[#09090b] text-foreground relative">
       <div className="px-6 max-w-6xl mx-auto min-h-[80vh] flex flex-col items-center justify-end pb-10 pt-[200px]">
-        <h1 className="z-50"
-          style={{
-            position: 'absolute',
-            width: '100%',
-            left: 0,
-            top: '60px',
-            fontFamily: 'Inter',
-            fontStyle: 'normal',
-            zIndex: 1,
-            fontWeight: 900,
-            fontSize: '96px',
-            lineHeight: '1.1',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            textAlign: 'center',
-            background: 'linear-gradient(90deg, #999999 0%, #FFFFFF 21.73%, #FAFAFA 35.99%, #FFFFFF 49.53%, #999999 71.22%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text',
-            color: 'transparent'
-          }}
+        <h1 className="text-center text-5xl md:text-6xl font-extrabold notification-text tracking-tight opacity-90"
         >
           Your Dream Companies
         </h1>

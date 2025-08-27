@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
 
 @theme {
   --background: 0 0% 100%;
@@ -23,18 +23,14 @@
   --ring: 240 5% 65.1%;
 }
 
-
-
 .julius-sans-one-regular {
-    font-family: "Julius Sans One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Julius Sans One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
-
 
 html {
   scroll-behavior: smooth;
-  
 }
 .dark {
   --background: 240 10% 3.9%;
@@ -58,10 +54,18 @@ html {
   --ring: 240 3.7% 15.9%;
 }
 
-@utility bg-background { background-color: hsl(var(--background)); }
-@utility text-foreground { color: hsl(var(--foreground)); }
-@utility border { border-color: hsl(var(--border)); }
-@utility ring-background { --tw-ring-color: hsl(var(--background)); }
+@utility bg-background {
+  background-color: hsl(var(--background));
+}
+@utility text-foreground {
+  color: hsl(var(--foreground));
+}
+@utility border {
+  border-color: hsl(var(--border));
+}
+@utility ring-background {
+  --tw-ring-color: hsl(var(--background));
+}
 
 /* Marquee styles */
 .marquee-container {
@@ -136,15 +140,17 @@ html {
   }
 }
 
-
 /* Glass/Liquid Button Custom Styles */
 .glass-btn {
   @apply relative flex items-center justify-center px-5 py-1.5 rounded-full font-medium text-lg transition-all duration-300;
-  background: linear-gradient(0deg, #000, #000), linear-gradient(0deg, rgba(255,255,255,0.5), rgba(255,255,255,0.5)), #000;
+  background: linear-gradient(0deg, #000, #000),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+    #000;
   background-blend-mode: plus-darker, normal, color-dodge;
   border-radius: 1000px;
-  color: #D9D9D9;
-  box-shadow: 0 4px 32px 0 rgba(0,0,0,0.12), 0 1.5px 4px 0 rgba(0,0,0,0.08);
+  color: #d9d9d9;
+  box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.12),
+    0 1.5px 4px 0 rgba(0, 0, 0, 0.08);
   overflow: hidden;
   z-index: 1;
 }
@@ -153,7 +159,7 @@ html {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 1000px;
   z-index: 0;
   pointer-events: none;
@@ -164,10 +170,10 @@ html {
 .glass-btn .glass-btn-text {
   position: relative;
   z-index: 1;
-  font-family: 'SF Pro', 'Inter', sans-serif;
+  font-family: "SF Pro", "Inter", sans-serif;
   font-weight: 510;
   font-size: 1.25rem;
-  color: #D9D9D9;
+  color: #d9d9d9;
   letter-spacing: 0.01em;
 }
 
@@ -191,17 +197,14 @@ html {
   -webkit-backdrop-filter: blur(20px);
   background: rgba(14, 14, 14, 0.381);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 
-      0 8px 32px rgba(55, 54, 54, 0),
-      inset 0 1px 0 rgba(5, 5, 5, 0.26);
+  box-shadow: 0 8px 32px rgba(55, 54, 54, 0), inset 0 1px 0 rgba(5, 5, 5, 0.26);
   transition: all 0.3s ease;
 }
 .apply-button:hover {
   background: rgba(16, 15, 15, 0.3);
   transform: translateY(-2px);
-  box-shadow: 
-      0 12px 40px rgba(0, 0, 0, 0.15),
-      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 /* Floating Dock (Liquid Blur / Glass) */
@@ -209,12 +212,14 @@ html {
   position: relative;
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  background: color-mix(in oklab, hsl(var(--background)) 55%, rgba(255,255,255,0));
+  background: color-mix(
+    in oklab,
+    hsl(var(--background)) 55%,
+    rgba(255, 255, 255, 0)
+  );
   border: 1px solid hsl(var(--border));
-  box-shadow:
-    0 20px 40px rgba(0,0,0,0.35),
-    inset 0 1px 0 rgba(255,255,255,0.08),
-    inset 0 -1px 0 rgba(0,0,0,0.12);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08), inset 0 -1px 0 rgba(0, 0, 0, 0.12);
 }
 
 .dock::before {
@@ -223,7 +228,11 @@ html {
   inset: 0;
   border-radius: inherit;
   pointer-events: none;
-  background: linear-gradient(180deg, rgba(255,255,255,0.16), rgba(255,255,255,0.04));
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.16),
+    rgba(255, 255, 255, 0.04)
+  );
 }
 
 .dock::after {
@@ -234,7 +243,11 @@ html {
   right: 10%;
   height: 8px;
   border-radius: 9999px;
-  background: radial-gradient(100% 100% at 50% 0%, rgba(255,255,255,0.28) 0%, rgba(255,255,255,0) 70%);
+  background: radial-gradient(
+    100% 100% at 50% 0%,
+    rgba(255, 255, 255, 0.28) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
   pointer-events: none;
 }
 
@@ -262,13 +275,12 @@ html {
 .glass-footer-background {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.20);
+  background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-radius: 1000px;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.3),
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
@@ -288,45 +300,42 @@ html {
   transform: scale(0.95);
 }
 
-
-.view-job{
+.view-job {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   /* background: rgba(14, 14, 14, 0.97); */
   border: 1px solid rgba(255, 255, 255, 0.167);
-  box-shadow: 
-      0 8px 32px rgba(118, 115, 115, 0.077),
-      inset 0 1px 0 rgba(212, 210, 210, 0.642);
+  box-shadow: 0 8px 32px rgba(118, 115, 115, 0.077),
+    inset 0 1px 0 rgba(212, 210, 210, 0.642);
   transition: all 0.3s ease;
 
   background: rgba(0, 0, 0, 0.2);
   background-blend-mode: screen;
   border-radius: 296px;
-
-
 }
 
-.view-job-btn:hover{
+.view-job-btn:hover {
   background: rgba(16, 15, 15, 0.3);
   transform: translateY(2px);
-  box-shadow: 
-      0 12px 40px rgba(0, 0, 0, 0.15),
-      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
-.notification-text{
-  
-font-style: normal;
+.notification-text {
+  font-style: normal;
 
-
-
-background: linear-gradient(90deg, #727171cf 0%, #FFFFFF 21.73%, #949494 35.99%, #FFFFFF 49.53%, #505050cc 71.22%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-background-clip: text;
-text-fill-color: transparent;
-
-
+  background: linear-gradient(
+    90deg,
+    #727171cf 0%,
+    #ffffff 21.73%,
+    /* #949494 35.99%, */
+    #ffffff 49.53%,
+    #505050cc 71.22%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 
 .notification-logo {
@@ -334,9 +343,8 @@ text-fill-color: transparent;
   -webkit-backdrop-filter: blur(20px);
   /* background: rgba(14, 14, 14, 0.97); */
   border: 1px solid rgba(255, 255, 255, 0.267);
-  box-shadow: 
-      0 8px 32px rgba(118, 115, 115, 0.056),
-      inset 0 1px 0 rgba(212, 210, 210, 0.642);
+  box-shadow: 0 8px 32px rgba(118, 115, 115, 0.056),
+    inset 0 1px 0 rgba(212, 210, 210, 0.642);
   transition: all 0.3s ease;
 
   background: rgba(0, 0, 0, 0.2);

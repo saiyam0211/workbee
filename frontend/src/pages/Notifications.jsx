@@ -82,16 +82,6 @@ export default function Notifications() {
         <main className="min-h-dvh bg-background text-foreground">
             <section className="max-w-6xl mx-auto px-6 pt-8 pb-28">
                 <div className="relative flex items-center justify-center mb-6">
-                    <button
-                        onClick={() => navigate('/dashboard')}
-                        aria-label="Back to dashboard"
-                        className="absolute left-0 w-17 h-17 rounded-full border border-white/10 bg-black/40 text-white flex items-center -ml-45 justify-center shadow-[0_8px_30px_rgba(0,0,0,.35)]"
-                    >
-                        <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M63.5413 50H36.458M36.458 50L46.8747 39.5833M36.458 50L46.8747 60.4167" stroke="#CDCDCD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M70.8333 18.8148C64.8746 14.8261 57.7089 12.5 50 12.5C29.2893 12.5 12.5 29.2893 12.5 50C12.5 70.7107 29.2893 87.5 50 87.5C70.7107 87.5 87.5 70.7107 87.5 50C87.5 43.1696 85.6739 36.7657 82.4832 31.25" stroke="#CDCDCD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </button>
                     <h1 className="text-center text-5xl md:text-6xl font-extrabold notification-text tracking-tight opacity-90">Notifications</h1>
                 </div>
 

@@ -3,13 +3,13 @@ import GlassFooter from '@/components/ui/GlassFooter';
 
 const companies = [
   { name: 'Microsoft', logo: '/logos/microsoft-only.svg', views: 10 },
-  { name: 'Spotify', logo: '/logos/spotify.svg', views: 2 },
-  { name: 'Slack', logo: '/logos/slack.svg', views: 6 },
-  { name: 'Adobe', logo: '/logos/adobe.svg', views: 19 },
-  { name: 'WhatsApp', logo: '/logos/whatsapp.svg', views: 8 },
-  { name: 'Atlassian', logo: '/logos/atlassian.svg', views: 5 },
-  { name: 'Razorpay', logo: '/logos/razorpay.svg', views: 12 },
-  { name: 'Loom', logo: '/logos/lom.svg', views: 3 },
+  { name: 'Spotify', logo: '/logos/spotify-only.svg', views: 2 },
+  { name: 'Slack', logo: '/logos/slack-only.svg', views: 6 },
+  { name: 'Adobe', logo: '/logos/adobe-only.svg', views: 19 },
+  { name: 'WhatsApp', logo: '/logos/whatsapp-only.svg', views: 8 },
+  { name: 'Atlassian', logo: '/logos/Atlassian-only.svg', views: 5 },
+  { name: 'Razorpay', logo: '/logos/razorpay-only.svg', views: 12 },
+  { name: 'Loom', logo: '/logos/loom-only.svg', views: 3 },
 ];
 
 export default function FavCompanies() {

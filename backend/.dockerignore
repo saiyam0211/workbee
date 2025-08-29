@@ -1,0 +1,15 @@
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.git
+.pytest_cache
+.coverage
+.venv
+venv/
+.env
+logs/*
+data/output.json
+data/yesterday.json
+*.log
+.DS_Store

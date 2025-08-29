@@ -1,0 +1,55 @@
+name: Deploy FastAPI Manually via SSH
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+env:
+  REGISTRY: ${{ secrets.ACR_REGISTRY }}
+  IMAGE_NAME: joblebackend
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: 🔐 Decode and set SSH key
+      run: |
+        echo "${{ secrets.VM_SSH_KEY }}" | base64 --decode > id_rsa
+        chmod 600 id_rsa
+
+    - name: 🚀 Deploy to Azure VM via SSH
+      run: |
+        ssh -i id_rsa -o StrictHostKeyChecking=no ${{ secrets.VM_USERNAME }}@${{ secrets.VM_HOST }} << EOF
+          echo "✅ SSH connected"
+          
+          # Login to ACR
+          echo "${{ secrets.ACR_PASSWORD }}" | docker login ${{ secrets.ACR_REGISTRY }} -u ${{ secrets.ACR_USERNAME }} --password-stdin
+
+          # Stop existing container
+          sudo systemctl stop joblebackend || true
+          docker stop joblebackend || true
+          docker rm joblebackend || true
+
+          # Pull latest image
+          docker pull ${{ secrets.ACR_REGISTRY }}/joblebackend:latest
+
+          # Run container
+          docker run -d --name joblebackend --restart unless-stopped \
+            -v /home/${{ secrets.VM_USERNAME }}/job_data:/app/data/ \
+            -p 8000:8000 \
+            ${{ secrets.ACR_REGISTRY }}/joblebackend:latest
+
+          # Start systemd service
+          sudo systemctl start joblebackend
+          sudo systemctl enable joblebackend
+
+          # Clean up old images
+          docker image prune -f
+
+    - name: 🧹 Clean up
+      run: rm -f id_rsa

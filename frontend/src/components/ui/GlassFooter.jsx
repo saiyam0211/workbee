@@ -31,7 +31,7 @@ const GlassFooter = ({ activeTab, setActiveTab }) => {
                   }
                   if (item.id === 'saved') navigate('/fav-companies');
                   if (item.id === 'alerts') navigate('/notifications');
-                  if (item.id === 'home') navigate('/');
+                  // removed duplicate home navigation to avoid conflicting routes
                 }}
                 className="glass-nav-item flex flex-col items-center gap-1 group relative"
               >

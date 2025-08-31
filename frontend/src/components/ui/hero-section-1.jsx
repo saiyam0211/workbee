@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
 import { Button } from '@/components/ui/button'
 import { AnimatedGroup } from '@/components/ui/animated-group'
 import { cn } from '@/lib/utils'
 import Spline from '@splinetool/react-spline'
+import AuthModal from './auth-modal'
 "use client"
 
 const transitionVariants = {
@@ -276,6 +277,8 @@ const menuItems = []
 const HeroHeader = () => {
     const [menuState, setMenuState] = React.useState(false)
     const [isScrolled, setIsScrolled] = React.useState(false)
+    const [isAuthModalOpen, setIsAuthModalOpen] = React.useState(false)
+    const navigate = useNavigate()
 
     React.useEffect(() => {
         const handleScroll = () => {
@@ -284,6 +287,16 @@ const HeroHeader = () => {
         window.addEventListener('scroll', handleScroll)
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
+
+    const handleDashboardClick = (e) => {
+        e.preventDefault()
+        setIsAuthModalOpen(true)
+    }
+
+    const handleAuthSuccess = () => {
+        navigate('/dashboard')
+    }
+
     return (
         <header>
             <nav
@@ -338,28 +351,31 @@ const HeroHeader = () => {
                             </div>
                             <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
                                 <Button
-                                    asChild
                                     variant="outline"
                                     size="sm"
-                                    className={cn(isScrolled && 'lg:hidden')}>
-                                    <Link to="/dashboard">
-                                        <span>Dashboard</span>
-                                    </Link>
+                                    className={cn(isScrolled && 'lg:hidden')}
+                                    onClick={handleDashboardClick}>
+                                    <span>Dashboard</span>
                                 </Button>
 
                                 <Button
-                                    asChild
                                     size="sm"
-                                    className={cn(isScrolled ? 'lg:inline-flex' : 'hidden')}>
-                                    <Link to="/dashboard">
-                                        <span>Get Started</span>
-                                    </Link>
+                                    className={cn(isScrolled ? 'lg:inline-flex' : 'hidden')}
+                                    onClick={handleDashboardClick}>
+                                    <span>Get Started</span>
                                 </Button>
                             </div>
                         </div>
                     </div>
                 </div>
             </nav>
+            
+            {/* Auth Modal */}
+            <AuthModal 
+                isOpen={isAuthModalOpen}
+                onClose={() => setIsAuthModalOpen(false)}
+                onSuccess={handleAuthSuccess}
+            />
         </header>
     )
 }

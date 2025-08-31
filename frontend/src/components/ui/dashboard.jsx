@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Heart } from 'lucide-react';
 import GlassFooter from './GlassFooter';
 
@@ -98,6 +98,8 @@ const WorkBeeJobCard = () => {
   const currentJob = jobData[currentJobIndex];
   const [isExpanded, setIsExpanded] = useState(false);
   const [isFavorited, setIsFavorited] = useState(false);
+  const touchStartXRef = useRef(null);
+  const touchStartYRef = useRef(null);
   const handlePrevious = () => {
     setCurrentJobIndex((prev) => (prev === 0 ? jobData.length - 1 : prev - 1));
   };
@@ -145,24 +147,41 @@ const WorkBeeJobCard = () => {
       <div aria-hidden className="absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--background)_75%)]" />
 
       {/* Header */}
-      <div className="flex items-center justify-between p-4 relative z-10">
-        <h1 className="text-4xl ml-20 font-bold text-foreground">WorkBee</h1>
+      <div className="flex items-center mb-10 justify-between p-4 relative z-10">
+        <h1 className="text-2xl sm:text-4xl ml-0 sm:ml-20 font-bold text-foreground">WorkBee</h1>
 
-        <button>
-          <img className='w-25 h-25 mr-25' src="./public/images/image.png" alt="" />
-
-        </button>
-
+       
 
       </div>
 
+
       {/* Main Content */}
       <div className="px-4 py-8 flex items-center justify-center relative z-10">
-        <div className="relative max-w-md w-full">
+        <div
+          className="relative max-w-md w-full sm:max-w-lg"
+          onTouchStart={(e) => {
+            const touch = e.changedTouches[0];
+            touchStartXRef.current = touch.clientX;
+            touchStartYRef.current = touch.clientY;
+          }}
+          onTouchEnd={(e) => {
+
+            const touch = e.changedTouches[0];
+            const dx = touch.clientX - (touchStartXRef.current ?? 0);
+            const dy = touch.clientY - (touchStartYRef.current ?? 0);
+            const absDx = Math.abs(dx);
+            const absDy = Math.abs(dy);
+            const SWIPE_THRESHOLD = 40;
+            if (absDx > SWIPE_THRESHOLD && absDx > absDy) {
+              if (dx < 0) handleNext();
+              else handlePrevious();
+            }
+          }}
+        >
           {/* Navigation Arrows */}
           <button
             onClick={handlePrevious}
-            className="absolute -left-16 glassmorphic-base cursor-pointer top-1/2 transform -translate-y-1/2 w-16 h-16  border  rounded-full flex items-center justify-center transition-colors -ml-95">
+            className="hidden sm:flex absolute -left-16 glassmorphic-base cursor-pointer top-1/2 transform -translate-y-1/2 w-12 h-12 sm:w-16 sm:h-16 border rounded-full items-center justify-center transition-colors -ml-95">
             <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M63.5413 50H36.458M36.458 50L46.8747 39.5833M36.458 50L46.8747 60.4167" stroke="#CDCDCD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
               <path d="M70.8333 18.8148C64.8746 14.8261 57.7089 12.5 50 12.5C29.2893 12.5 12.5 29.2893 12.5 50C12.5 70.7107 29.2893 87.5 50 87.5C70.7107 87.5 87.5 70.7107 87.5 50C87.5 43.1696 85.6739 36.7657 82.4832 31.25" stroke="#CDCDCD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -172,7 +191,7 @@ const WorkBeeJobCard = () => {
 
           <button
             onClick={handleNext}
-            className="absolute cursor-pointer -right-16 top-1/2 transform -translate-y-1/2 w-16 h-16 glassmorphic-base border border-gray-600 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors -mr-95">
+            className="hidden sm:flex absolute cursor-pointer -right-16 top-1/2 transform -translate-y-1/2 w-12 h-12 sm:w-16 sm:h-16 glassmorphic-base border border-gray-600 rounded-full items-center justify-center hover:bg-gray-700 transition-colors -mr-95">
             <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M36.4587 50H63.542M63.542 50L53.1253 60.4167M63.542 50L53.1253 39.5833" stroke="#CDCDCD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
               <path d="M29.1667 81.1852C35.1254 85.1739 42.2911 87.5 50 87.5C70.7107 87.5 87.5 70.7107 87.5 50C87.5 29.2893 70.7107 12.5 50 12.5C29.2893 12.5 12.5 29.2893 12.5 50C12.5 56.8304 14.3261 63.2343 17.5168 68.75" stroke="#CDCDCD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -181,10 +200,10 @@ const WorkBeeJobCard = () => {
           </button>
 
           {/* Job Card */}
-          <div className="bg-gradient-to-br from-[#D9D9D9] to-[#737373] -ml-55 rounded-[60px] p-15 text-black shadow-2xl border-4 -mt-17  w-230 h-140">
-            {/* Company Logo */}
-            <div className="flex justify-end mb-4">
-              <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center p-2">
+          <div className="bg-gradient-to-br from-[#D9D9D9] to-[#737373]    rounded-3xl sm:rounded-[60px] p-4 sm:p-15 text-black shadow-2xl border-4 w-full sm:w-230 h-auto sm:h-140 ml-0 sm:-ml-55  sm:-mt-17 select-none touch-pan-y">
+            {/* Company Logo (desktop only) */}
+            <div className="hidden sm:flex justify-end mb-4">
+              <div className="w-20  h-20 bg-white rounded-full flex items-center justify-center p-2">
                 <img
                   src={currentJob.logo}
                   alt={`${currentJob.company} logo`}
@@ -193,15 +212,24 @@ const WorkBeeJobCard = () => {
               </div>
             </div>
 
-            {/* Job Title */}
-            <h2 className="text-4xl -mt-22 ml-6 font-bold mb-2">
+            {/* Job Title with inline logo on mobile */}
+            <div className="flex  items-center -mt-4 gap-3 ml-6 mb-2 sm:mb-0">
+              <div className="sm:hidden  shrink-0 w-10 h-10 bg-white rounded-full flex items-center justify-center p-1.5">
+                <img
+                  src={currentJob.logo}
+                  alt={`${currentJob.company} logo`}
+                  className="w-6 h-6 object-contain"
+                />
+              </div>
+              <h2 className="text-2xl sm:text-4xl mt-2 sm:-mt-22 font-bold">
               {currentJob.title}
             </h2>
+            </div>
 
 
 
             {/* Location and Level */}
-            <div className="flex items-center text-lg ml-6 text-gray-900 mb-6">
+            <div className="flex  items-center text-base sm:text-lg ml-6 text-gray-900 mb-6">
               <span className="mr-1"><svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M9.49967 17.1346C9.31495 17.1346 9.15662 17.0827 9.02467 16.9788C8.89273 16.875 8.79377 16.7387 8.7278 16.57C8.47711 15.843 8.16044 15.1615 7.7778 14.5255C7.40835 13.8894 6.88717 13.143 6.21426 12.2863C5.54134 11.4296 4.99377 10.6118 4.57155 9.83293C4.16252 9.05409 3.95801 8.11298 3.95801 7.00962C3.95801 5.49087 4.49238 4.20577 5.56113 3.15433C6.64308 2.0899 7.95592 1.55769 9.49967 1.55769C11.0434 1.55769 12.3497 2.0899 13.4184 3.15433C14.5004 4.20577 15.0413 5.49087 15.0413 7.00962C15.0413 8.19087 14.8104 9.1774 14.3486 9.96923C13.9 10.7481 13.3788 11.5204 12.7851 12.2863C12.0726 13.2209 11.5316 13.9998 11.1622 14.6228C10.8059 15.2329 10.509 15.882 10.2715 16.57C10.2056 16.7517 10.1 16.8945 9.95488 16.9983C9.82294 17.0892 9.6712 17.1346 9.49967 17.1346ZM9.49967 8.95673C10.0538 8.95673 10.5222 8.76851 10.9049 8.39207C11.2875 8.01563 11.4788 7.55481 11.4788 7.00962C11.4788 6.46442 11.2875 6.00361 10.9049 5.62716C10.5222 5.25072 10.0538 5.0625 9.49967 5.0625C8.94551 5.0625 8.47711 5.25072 8.09447 5.62716C7.71183 6.00361 7.52051 6.46442 7.52051 7.00962C7.52051 7.55481 7.71183 8.01563 8.09447 8.39207C8.47711 8.76851 8.94551 8.95673 9.49967 8.95673Z" fill="#1D1B20" />
               </svg>
@@ -220,12 +248,12 @@ const WorkBeeJobCard = () => {
             </div>
 
             {/* Job Description Section */}
-            <div className="mb-8 h-40">
-              <h3 className="text-3xl ml-6 mt-10 font-bold mb-2">Job Description</h3>
+            <div className="mb-4 sm:mb-8 sm:h-40">
+              <h3 className="text-xl sm:text-3xl ml-6 mt-4 sm:mt-10 font-bold mb-2">Job Description</h3>
               <div className="mb-2">
-                <span className="font-semibold text-xl ml-6">About the job</span>
+                <span className="font-semibold text-lg sm:text-xl ml-6">About the job</span>
               </div>
-              <p className={`text-xl ml-6 text-gray-700 leading-relaxed ${isExpanded ? '' : 'clamp-3'}`}>
+              <p className={`text-sm sm:text-xl ml-6 text-gray-700 leading-relaxed ${isExpanded ? '' : 'clamp-3'}`}>
                 {currentJob.description}
               </p>
              
@@ -234,17 +262,17 @@ const WorkBeeJobCard = () => {
 
             {/* Action Buttons */}
             {/*
-              Add isFavorited state to control the button fill.
+              Add isFavorited state to control the button fill. 
               Place this near the other useState hooks:
               const [isFavorited, setIsFavorited] = useState(false);
             */}
-            <div className="flex ml-135 mt-24 items-center justify-center space-x-4 ">
+            <div className="flex flex-col sm:flex-row ml-0 sm:ml-135 mt-4 sm:mt-24 items-center justify-between sm:justify-center space-y-3 sm:space-y-0 sm:space-x-4 ">
               <button
                 onClick={() => {
                   handleFavorite();
                   setIsFavorited((prev) => !prev);
                 }}
-                className={`w-15 h-15 cursor-pointer apply-button rounded-full flex items-center justify-center glassmorphic-base transition-colors ${isFavorited ? 'bg-red-600' : ''}`}
+                className={`w-14 h-14 sm:w-15 sm:h-15 cursor-pointer apply-button rounded-full flex items-center justify-center glassmorphic-base transition-colors ${isFavorited ? 'bg-red-600' : ''}`}
                 style={isFavorited ? { backgroundColor: '#ef4444' } : {}}
               >
                 <span className="text-3xl">
@@ -253,11 +281,37 @@ const WorkBeeJobCard = () => {
               </button>
               <button
                 onClick={handleApply}
-                className="px-8 -45 h-15 py-3 apply-button glassmorphic-base text-white rounded-full font-semibold hover:bg-gray-600 transition-colors text-xl">
+                className="w-full sm:w-auto px-8 h-15 py-3 apply-button glassmorphic-base text-white rounded-full font-semibold hover:bg-gray-600 transition-colors text-lg sm:text-xl">
                 Apply Now
               </button>
             </div>
           </div>
+
+          {/* Mobile Navigation Arrows - Only visible on mobile */}
+          <div className="flex sm:hidden justify-center items-center mt-4 space-x-8">
+            <button
+              onClick={handlePrevious}
+              className="w-14 h-14 glassmorphic-base border border-gray-600 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors cursor-pointer"
+              aria-label="Previous job"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 18L9 12L15 6" stroke="#CDCDCD" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+            
+            <button
+              onClick={handleNext}
+              className="w-14 h-14 glassmorphic-base border border-gray-600 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors cursor-pointer"
+              aria-label="Next job"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="#CDCDCD" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          {/* Swipe hint for mobile */}
+           
         </div>
       </div>
 

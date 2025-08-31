@@ -80,9 +80,9 @@ export default function Notifications() {
 
     return (
         <main className="min-h-dvh bg-background text-foreground">
-            <section className="max-w-6xl mx-auto px-6 pt-8 pb-28">
-                <div className="relative flex items-center justify-center mb-6">
-                    <h1 className="text-center text-5xl md:text-6xl font-extrabold notification-text tracking-tight opacity-90">Notifications</h1>
+            <section className="max-w-6xl mx-auto px-4 sm:px-6 pt-6 sm:pt-8 pb-28">
+                <div className="relative flex items-center justify-center mb-4 sm:mb-6">
+                    <h1 className="text-center text-3xl sm:text-5xl md:text-6xl font-extrabold notification-text tracking-tight opacity-90">Notifications</h1>
                 </div>
 
                 {loading ? (
@@ -90,19 +90,19 @@ export default function Notifications() {
                 ) : items.length === 0 ? (
                     <div className="text-center opacity-70">No notifications yet</div>
                 ) : (
-                    <div className="divide-y divide-border rounded-[2rem] overflow-hidden bg-transparent">
+                    <div className="divide-y divide-border rounded-2xl sm:rounded-[2rem] overflow-hidden bg-transparent">
                         {items.map((n) => (
-                            <div key={n.id} className="flex items-center justify-between py-6">
-                                <div className="flex items-center gap-4">
-                                    <div className="w-14 h-14 notification-logo rounded-full  ring-1  flex items-center  justify-center">
-                                        <img src={n.logo} alt="logo" className="w-8 h-8 object-contain" />
+                            <div key={n.id} className="flex flex-col sm:flex-row items-start sm:items-center justify-between py-4 sm:py-6 gap-4">
+                                <div className="flex items-center gap-3 sm:gap-4">
+                                    <div className="w-12 h-12 sm:w-14 sm:h-14 notification-logo rounded-full  ring-1  flex items-center  justify-center">
+                                        <img src={n.logo} alt="logo" className="w-7 h-7 sm:w-8 sm:h-8 object-contain" />
                                     </div>
                                     <div>
-                                        <div className="text-lg font-semibold opacity-90">{n.company} <span className="font-normal">{n.title}</span></div>
-                                        <div className="text-sm opacity-70">{n.subtitle}</div>
+                                        <div className="text-base sm:text-lg font-semibold opacity-90">{n.company} <span className="font-normal">{n.title}</span></div>
+                                        <div className="text-xs sm:text-sm opacity-70">{n.subtitle}</div>
                                     </div>
                                 </div>
-                                <button className="px-6 py-2 h-12 view-job-btn rounded-3xl view-job text-white ">View Job</button>
+                                <button className="w-full sm:w-auto px-5 sm:px-6 py-2 h-11 sm:h-12 view-job-btn rounded-2xl sm:rounded-3xl view-job text-white ">View Job</button>
                             </div>
                         ))}
                     </div>

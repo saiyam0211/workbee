@@ -6,17 +6,17 @@ const GlassFooter = ({ activeTab, setActiveTab }) => {
   const navigate = useNavigate();
   const navigationItems = [
     { id: 'home', icon: Home, label: 'Home' },
-    { id: 'search', icon: Search, label: 'Search' },
+    // { id: 'search', icon: Search, label: 'Search' },
     { id: 'saved', icon: Heart, label: 'Favourites' },
     { id: 'alerts', icon: Bell, label: 'Alerts', hasNotification: true },
-    { id: 'profile', icon: User, label: 'Profile' }
+    // { id: 'profile', icon: User, label: 'Profile' }
   ];
 
   return (
-    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
-      <div className="glass-footer-container">
+    <div className="fixed bottom-0 inset-x-0 md:inset-x-auto md:left-1/2 md:-translate-x-1/2 md:bottom-6 z-50 px-3 md:px-0 pb-[max(env(safe-area-inset-bottom),0.5rem)] sm:pb-6">
+      <div className="glass-footer-container mx-auto md:mx-0 max-w-md">
         <div className="glass-footer-background"></div>
-        <div className="flex items-center px-8 py-4 gap-12">
+        <div className="grid grid-cols-3 items-center px-4 sm:px-8 py-2 sm:py-4 gap-6 sm:gap-12">
           {navigationItems.map((item) => {
             const Icon = item.icon;
             const isActive = activeTab === item.id;
@@ -31,6 +31,7 @@ const GlassFooter = ({ activeTab, setActiveTab }) => {
                   }
                   if (item.id === 'saved') navigate('/fav-companies');
                   if (item.id === 'alerts') navigate('/notifications');
+                  // if (item.id === 'profile') navigate('/profile');
                   // removed duplicate home navigation to avoid conflicting routes
                 }}
                 className="glass-nav-item flex flex-col items-center gap-1 group relative"

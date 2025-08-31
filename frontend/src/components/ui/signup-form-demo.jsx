@@ -7,10 +7,12 @@ import {
   IconBrandGithub,
   IconBrandGoogle,
   IconBrandOnlyfans,
+  IconExclamationCircle,
 } from "@tabler/icons-react";
 
 export default function SignupFormDemo({ onSuccess }) {
   const [isLoading, setIsLoading] = React.useState(false);
+  const [passwordError, setPasswordError] = React.useState("");
   const [formData, setFormData] = React.useState({
     firstname: '',
     lastname: '',
@@ -24,30 +26,42 @@ export default function SignupFormDemo({ onSuccess }) {
       ...formData,
       [e.target.id]: e.target.value
     });
+    
+    // Clear password error when user types in either password field
+    if (e.target.id === 'password' || e.target.id === 'confirmpassword') {
+      setPasswordError("");
+    }
+  };
+
+  const validatePasswords = () => {
+    if (formData.password && formData.confirmpassword && formData.password !== formData.confirmpassword) {
+      setPasswordError("Password doesn't match");
+      return false;
+    }
+    setPasswordError("");
+    return true;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsLoading(true);
+    
+    // Validate passwords first
+    if (!validatePasswords()) {
+      return;
+    }
     
     // Basic validation
     if (!formData.firstname || !formData.lastname || !formData.email || !formData.password || !formData.confirmpassword) {
       alert('Please fill in all fields');
-      setIsLoading(false);
-      return;
-    }
-
-    if (formData.password !== formData.confirmpassword) {
-      alert('Passwords do not match');
-      setIsLoading(false);
       return;
     }
 
     if (formData.password.length < 6) {
       alert('Password must be at least 6 characters long');
-      setIsLoading(false);
       return;
     }
+
+    setIsLoading(true);
 
     // Simulate API call
     setTimeout(() => {
@@ -59,18 +73,18 @@ export default function SignupFormDemo({ onSuccess }) {
     }, 1000);
   };
   return (
-    <div className="shadow-input mx-auto w-full max-w-md rounded-none bg-white p-4 md:rounded-2xl md:p-8 dark:bg-black">
-      <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-200">
+    <div className="shadow-input mx-auto w-full max-w-md rounded-none bg-black p-4 md:rounded-2xl md:p-8">
+      <h2 className="text-xl font-bold text-white">
         Welcome to WorkBee
       </h2>
-      <p className="mt-2 max-w-sm text-sm text-neutral-600 dark:text-neutral-300">
+      <p className="mt-2 max-w-sm text-sm text-gray-300">
         Login to WorkBee to access your personalized job dashboard
       </p>
 
       <form className="my-8" onSubmit={handleSubmit}>
         <div className="mb-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
           <LabelInputContainer>
-            <Label htmlFor="firstname">First name</Label>
+            <Label htmlFor="firstname" className="text-white">First name</Label>
             <Input 
               id="firstname" 
               placeholder="Alex" 
@@ -81,7 +95,7 @@ export default function SignupFormDemo({ onSuccess }) {
             />
           </LabelInputContainer>
           <LabelInputContainer>
-            <Label htmlFor="lastname">Last name</Label>
+            <Label htmlFor="lastname" className="text-white">Last name</Label>
             <Input 
               id="lastname" 
               placeholder="Wiliams" 
@@ -93,7 +107,7 @@ export default function SignupFormDemo({ onSuccess }) {
           </LabelInputContainer>
         </div>
         <LabelInputContainer className="mb-4">
-          <Label htmlFor="email">Email Address</Label>
+          <Label htmlFor="email" className="text-white">Email Address</Label>
           <Input 
             id="email" 
             placeholder="example@gmail.com" 
@@ -104,7 +118,7 @@ export default function SignupFormDemo({ onSuccess }) {
           />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
-          <Label htmlFor="password">Password</Label>
+          <Label htmlFor="password" className="text-white">Password</Label>
           <Input 
             id="password" 
             placeholder="••••••••" 
@@ -114,16 +128,23 @@ export default function SignupFormDemo({ onSuccess }) {
             required
           />
         </LabelInputContainer>
-        <LabelInputContainer className="mb-8">
-          <Label htmlFor="confirmpassword">Confirm Password</Label>
+        <LabelInputContainer className="mb-2">
+          <Label htmlFor="confirmpassword" className="text-white">Confirm Password</Label>
           <Input
             id="confirmpassword"
             placeholder="••••••••"
             type="password"
             value={formData.confirmpassword}
             onChange={handleInputChange}
+            onBlur={validatePasswords}
             required
           />
+          {passwordError && (
+            <div className="flex items-center space-x-2 text-red-500 text-sm mt-1">
+              <IconExclamationCircle className="w-4 h-4" />
+              <span>{passwordError}</span>
+            </div>
+          )}
         </LabelInputContainer>
 
         <button

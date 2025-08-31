@@ -44,17 +44,17 @@ export default function LoginFormDemo({ onSuccess }) {
     }, 1000);
   };
   return (
-    <div className="shadow-input mx-auto w-full max-w-md rounded-none bg-white p-4 md:rounded-2xl md:p-8 dark:bg-black">
-      <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-200">
+    <div className="shadow-input mx-auto w-full max-w-md rounded-none bg-black p-4 md:rounded-2xl md:p-8">
+      <h2 className="text-xl font-bold text-white">
         Welcome back to WorkBee
       </h2>
-      <p className="mt-2 max-w-sm text-sm text-neutral-600 dark:text-neutral-300">
+      <p className="mt-2 max-w-sm text-sm text-gray-300">
         Sign in to access your personalized job dashboard
       </p>
 
       <form className="my-8" onSubmit={handleSubmit}>
         <LabelInputContainer className="mb-4">
-          <Label htmlFor="email">Email Address</Label>
+          <Label htmlFor="email" className="text-white">Email Address</Label>
           <Input 
             id="email" 
             placeholder="example@gmail.com" 
@@ -65,7 +65,7 @@ export default function LoginFormDemo({ onSuccess }) {
           />
         </LabelInputContainer>
         <LabelInputContainer className="mb-8">
-          <Label htmlFor="password">Password</Label>
+          <Label htmlFor="password" className="text-white">Password</Label>
           <Input 
             id="password" 
             placeholder="••••••••" 

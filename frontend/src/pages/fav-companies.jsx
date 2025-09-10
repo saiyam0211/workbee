@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import GlassFooter from '@/components/ui/GlassFooter';
 import SavedJobsPopup from '@/components/ui/saved-jobs-popup';
 import { storageUtils } from '../utils/storage';
@@ -89,7 +89,7 @@ export default function FavCompanies() {
 
   // Listen for updates from dashboard when user saves/unsaves jobs
   React.useEffect(() => {
-    const handler = () => {
+    const updateCounts = () => {
       const counts = storageUtils.getAllJobCounts();
       setSavedCounts(counts);
       console.log('Updated saved counts:', counts);

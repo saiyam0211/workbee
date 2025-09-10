@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Heart, HelpCircle, Play } from 'lucide-react';
 import { driver } from 'driver.js';
 import 'driver.js/dist/driver.css';

@@ -383,7 +383,7 @@ const HeroHeader = () => {
 const Logo = ({ className }) => {
     return (
     <>
-        <span className='text-2xl font-bold'>WorkBee</span>
+        <span className='text-xl h-10 font-bold'><img className='w-40 h-50 -mt-18' src="public/logos/workbeelogo.svg" alt="" /></span>
         </>
     )
 }

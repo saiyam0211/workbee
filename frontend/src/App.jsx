@@ -4,6 +4,7 @@ import Landing from '@/pages/Landing'
 import Dashboard from '@/pages/Dashboard'
 import FavCompanies from '@/pages/fav-companies'
 import Notifications from '@/pages/Notifications'
+import SearchPage from '@/pages/SearchPage'
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/fav-companies" element={<FavCompanies />} />
         <Route path="/notifications" element={<Notifications />} />
+        <Route path="/search" element={<SearchPage />} />
       </Routes>
     </Router>
   )

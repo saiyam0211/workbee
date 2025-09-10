@@ -5,7 +5,6 @@ import { Button } from '@/components/ui/button'
 import { AnimatedGroup } from '@/components/ui/animated-group'
 import { cn } from '@/lib/utils'
 import Spline from '@splinetool/react-spline'
-import AuthModal from './auth-modal'
 "use client"
 
 const transitionVariants = {
@@ -277,7 +276,6 @@ const menuItems = []
 const HeroHeader = () => {
     const [menuState, setMenuState] = React.useState(false)
     const [isScrolled, setIsScrolled] = React.useState(false)
-    const [isAuthModalOpen, setIsAuthModalOpen] = React.useState(false)
     const navigate = useNavigate()
 
     React.useEffect(() => {
@@ -290,10 +288,6 @@ const HeroHeader = () => {
 
     const handleDashboardClick = (e) => {
         e.preventDefault()
-        setIsAuthModalOpen(true)
-    }
-
-    const handleAuthSuccess = () => {
         navigate('/dashboard')
     }
 
@@ -369,13 +363,6 @@ const HeroHeader = () => {
                     </div>
                 </div>
             </nav>
-            
-            {/* Auth Modal */}
-            <AuthModal 
-                isOpen={isAuthModalOpen}
-                onClose={() => setIsAuthModalOpen(false)}
-                onSuccess={handleAuthSuccess}
-            />
         </header>
     )
 }

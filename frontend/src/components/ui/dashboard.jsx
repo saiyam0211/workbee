@@ -1,16 +1,41 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Heart } from 'lucide-react';
+import { Heart, HelpCircle, Play } from 'lucide-react';
+import { driver } from 'driver.js';
+import 'driver.js/dist/driver.css';
 import GlassFooter from './GlassFooter';
 import JobDetailsModal from './JobDetailsModal';
 import nvidiaJobs from '@/nvidia_jobs.json';
+import { storageUtils } from '../../utils/storage';
 
 
+
+// Company logo mapping
+const companyLogos = {
+  'NVIDIA': '/logos/nvidia.svg',
+  'Microsoft': '/logos/microsoft.svg',
+  'Google': '/logos/google-only.svg',
+  'Apple': '/logos/apple-only.svg',
+  'Amazon': '/logos/amazon.png',
+  'Meta': '/logos/meta-only.svg',
+  'AMD': '/logos/amd.png',
+  'Yahoo': '/logos/yahoo.png',
+  'Stripe': '/logos/stripe-logo.svg',
+  'Tesla': '/logos/tesla-logo.svg',
+  'Airbnb': '/logos/airbnb-logo.svg',
+  'Spotify': '/logos/spotify-only.svg',
+  'Netflix': '/logos/netflix-only.svg',
+  'Slack': '/logos/slack-only.svg',
+  'Atlassian': '/logos/atlassian.svg',
+  'Adobe': '/logos/adobe-only.svg',
+  'WhatsApp': '/logos/whatsapp-only.svg',
+  'Loom': '/logos/loom-only.svg'
+};
 
 // Build job data from NVIDIA JSON
 const jobData = (Array.isArray(nvidiaJobs) ? nvidiaJobs : []).map((job, idx) => ({
   id: idx + 1,
   company: job.company || 'NVIDIA',
-  logo: '/logos/microsoft.svg',
+  logo: companyLogos[job.company] || companyLogos['NVIDIA'],
   title: job.title || 'Untitled Role',
   location: job.location || 'Location not specified',
   level: job.experience_required || 'Not specified',
@@ -22,18 +47,321 @@ const jobData = (Array.isArray(nvidiaJobs) ? nvidiaJobs : []).map((job, idx) => 
 const WorkBeeJobCard = () => {
   useEffect(() => {
     document.body.classList.add('dark');
-    return () => document.body.classList.remove('dark');
+    
+    // Add custom CSS for Driver.js popover styling
+    const style = document.createElement('style');
+    style.textContent = `
+      .driver-popover-custom {
+        border-radius: 16px !important;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+        border: 2px solid rgba(255, 255, 255, 0.1) !important;
+        backdrop-filter: blur(10px) !important;
+        background: rgba(17, 24, 39, 0.95) !important;
+      }
+      
+      .driver-popover-custom .driver-popover-title {
+        color: #f3f4f6 !important;
+        font-size: 1.25rem !important;
+        font-weight: 600 !important;
+        margin-bottom: 0.75rem !important;
+      }
+      
+      .driver-popover-custom .driver-popover-description {
+        color: #d1d5db !important;
+        font-size: 1rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 1rem !important;
+      }
+      
+      .driver-popover-custom .driver-popover-footer {
+        border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+        padding-top: 1rem !important;
+      }
+      
+      .driver-popover-custom .driver-popover-progress-text {
+        color: #9ca3af !important;
+        font-size: 0.875rem !important;
+      }
+      
+      .driver-popover-custom .driver-popover-btn {
+        border-radius: 8px !important;
+        font-weight: 500 !important;
+        transition: all 0.2s ease !important;
+      }
+      
+      .driver-popover-custom .driver-popover-btn.driver-popover-btn-primary {
+        background: #3b82f6 !important;
+        border: 1px solid #3b82f6 !important;
+        color: white !important;
+      }
+      
+      .driver-popover-custom .driver-popover-btn.driver-popover-btn-primary:hover {
+        background: #2563eb !important;
+        border-color: #2563eb !important;
+      }
+      
+      .driver-popover-custom .driver-popover-btn.driver-popover-btn-secondary {
+        background: transparent !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        color: #d1d5db !important;
+      }
+      
+      .driver-popover-custom .driver-popover-btn.driver-popover-btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.1) !important;
+        border-color: rgba(255, 255, 255, 0.3) !important;
+      }
+      
+      /* Special styling for step 1 - larger size */
+      .driver-popover-step-1 {
+        min-width: 400px !important;
+        max-width: 500px !important;
+        width: auto !important;
+        padding: 2rem !important;
+        background: linear-gradient(135deg, rgba(17, 24, 39, 0.98) 0%, rgba(31, 41, 55, 0.95) 100%) !important;
+        border: 2px solid rgba(59, 130, 246, 0.3) !important;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(59, 130, 246, 0.1) !important;
+      }
+      
+      .driver-popover-step-1 .driver-popover-title {
+        font-size: 1.5rem !important;
+        text-align: center !important;
+        background: linear-gradient(135deg, #3b82f6, #8b5cf6) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        background-clip: text !important;
+        margin-bottom: 1rem !important;
+      }
+      
+      .driver-popover-step-1 .driver-popover-description {
+        font-size: 1.125rem !important;
+        text-align: center !important;
+        margin-bottom: 1.5rem !important;
+        color: #e5e7eb !important;
+        line-height: 1.6 !important;
+      }
+      
+      .driver-popover-step-1 .driver-popover-footer {
+        margin-top: 1.5rem !important;
+        padding-top: 1.5rem !important;
+        border-top: 1px solid rgba(59, 130, 246, 0.2) !important;
+      }
+      
+      /* Custom highlight styling for step 1 */
+      .driver-popover-step-1 ~ .driver-highlighted-element {
+        border-radius: 16px !important;
+        box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.3), 0 0 20px rgba(59, 130, 246, 0.2) !important;
+        background: rgba(59, 130, 246, 0.05) !important;
+        transition: all 0.3s ease !important;
+      }
+      
+      /* Enhanced highlight for the job card header */
+      #job-card-header.driver-highlighted-element {
+        background: rgba(59, 130, 246, 0.08) !important;
+        border-radius: 12px !important;
+        padding: 0.5rem !important;
+        margin: -0.5rem !important;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.4), 0 0 15px rgba(59, 130, 246, 0.3) !important;
+      }
+    `;
+    document.head.appendChild(style);
+    
+    return () => {
+      document.body.classList.remove('dark');
+      // Clean up the style element
+      if (document.head.contains(style)) {
+        document.head.removeChild(style);
+      }
+    };
   }, []);
   const [currentJobIndex, setCurrentJobIndex] = useState(0);
   const [savedVersion, setSavedVersion] = useState(0);
   const [activeTab, setActiveTab] = useState('home');
-  const getSavedMap = () => {
-    try {
-      const raw = localStorage.getItem('wb_saved_jobs');
-      return raw ? JSON.parse(raw) : {};
-    } catch {
-      return {};
+  const [navigatedFromFavorited, setNavigatedFromFavorited] = useState(false);
+  const [showTourButton, setShowTourButton] = useState(false);
+  const [showTooltip, setShowTooltip] = useState(null);
+
+  // Driver.js configuration
+  const driverObj = driver({
+    showProgress: true,
+    showButtons: ['next', 'previous', 'close'],
+    nextBtnText: 'Next →',
+    prevBtnText: '← Previous',
+    doneBtnText: 'Got it!',
+    closeBtnText: 'Skip tour',
+    progressText: 'Step {{current}} of {{total}}',
+    popoverClass: 'driver-popover-custom',
+    steps: [
+      {
+        element: '#job-card',
+        popover: {
+          title: 'Welcome to WorkBee! 🐝',
+          description: 'This is your job discovery platform. Here you can browse through available job opportunities from top companies.',
+          side: 'bottom',
+          align: 'center',
+          popoverClass: 'driver-popover-custom driver-popover-step-1'
+        }
+      },
+      {
+        element: '#company-logo',
+        popover: {
+          title: 'Company Information',
+          description: 'Each job card shows the company logo, making it easy to identify opportunities from your favorite companies.',
+          side: 'right',
+          align: 'center'
+        }
+      },
+      {
+        element: '#job-card-header',
+        popover: {
+          title: 'Job Title',
+          description: 'Each job card shows the Job Title, making it easy to identify opportunities from your favorite companies.',
+          side: 'right',
+          align: 'center'
+        }
+      },
+      {
+        element: '#job-details',
+        popover: {
+          title: 'Job Details',
+          description: 'View important information like location, experience level, and posting date to help you make informed decisions.',
+          side: 'top',
+          align: 'center'
+        }
+      },
+      {
+        element: '#job-description',
+        popover: {
+          title: 'Job Description',
+          description: 'Read the full job description to understand the role requirements and responsibilities. Click "Read More" for the complete details.',
+          side: 'top',
+          align: 'center'
+        }
+      },
+      {
+        element: '#favorite-button',
+        popover: {
+          title: 'Save Jobs',
+          description: 'Click the heart icon to save jobs you\'re interested in. Saved jobs will appear in your favorites section.',
+          side: 'left',
+          align: 'center'
+        }
+      },
+      {
+        element: '#apply-button',
+        popover: {
+          title: 'Apply Now',
+          description: 'Ready to apply? Click this button to be taken directly to the company\'s application page.',
+          side: 'left',
+          align: 'center'
+        }
+      },
+      {
+        element: '#navigation-arrows',
+        popover: {
+          title: 'Browse Jobs',
+          description: 'Use these arrows to navigate between different job opportunities. You can also use keyboard arrows.',
+          side: 'top',
+          align: 'center'
+        }
+      },
+      {
+        element: '#bottom-navigation',
+        popover: {
+          title: 'Navigation Menu',
+          description: 'Access different sections of WorkBee: search for jobs, view your saved jobs, and manage notifications.',
+          side: 'top',
+          align: 'center'
+        }
+      },
+      {
+        element: '#nav-search',
+        popover: {
+          title: 'Search Feature',
+          description: 'Click here to access the search page where you can find specific job opportunities.',
+          side: 'top',
+          align: 'center'
+        }
+      },
+      {
+        element: '#nav-saved',
+        popover: {
+          title: 'Saved Jobs',
+          description: 'View all your saved job opportunities in one place.',
+          side: 'top',
+          align: 'center'
+        }
+      }
+    ]
+  });
+
+  // Start the tour
+  const startTour = () => {
+    driverObj.drive();
+    setShowTourButton(false);
+  };
+
+  // Check if user has completed the tour
+  useEffect(() => {
+    const hasCompletedTour = storageUtils.tourUtils.hasCompletedTour();
+    if (!hasCompletedTour) {
+      setShowTourButton(true);
     }
+  }, []);
+
+  // Mark tour as completed
+  const onTourComplete = () => {
+    storageUtils.tourUtils.markTourCompleted();
+    setShowTourButton(false);
+  };
+
+  // Add event listener for tour completion
+  useEffect(() => {
+    const handleTourComplete = () => {
+      onTourComplete();
+    };
+
+    // Listen for tour completion
+    document.addEventListener('driver:completed', handleTourComplete);
+    document.addEventListener('driver:closed', handleTourComplete);
+
+    return () => {
+      document.removeEventListener('driver:completed', handleTourComplete);
+      document.removeEventListener('driver:closed', handleTourComplete);
+    };
+  }, []);
+
+  // Tooltip component
+  const Tooltip = ({ children, content, position = 'top' }) => {
+    const [isVisible, setIsVisible] = useState(false);
+    
+    return (
+      <div 
+        className="relative inline-block"
+        onMouseEnter={() => setIsVisible(true)}
+        onMouseLeave={() => setIsVisible(false)}
+      >
+        {children}
+        {isVisible && (
+          <div className={`absolute z-50 px-3 py-2 text-sm text-white bg-gray-900 rounded-lg shadow-lg whitespace-nowrap ${
+            position === 'top' ? 'bottom-full mb-2' : 
+            position === 'bottom' ? 'top-full mt-2' :
+            position === 'left' ? 'right-full mr-2' : 'left-full ml-2'
+          }`}>
+            {content}
+            <div className={`absolute w-2 h-2 bg-gray-900 transform rotate-45 ${
+              position === 'top' ? 'top-full -mt-1 left-1/2 -translate-x-1/2' :
+              position === 'bottom' ? 'bottom-full -mb-1 left-1/2 -translate-x-1/2' :
+              position === 'left' ? 'left-full -ml-1 top-1/2 -translate-y-1/2' :
+              'right-full -mr-1 top-1/2 -translate-y-1/2'
+            }`} />
+          </div>
+        )}
+      </div>
+    );
+  };
+
+  const getSavedMap = () => {
+    return storageUtils.getSavedJobs();
   };
   const isJobSaved = (job) => {
     const saved = getSavedMap();
@@ -41,35 +369,64 @@ const WorkBeeJobCard = () => {
     const key = `${company}__${job.title}`;
     return Boolean(saved?.[company]?.[key]);
   };
-  const visibleJobs = React.useMemo(() => jobData.filter((j) => !isJobSaved(j)), [savedVersion]);
+  const visibleJobs = React.useMemo(() => {
+    // If user hasn't navigated away from a favorited job, show all jobs
+    if (!navigatedFromFavorited) {
+      return jobData;
+    }
+    // If user has navigated away, filter out favorited jobs
+    return jobData.filter((job) => !isJobSaved(job));
+  }, [savedVersion, navigatedFromFavorited]);
   const currentJob = visibleJobs[currentJobIndex];
   const [isExpanded, setIsExpanded] = useState(false);
-  const [isFavorited, setIsFavorited] = useState(false);
+  const [isFavorited, setIsFavorited] = useState(null); // null = loading, true/false = loaded
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedJob, setSelectedJob] = useState(null);
   const touchStartXRef = useRef(null);
   const touchStartYRef = useRef(null);
+
+  // Helper function to get next valid job index
+  const getNextValidIndex = (currentIndex, direction) => {
+    const totalJobs = visibleJobs.length;
+    if (totalJobs === 0) return 0;
+    
+    return direction === 'next' 
+      ? (currentIndex + 1) % totalJobs
+      : (currentIndex - 1 + totalJobs) % totalJobs;
+  };
   const handlePrevious = () => {
     if (visibleJobs.length === 0) return;
-    setCurrentJobIndex((prev) => (prev === 0 ? visibleJobs.length - 1 : prev - 1));
+    // Check if current job is favorited before navigating away
+    if (currentJob && isJobSaved(currentJob)) {
+      setNavigatedFromFavorited(true);
+    }
+    setCurrentJobIndex((prev) => getNextValidIndex(prev, 'prev'));
   };
 
   const handleNext = () => {
     if (visibleJobs.length === 0) return;
-    setCurrentJobIndex((prev) => (prev === visibleJobs.length - 1 ? 0 : prev + 1));
+    // Check if current job is favorited before navigating away
+    if (currentJob && isJobSaved(currentJob)) {
+      setNavigatedFromFavorited(true);
+    }
+    setCurrentJobIndex((prev) => getNextValidIndex(prev, 'next'));
   };
 
   // Initialize favorited state based on localStorage when job changes
   useEffect(() => {
-    try {
-      const raw = localStorage.getItem('wb_saved_jobs');
-      const saved = raw ? JSON.parse(raw) : {};
-      if (!currentJob) return;
-      const jobKey = `${currentJob.company}__${currentJob.title}`;
-      setIsFavorited(Boolean(saved?.[currentJob.company]?.[jobKey]));
-    } catch (e) {
+    if (!currentJob) {
       setIsFavorited(false);
+      return;
     }
+    setIsFavorited(storageUtils.isJobSaved(currentJob));
   }, [currentJob]);
+
+  // Debug: Log storage info on mount
+  useEffect(() => {
+    const storageInfo = storageUtils.getStorageInfo();
+    console.log('Storage Info:', storageInfo);
+    console.log('All saved jobs:', storageUtils.getSavedJobs());
+  }, []);
 
   // TODO: Replace with API call
   const handleApply = () => {
@@ -81,44 +438,35 @@ const WorkBeeJobCard = () => {
     // API call will go here
   };
 
+  // Handle job selection from search
+  const handleJobSelect = (job) => {
+    setSelectedJob(job);
+    setIsModalOpen(true);
+  };
+
   const handleFavorite = () => {
-    try {
-      const raw = localStorage.getItem('wb_saved_jobs');
-      const saved = raw ? JSON.parse(raw) : {};
-      const company = currentJob.company || 'Unknown';
-      const jobKey = `${company}__${currentJob.title}`;
-      const companyMap = saved[company] || {};
-      let newFavorited;
-      if (companyMap[jobKey]) {
-        // Toggle off (remove)
-        delete companyMap[jobKey];
-        newFavorited = false;
+    if (!currentJob) return;
+    
+    const isCurrentlySaved = storageUtils.isJobSaved(currentJob);
+    
+    if (isCurrentlySaved) {
+      // Remove the job
+      const success = storageUtils.removeJob(currentJob, currentJob.company);
+      if (success) {
+        setIsFavorited(false);
+        console.log('Job removed from favorites');
       } else {
-        companyMap[jobKey] = {
-          id: currentJob.id,
-          title: currentJob.title,
-          location: currentJob.location,
-          level: currentJob.level,
-          description: currentJob.description,
-          job_link: currentJob.job_link,
-          company: company
-        };
-        newFavorited = true;
+        console.error('Failed to remove job from favorites');
       }
-      saved[company] = companyMap;
-      localStorage.setItem('wb_saved_jobs', JSON.stringify(saved));
-      setIsFavorited(newFavorited);
-      // Notify other pages (fav-companies) to update counts
-      window.dispatchEvent(new CustomEvent('wb:saved-jobs-updated'));
-      // If saved, remove from current visible list
-      if (newFavorited) {
-        setSavedVersion((v) => v + 1);
-        if (visibleJobs.length > 1) {
-          setCurrentJobIndex((prev) => (prev >= visibleJobs.length - 1 ? 0 : prev));
-        }
+    } else {
+      // Add the job
+      const success = storageUtils.addJob(currentJob);
+      if (success) {
+        setIsFavorited(true);
+        console.log('Job added to favorites');
+      } else {
+        console.error('Failed to add job to favorites');
       }
-    } catch (e) {
-      console.error('Failed to update saved jobs', e);
     }
   };
 
@@ -135,12 +483,16 @@ const WorkBeeJobCard = () => {
     window.addEventListener('keydown', handleKeyPress);
     return () => window.removeEventListener('keydown', handleKeyPress);
   }, []);
-  // Keep index in bounds when list changes
+  // Set random initial job and keep index in bounds when list changes
   useEffect(() => {
-    if (currentJobIndex >= visibleJobs.length) {
-      setCurrentJobIndex(0);
+    if (visibleJobs.length > 0) {
+      // If this is the first load or if current index is out of bounds, set random index
+      if (currentJobIndex >= visibleJobs.length || currentJobIndex === 0) {
+        const randomIndex = Math.floor(Math.random() * visibleJobs.length);
+        setCurrentJobIndex(randomIndex);
+      }
     }
-  }, [visibleJobs.length]);
+  }, [visibleJobs.length, currentJobIndex]);
   return (
     <div className="min-h-screen bg-background text-foreground font-sans pb-20">
       {/* Background Effects */}
@@ -177,13 +529,51 @@ const WorkBeeJobCard = () => {
             </defs>
           </svg>
         </div>
-       
-
       </div>
 
+      {/* Tour Control Buttons - Positioned absolutely to avoid layout interference */}
+      <div className="fixed top-4 right-24 sm:right-32 z-50 flex flex-col gap-2 max-w-[180px] sm:max-w-none">
+        {/* Tour Button */}
+        {showTourButton && (
+          <button
+            onClick={startTour}
+            className="flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors shadow-lg text-xs sm:text-sm"
+          >
+            <Play className="w-3 h-3 sm:w-4 sm:h-4" />
+            <span className="hidden sm:inline">Take a Tour</span>
+            <span className="sm:hidden">Tour</span>
+          </button>
+        )}
+
+        {/* Help Button - Always visible */}
+        <button
+          onClick={startTour}
+          className="flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors shadow-lg text-xs sm:text-sm"
+          title="Start product tour"
+        >
+          <HelpCircle className="w-3 h-3 sm:w-4 sm:h-4" />
+          <span className="hidden sm:inline">Help</span>
+        </button>
+
+        {/* Debug: Reset Tour Button (only in development) */}
+        {process.env.NODE_ENV === 'development' && (
+          <button
+            onClick={() => {
+              storageUtils.tourUtils.resetTour();
+              setShowTourButton(true);
+              console.log('Tour reset for testing');
+            }}
+            className="flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors shadow-lg text-xs sm:text-sm"
+            title="Reset tour (dev only)"
+          >
+            <span className="hidden sm:inline">Reset Tour</span>
+            <span className="sm:hidden">Reset</span>
+          </button>
+        )}
+      </div>
 
       {/* Main Content */}
-      <div className="px-4 -mt-12 py-8 flex items-center justify-center relative z-10">
+      <div className="px-4 py-8 flex items-center justify-center relative z-10" id="job-card">
         <div
           className="relative max-w-md w-full sm:max-w-lg"
           onTouchStart={(e) => {
@@ -206,123 +596,149 @@ const WorkBeeJobCard = () => {
           }}
         >
           {/* Navigation Arrows */}
-          <button
-            onClick={handlePrevious}
-            className="hidden sm:flex absolute -left-16 glassmorphic-base cursor-pointer top-1/2 transform -translate-y-1/2 w-12 h-12 sm:w-16 sm:h-16 border rounded-full items-center justify-center transition-colors -ml-95">
+            <div  className="hidden sm:flex">
+
+              <button
+                onClick={handlePrevious}
+                className="absolute -left-16 glassmorphic-base cursor-pointer top-1/2 transform -translate-y-1/2 w-12 h-12 sm:w-16 sm:h-16 border rounded-full items-center justify-center transition-colors -ml-95">
             <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M63.5413 50H36.458M36.458 50L46.8747 39.5833M36.458 50L46.8747 60.4167" stroke="#CDCDCD" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               <path d="M70.8333 18.8148C64.8746 14.8261 57.7089 12.5 50 12.5C29.2893 12.5 12.5 29.2893 12.5 50C12.5 70.7107 29.2893 87.5 50 87.5C70.7107 87.5 87.5 70.7107 87.5 50C87.5 43.1696 85.6739 36.7657 82.4832 31.25" stroke="#CDCDCD" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
 
-          </button>
-
-          <button
-            onClick={handleNext}
-            className="hidden sm:flex absolute cursor-pointer -right-16 top-1/2 transform -translate-y-1/2 w-12 h-12 sm:w-16 sm:h-16 glassmorphic-base border border-gray-600 rounded-full items-center justify-center hover:bg-gray-700 transition-colors -mr-95">
+              </button>
+              <button
+              id="navigation-arrows"
+                onClick={handleNext}
+                className="absolute cursor-pointer -right-16 top-1/2 transform -translate-y-1/2 w-12 h-12 sm:w-16 sm:h-16 glassmorphic-base border border-gray-600 rounded-full items-center justify-center hover:bg-gray-700 transition-colors -mr-95">
             <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M36.4587 50H63.542M63.542 50L53.1253 60.4167M63.542 50L53.1253 39.5833" stroke="#CDCDCD" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               <path d="M29.1667 81.1852C35.1254 85.1739 42.2911 87.5 50 87.5C70.7107 87.5 87.5 70.7107 87.5 50C87.5 29.2893 70.7107 12.5 50 12.5C29.2893 12.5 12.5 29.2893 12.5 50C12.5 56.8304 14.3261 63.2343 17.5168 68.75" stroke="#CDCDCD" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
 
-          </button>
+              </button>
+          </div>
 
           {/* Job Card */}
           <div
             key={currentJob.id || currentJob.title}
-            className="bg-gradient-to-br from-[#D9D9D9] to-[#737373]    rounded-3xl sm:rounded-[60px] p-4 sm:p-15 text-black shadow-2xl border-4 w-full sm:w-230 h-auto sm:h-140 ml-0 sm:-ml-55  sm:-mt-17 select-none touch-pan-y"
+            className="bg-gradient-to-br from-[#D9D9D9] to-[#737373] rounded-3xl sm:rounded-[60px] p-6 sm:p-8 text-black shadow-2xl border-4 w-full sm:w-230 h-auto sm:h-140 ml-0 sm:-ml-55 sm:-mt-17 select-none touch-pan-y"
           >
-            {/* Company Logo (desktop only) */}
-            <div className="hidden sm:flex justify-end mb-4">
-              <div className="w-20  h-20 bg-white rounded-full flex items-center justify-center p-2">
+            {/* Header with Company Logo and Job Title */}
+            <div className="flex items-start justify-between mb-6">
+              {/* Company Logo */}
+              <div id="company-logo" className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 bg-white rounded-2xl sm:rounded-3xl flex items-center justify-center p-3 sm:p-4 shadow-lg">
                 <img
                   src={currentJob.logo}
                   alt={`${currentJob.company} logo`}
-                  className="w-8 h-8 object-contain"
+                  className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
                   onError={(e) => {
                     const img = e.currentTarget;
                     if (img.src.includes('-only')) img.src = img.src.replace('-only','');
                   }}
                 />
               </div>
-            </div>
-
-            {/* Job Title with inline logo on mobile */}
-            <div className="flex  items-center -mt-4 gap-3 ml-6 mb-2 sm:mb-0">
-              <div className="sm:hidden  shrink-0 w-10 h-10 bg-white rounded-full flex items-center justify-center p-1.5">
-                <img
-                  src={currentJob.logo}
-                  alt={`${currentJob.company} logo`}
-                  className="w-6 h-6 object-contain"
-                />
+              
+              {/* Job Title */}
+              <div className="flex-1 ml-4 sm:ml-6">
+                <h2  id="job-card-header" className="text-xl sm:text-3xl font-bold leading-tight text-gray-900 break-words line-clamp-2">
+                  {currentJob.title}
+                </h2>
+                <p className="text-sm sm:text-lg font-medium text-gray-700 mt-1">
+                  {currentJob.company}
+                </p>
               </div>
-              <h2 className="text-2xl sm:text-4xl mt-2 sm:-mt-22 font-bold leading-tight break-words line-clamp-2 pr-24 sm:pr-40">
-              {currentJob.title}
-            </h2>
             </div>
 
 
 
-            {/* Location and Level */}
-            <div className="flex items-start text-sm sm:text-lg ml-6 text-gray-900 mb-6">
-              <span className="mr-1"><svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9.49967 17.1346C9.31495 17.1346 9.15662 17.0827 9.02467 16.9788C8.89273 16.875 8.79377 16.7387 8.7278 16.57C8.47711 15.843 8.16044 15.1615 7.7778 14.5255C7.40835 13.8894 6.88717 13.143 6.21426 12.2863C5.54134 11.4296 4.99377 10.6118 4.57155 9.83293C4.16252 9.05409 3.95801 8.11298 3.95801 7.00962C3.95801 5.49087 4.49238 4.20577 5.56113 3.15433C6.64308 2.0899 7.95592 1.55769 9.49967 1.55769C11.0434 1.55769 12.3497 2.0899 13.4184 3.15433C14.5004 4.20577 15.0413 5.49087 15.0413 7.00962C15.0413 8.19087 14.8104 9.1774 14.3486 9.96923C13.9 10.7481 13.3788 11.5204 12.7851 12.2863C12.0726 13.2209 11.5316 13.9998 11.1622 14.6228C10.8059 15.2329 10.509 15.882 10.2715 16.57C10.2056 16.7517 10.1 16.8945 9.95488 16.9983C9.82294 17.0892 9.6712 17.1346 9.49967 17.1346ZM9.49967 8.95673C10.0538 8.95673 10.5222 8.76851 10.9049 8.39207C11.2875 8.01563 11.4788 7.55481 11.4788 7.00962C11.4788 6.46442 11.2875 6.00361 10.9049 5.62716C10.5222 5.25072 10.0538 5.0625 9.49967 5.0625C8.94551 5.0625 8.47711 5.25072 8.09447 5.62716C7.71183 6.00361 7.52051 6.46442 7.52051 7.00962C7.52051 7.55481 7.71183 8.01563 8.09447 8.39207C8.47711 8.76851 8.94551 8.95673 9.49967 8.95673Z" fill="#1D1B20" />
-              </svg>
-              </span>
-              <span className="line-clamp-2 break-words">{currentJob.location}</span>
-              <div className="flex items-center ml-4">
-                <span className="mr-1"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3 22H21" stroke="#292D32" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M5.59998 8.38H4C3.45 8.38 3 8.83 3 9.38V18C3 18.55 3.45 19 4 19H5.59998C6.14998 19 6.59998 18.55 6.59998 18V9.38C6.59998 8.83 6.14998 8.38 5.59998 8.38Z" stroke="#292D32" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M12.8002 5.19H11.2002C10.6502 5.19 10.2002 5.64 10.2002 6.19V18C10.2002 18.55 10.6502 19 11.2002 19H12.8002C13.3502 19 13.8002 18.55 13.8002 18V6.19C13.8002 5.64 13.3502 5.19 12.8002 5.19Z" stroke="#292D32" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M20.0004 2H18.4004C17.8504 2 17.4004 2.45 17.4004 3V18C17.4004 18.55 17.8504 19 18.4004 19H20.0004C20.5504 19 21.0004 18.55 21.0004 18V3C21.0004 2.45 20.5504 2 20.0004 2Z" stroke="#292D32" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                </span>
-                <span>{currentJob.level}</span>
-              </div>
+            {/* Job Details */}
+            <div id="job-details" className="flex flex-col sm:flex-row sm:items-center gap-4 mb-6">
+              {/* Location - only render if available */}
+              {currentJob.location && currentJob.location.trim() !== '' && (
+                <div className="flex items-center text-sm sm:text-base text-gray-700">
+                  <svg className="w-4 h-4 mr-2 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                  </svg>
+                  <span className="font-medium">{currentJob.location}</span>
+                </div>
+              )}
+              
+              {/* Experience Level - only render if available */}
+              {currentJob.level && currentJob.level.trim() !== '' && currentJob.level !== 'Not specified' && (
+                <div className="flex items-center text-sm sm:text-base text-gray-700">
+                  <svg className="w-4 h-4 mr-2 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2V6" />
+                  </svg>
+                  <span className="font-medium">{currentJob.level}</span>
+                </div>
+              )}
+
+              {/* Posted Date - only render if available */}
+              {currentJob.postedDate && currentJob.postedDate.trim() !== '' && (
+                <div className="flex items-center text-sm sm:text-base text-gray-700">
+                  <svg className="w-4 h-4 mr-2 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  <span className="font-medium">{currentJob.postedDate}</span>
+                </div>
+              )}
             </div>
 
             {/* Job Description Section */}
-            <div className="mb-4 sm:mb-8 sm:h-40">
-              <h3 className="text-xl sm:text-3xl ml-6 mt-4 sm:mt-10 font-bold mb-2">Job Description</h3>
-              <div className="mb-2">
-                <span className="font-semibold text-lg sm:text-xl ml-6">About the job</span>
-              </div>
-              <p className={`text-sm sm:text-xl ml-6 text-gray-700 leading-relaxed ${isExpanded ? '' : 'clamp-3'}`}>
-                {currentJob.description}
-              </p>
-              <button
-                className="ml-6 mt-2 text-sm sm:text-base font-semibold text-blue-700 hover:underline cursor-pointer"
-                onClick={(e) => { e.stopPropagation(); setIsModalOpen(true); }}
-              >
-                Read More...
-              </button>
-
+            <div id="job-description" className="mb-6">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">Job Description</h3>
+              {currentJob.description && currentJob.description.trim() !== '' ? (
+                <div className="bg-white/20 rounded-xl p-4 backdrop-blur-sm">
+                  <p className={`text-sm sm:text-base text-gray-800 leading-relaxed ${isExpanded ? '' : 'line-clamp-3'}`}>
+                    {currentJob.description}
+                  </p>
+                  <button
+                    className="mt-3 text-sm font-semibold text-blue-700 hover:text-blue-800 transition-colors cursor-pointer"
+                    onClick={(e) => { e.stopPropagation(); setIsModalOpen(true); }}
+                  >
+                    Read More →
+                  </button>
+                </div>
+              ) : (
+                <div className="bg-white/20 rounded-xl p-4 backdrop-blur-sm">
+                  <p className="text-sm sm:text-base text-gray-600 italic text-center py-4">
+                    No job description available. Click Apply Now to learn more!
+                  </p>
+                </div>
+              )}
             </div>
 
             {/* Action Buttons */}
-            {/*
-              Add isFavorited state to control the button fill. 
-              Place this near the other useState hooks:
-              const [isFavorited, setIsFavorited] = useState(false);
-            */}
-            <div className="flex flex-col sm:flex-row ml-0 sm:ml-135 mt-4 sm:mt-24 items-center justify-between sm:justify-center space-y-3 sm:space-y-0 sm:space-x-4 ">
-              <button
-                onClick={handleFavorite}
-                onClick={() => {
-                  handleFavorite();
-                }}
-                className={`w-14 h-14 sm:w-15 sm:h-15 cursor-pointer apply-button rounded-full flex items-center justify-center glassmorphic-base transition-colors ${isFavorited ? 'bg-red-600' : ''}`}
-                style={isFavorited ? { backgroundColor: '#ef4444' } : {}}
-              >
-                <span className="text-3xl">
-                  <Heart className={isFavorited ? 'text-white fill-white' : 'text-white'} fill={isFavorited ? '#fff' : 'none'} />
-                </span>
-              </button>
-              <button
-                onClick={(e) => { e.stopPropagation(); handleApply(); }}
-                className="w-full sm:w-auto px-8 h-15 py-3 apply-button glassmorphic-base text-white rounded-full font-semibold hover:bg-gray-600 transition-colors text-lg sm:text-xl">
-                Apply Now
-              </button>
+            <div className="flex items-center justify-end pt-10 border-t border-white/20">
+              <Tooltip content={isFavorited ? "Remove from favorites" : "Save this job"} position="top">
+                <button
+                  id="favorite-button"
+                  onClick={handleFavorite}
+                  className={`w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center transition-all duration-200 shadow-lg ${
+                    isFavorited === true
+                      ? 'bg-red-500 hover:bg-red-600 shadow-red-500/25' 
+                      : 'bg-white/20 hover:bg-white/30 backdrop-blur-sm'
+                  }`}
+                >
+                  <Heart 
+                    className={`w-6 h-6 sm:w-7 sm:h-7 ${
+                      isFavorited === true ? 'text-white fill-white' : 'text-gray-700'
+                    }`} 
+                    fill={isFavorited === true ? '#fff' : 'none'} 
+                  />
+                </button>
+              </Tooltip>
+              
+              <Tooltip content="Apply to this job position" position="top">
+                <button
+                  id="apply-button"
+                  onClick={(e) => { e.stopPropagation(); handleApply(); }}
+                  className="flex-1 sm:flex-none sm:px-8 py-3 sm:py-4 bg-black hover:bg-gray-800 text-white rounded-xl sm:rounded-full font-semibold transition-all duration-200 shadow-lg hover:shadow-xl text-base sm:text-lg ml-3"
+                >
+                  Apply Now
+                </button>
+              </Tooltip>
             </div>
           </div>
 
@@ -355,12 +771,17 @@ const WorkBeeJobCard = () => {
       </div>
 
       {/* Glass Footer Navigation */}
-      <GlassFooter activeTab={activeTab} setActiveTab={setActiveTab} />
+      <div id="bottom-navigation">
+        <GlassFooter activeTab={activeTab} setActiveTab={setActiveTab} onJobSelect={handleJobSelect} />
+      </div>
       {/* Details Modal */}
       <JobDetailsModal
         isOpen={isModalOpen}
-        job={currentJob}
-        onClose={() => setIsModalOpen(false)}
+        job={selectedJob || currentJob}
+        onClose={() => {
+          setIsModalOpen(false);
+          setSelectedJob(null);
+        }}
         onApply={handleApply}
         onFavorite={() => setIsFavorited((prev) => !prev)}
         isFavorited={isFavorited}

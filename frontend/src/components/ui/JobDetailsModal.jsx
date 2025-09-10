@@ -7,7 +7,7 @@ const JobDetailsModal = ({ isOpen, job, onClose, onApply }) => {
   const logo = job.logo || `/logos/${(companyName || '').toLowerCase().replace(/\s+/g, '-')}.svg`;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-2 sm:p-4" onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}>
+    <div className="fixed inset-0 z-[999999] flex items-center justify-center bg-black/70 backdrop-blur-sm p-2 sm:p-4" onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}>
       <div className="relative w-full max-w-4xl mx-auto bg-black text-white rounded-xl sm:rounded-2xl shadow-2xl max-h-[90vh] sm:max-h-[80vh] overflow-hidden border border-gray-800">
         <div className="sticky top-0 z-10 flex items-start justify-between p-4 sm:p-6 border-b border-gray-800 bg-black">
           <div className="flex items-start gap-3 sm:gap-4">
@@ -50,17 +50,28 @@ const JobDetailsModal = ({ isOpen, job, onClose, onApply }) => {
             <p className="text-sm sm:text-base text-white whitespace-pre-wrap break-words leading-relaxed">{job.job_description || job.description}</p>
           )}
 
-          <div className="mt-4 sm:mt-6 flex flex-wrap gap-2 sm:gap-3">
-            {job.job_link && (
+        </div>
+
+        {/* Bottom Action Bar */}
+        <div className="sticky bottom-0 p-4 sm:p-6 border-t border-gray-800 bg-black">
+          <div className="flex gap-3 sm:gap-4">
+            {job.job_link ? (
               <a
                 href={job.job_link}
                 target="_blank"
                 rel="noreferrer"
-                className="px-3 sm:px-4 py-2 glassmorphic-base apply-button text-white rounded-lg sm:rounded-2xl font-medium text-xs sm:text-sm"
+                className="flex-1 px-4 py-3 bg-white text-black rounded-xl hover:bg-gray-200 transition-colors font-medium text-center"
                 onClick={(e) => e.stopPropagation()}
               >
                 Apply Now
               </a>
+            ) : (
+              <button
+                onClick={onClose}
+                className="flex-1 px-4 py-3 bg-white text-black rounded-xl hover:bg-gray-200 transition-colors font-medium"
+              >
+                Close
+              </button>
             )}
           </div>
         </div>

@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Heart, HelpCircle, Play } from 'lucide-react';
 import { driver } from 'driver.js';
 import 'driver.js/dist/driver.css';
@@ -178,7 +177,6 @@ const WorkBeeJobCard = () => {
   const [savedVersion, setSavedVersion] = useState(0);
   const [activeTab, setActiveTab] = useState('home');
   const [navigatedFromFavorited, setNavigatedFromFavorited] = useState(false);
-  const [showTourButton, setShowTourButton] = useState(false);
   const [showTooltip, setShowTooltip] = useState(null);
 
   // Driver.js configuration
@@ -295,24 +293,41 @@ const WorkBeeJobCard = () => {
     ]
   });
 
-  // Start the tour
-  const startTour = () => {
+  // Start the tour - memoized to prevent unnecessary re-renders
+  const startTour = useCallback(() => {
     driverObj.drive();
-    setShowTourButton(false);
-  };
+  }, []);
 
-  // Check if user has completed the tour
+  // Check if user has completed the tour and auto-start if not
   useEffect(() => {
     const hasCompletedTour = storageUtils.tourUtils.hasCompletedTour();
-    if (!hasCompletedTour) {
-      setShowTourButton(true);
+    const hasSeenTourThisSession = sessionStorage.getItem('workbee-tour-shown');
+    
+    if (!hasCompletedTour && !hasSeenTourThisSession) {
+      // Mark that we've shown the tour this session
+      sessionStorage.setItem('workbee-tour-shown', 'true');
+      
+      // Auto-start the tour for first-time users
+      setTimeout(() => {
+        startTour();
+      }, 1000); // Small delay to ensure page is fully loaded
     }
-  }, []);
+  }, [startTour]);
 
   // Mark tour as completed
   const onTourComplete = () => {
     storageUtils.tourUtils.markTourCompleted();
-    setShowTourButton(false);
+  };
+
+  // Reset tour for testing purposes
+  const resetTour = () => {
+    storageUtils.tourUtils.resetTour();
+    // Clear session storage so tour can show again
+    sessionStorage.removeItem('workbee-tour-shown');
+    // Auto-start the tour after reset
+    setTimeout(() => {
+      startTour();
+    }, 500);
   };
 
   // Add event listener for tour completion
@@ -534,19 +549,28 @@ const WorkBeeJobCard = () => {
 
       {/* Tour Control Buttons - Positioned absolutely to avoid layout interference */}
       <div className="fixed top-4 right-24 sm:right-32 z-50 flex flex-col gap-2 max-w-[180px] sm:max-w-none">
-        {/* Tour Button */}
-        {showTourButton && (
-          <button
-            onClick={startTour}
-            className="flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors shadow-lg text-xs sm:text-sm"
-          >
-            <Play className="w-3 h-3 sm:w-4 sm:h-4" />
-            <span className="hidden sm:inline">Take a Tour</span>
-            <span className="sm:hidden">Tour</span>
-          </button>
-        )}
+        {/* Tour Button - Always show for users who want to retake the tour */}
+        <button
+          onClick={startTour}
+          className="flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors shadow-lg text-xs sm:text-sm"
+        >
+          <Play className="w-3 h-3 sm:w-4 sm:h-4" />
+          <span className="hidden sm:inline">Retake Tour</span>
+          <span className="sm:hidden">Tour</span>
+        </button>
 
-        {/* Help Button - Always visible */}
+        {/* Reset Tour Button - For testing purposes 
+        <button
+          onClick={resetTour}
+          className="flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors shadow-lg text-xs sm:text-sm"
+        >
+          <HelpCircle className="w-3 h-3 sm:w-4 sm:h-4" />
+          <span className="hidden sm:inline">Reset Tour</span>
+          <span className="sm:hidden">Reset</span>
+        </button>
+        */}
+
+        {/* Help Button - Always visible 
         <button
           onClick={startTour}
           className="flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors shadow-lg text-xs sm:text-sm"
@@ -555,13 +579,14 @@ const WorkBeeJobCard = () => {
           <HelpCircle className="w-3 h-3 sm:w-4 sm:h-4" />
           <span className="hidden sm:inline">Help</span>
         </button>
+        */}
 
-        {/* Debug: Reset Tour Button (only in development) */}
+        {/* Debug: Reset Tour Button (only in development) 
         {process.env.NODE_ENV === 'development' && (
           <button
             onClick={() => {
               storageUtils.tourUtils.resetTour();
-              setShowTourButton(true);
+              sessionStorage.removeItem('workbee-tour-shown');
               console.log('Tour reset for testing');
             }}
             className="flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors shadow-lg text-xs sm:text-sm"
@@ -571,6 +596,7 @@ const WorkBeeJobCard = () => {
             <span className="sm:hidden">Reset</span>
           </button>
         )}
+        */}
       </div>
 
       {/* Main Content */}

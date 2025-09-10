@@ -73,7 +73,7 @@ const companies = [
   { name: 'Yahoo', logo: '/logos/yahoo.png', views: 4, savedJobs: generateSavedJobs('Yahoo', 4, companyRoles.Yahoo) },
   { name: 'Stripe', logo: '/logos/stripe-logo.svg', views: 5, savedJobs: generateSavedJobs('Stripe', 5, companyRoles.Stripe) },
   { name: 'Tesla', logo: '/logos/tesla-logo.svg', views: 8, savedJobs: generateSavedJobs('Tesla', 6, companyRoles.Tesla) },
-  { name: 'Airbnb', logo: '/logos/airbnb-logo.svg', views: 6, savedJobs: generateSavedJobs('Airbnb', 5, companyRoles.Airbnb) },
+  { name: 'Airbnb', logo: '/logos/airbnb-only.svg', views: 6, savedJobs: generateSavedJobs('Airbnb', 5, companyRoles.Airbnb) },
   { name: 'Spotify', logo: '/logos/spotify-only.svg', views: 10, savedJobs: generateSavedJobs('Spotify', 6, companyRoles.Spotify) }
 ];
 

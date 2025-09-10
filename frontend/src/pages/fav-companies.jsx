@@ -1,106 +1,72 @@
-import React, { useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import GlassFooter from '@/components/ui/GlassFooter';
 import SavedJobsPopup from '@/components/ui/saved-jobs-popup';
 
-// Sample saved jobs data - this would come from your backend/API
-const generateSavedJobs = (companyName, count) => {
-  const jobTitles = [
-    'Software Engineer',
-    'Frontend Developer',
-    'Backend Developer',
-    'Full Stack Developer',
-    'DevOps Engineer',
-    'Product Manager',
-    'UI/UX Designer',
-    'Data Scientist',
-    'Machine Learning Engineer',
-    'Cloud Architect'
-  ];
-
-  const locations = [
-    'Seattle, Washington, USA',
-    'San Francisco, California, USA',
-    'New York, New York, USA',
-    'London, UK',
-    'Berlin, Germany',
-    'Bangalore, Karnataka, India',
-    'Mumbai, Maharashtra, India',
-    'Stockholm, Sweden',
-    'Sydney, Australia',
-    'Toronto, Canada'
-  ];
-
-  const levels = ['Entry', 'Mid', 'Senior', 'Lead', 'Principal'];
-
-  const jobs = [];
-  for (let i = 0; i < count; i++) {
-    jobs.push({
-      id: `${companyName.toLowerCase()}-job-${i + 1}`,
-      title: jobTitles[Math.floor(Math.random() * jobTitles.length)],
-      location: locations[Math.floor(Math.random() * locations.length)],
-      level: levels[Math.floor(Math.random() * levels.length)],
-      postedDate: `${Math.floor(Math.random() * 30) + 1} days ago`,
-      description: `Join ${companyName} as a talented professional to work on cutting-edge projects and help shape the future of technology. This role offers excellent growth opportunities and competitive compensation.`
-    });
-  }
-  return jobs;
-};
-
-const companies = [
-  { 
-    name: 'Microsoft', 
-    logo: '/logos/microsoft-only.svg', 
-    views: 10,
-    savedJobs: generateSavedJobs('Microsoft', 10)
-  },
-  { 
-    name: 'Spotify', 
-    logo: '/logos/spotify-only.svg', 
-    views: 2,
-    savedJobs: generateSavedJobs('Spotify', 2)
-  },
-  { 
-    name: 'Slack', 
-    logo: '/logos/slack-only.svg', 
-    views: 6,
-    savedJobs: generateSavedJobs('Slack', 6)
-  },
-  { 
-    name: 'Adobe', 
-    logo: '/logos/adobe-only.svg', 
-    views: 19,
-    savedJobs: generateSavedJobs('Adobe', 19)
-  },
-  { 
-    name: 'WhatsApp', 
-    logo: '/logos/whatsapp-only.svg', 
-    views: 8,
-    savedJobs: generateSavedJobs('WhatsApp', 8)
-  },
-  { 
-    name: 'Atlassian', 
-    logo: '/logos/Atlassian-only.svg', 
-    views: 5,
-    savedJobs: generateSavedJobs('Atlassian', 5)
-  },
-  { 
-    name: 'Razorpay', 
-    logo: '/logos/razorpay-only.svg', 
-    views: 12,
-    savedJobs: generateSavedJobs('Razorpay', 12)
-  },
-  { 
-    name: 'Loom', 
-    logo: '/logos/loom-only.svg', 
-    views: 3,
-    savedJobs: generateSavedJobs('Loom', 3)
-  },
+// Master company list to always render
+const ALL_COMPANIES = [
+  { name: 'Google', logo: '/logos/google-only.svg' },
+  { name: 'Amazon', logo: '/logos/amazon.png' },
+  { name: 'Apple', logo: '/logos/apple-logo.svg' },
+  { name: 'Microsoft', logo: '/logos/microsoft-only.svg' },
+  { name: 'Meta', logo: '/logos/meta-only.svg' },
+  { name: 'AMD', logo: '/logos/amd.png' },
+  { name: 'NVIDIA', logo: '/logos/nvidia.svg' },
+  { name: 'Stripe', logo: '/logos/stripe-logo.svg' },
+  { name: 'Tesla', logo: '/logos/tesla-logo.svg' },
+  { name: 'Airbnb', logo: '/logos/airbnb-logo.svg' },
+  { name: 'Spotify', logo: '/logos/spotify-logo.svg' },
+  { name: 'Yahoo', logo: '/logos/yahoo.png' },
 ];
+
+// Hook: read dynamic favorites and map onto the master list (cards always shown)
+const useFavoriteCompanies = () => {
+  const [data, setData] = useState({});
+
+  useEffect(() => {
+    const load = () => {
+      try {
+        const raw = localStorage.getItem('wb_favorite_jobs_by_company');
+        const parsed = raw ? JSON.parse(raw) : {};
+        if (parsed && typeof parsed === 'object') setData(parsed);
+        else if (window.__wbFavorites && typeof window.__wbFavorites === 'object') setData({ ...window.__wbFavorites });
+        else setData({});
+      } catch (_) {
+        try {
+          if (window.__wbFavorites && typeof window.__wbFavorites === 'object') {
+            setData({ ...window.__wbFavorites });
+          } else setData({});
+        } catch (_) { setData({}); }
+      }
+    };
+    load();
+    const onStorage = (e) => { if (e.key === 'wb_favorite_jobs_by_company') load(); };
+    const onLocalUpdate = () => load();
+    window.addEventListener('storage', onStorage);
+    window.addEventListener('wb-favorites-updated', onLocalUpdate);
+    window.addEventListener('focus', onLocalUpdate);
+    return () => {
+      window.removeEventListener('storage', onStorage);
+      window.removeEventListener('wb-favorites-updated', onLocalUpdate);
+      window.removeEventListener('focus', onLocalUpdate);
+    };
+  }, []);
+
+  const companies = useMemo(() => {
+    return ALL_COMPANIES.map((base) => {
+      const savedJobs = Array.isArray(data[base.name]) ? data[base.name] : [];
+      const firstLogo = savedJobs[0]?.logo;
+      return { ...base, logo: firstLogo || base.logo, savedJobs };
+    });
+  }, [data]);
+
+  return companies;
+};
 
 export default function FavCompanies() {
   const [activeTab, setActiveTab] = useState('saved');
   const [selectedCompany, setSelectedCompany] = useState(null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const companies = useFavoriteCompanies();
 
   const handleCompanyClick = (company) => {
     setSelectedCompany(company);
@@ -113,13 +79,13 @@ export default function FavCompanies() {
   };
 
   return (
-    <div className="min-h-screen bg-[#09090b] text-foreground relative">
-      <div className="px-4 sm:px-6 max-w-6xl mx-auto min-h-[80vh] flex flex-col items-center justify-start pb-20 pt-8">
+    <div className="min-h-screen bg-[#09090b] text-foreground relative ">
+      <div className="px-4 sm:px-6 max-w-6xl mx-auto min-h-[80vh] flex flex-col items-center justify-start pb-20 pt-8 pb-40">
         <h1 className="text-center text-3xl sm:text-5xl md:text-6xl font-extrabold notification-text tracking-tight opacity-90"
         >
           Your Dream Companies
         </h1>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-8 mt-8 sm:mt-20 w-full">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-8 mt-8 sm:mt-20 w-full ">
           {companies.map((c) => (
             <div 
               key={c.name} 

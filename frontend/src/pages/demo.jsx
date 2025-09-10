@@ -261,7 +261,7 @@ export function Demo() {
       <Connect />
       <footer className="w-full py-12 flex flex-col items-center bg-background">
         {/* Avatar */}
-        <div className="bg-gray-400 rounded-full w-32 h-32 mb-6"></div>
+        <div className=" w-40 h-32 mb-6"><img  src="./public/logos/workbeelogo.svg" alt="" /></div>
         {/* Navigation */}
         <nav className="flex flex-wrap justify-center gap-8 mb-4">
           <a href="#" className="font-bold text-white">Home</a>

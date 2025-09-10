@@ -3,8 +3,8 @@ import GlassFooter from '@/components/ui/GlassFooter';
 import SavedJobsPopup from '@/components/ui/saved-jobs-popup';
 
 // Sample saved jobs data - this would come from your backend/API
-const generateSavedJobs = (companyName, count) => {
-  const jobTitles = [
+const generateSavedJobs = (companyName, count, titlesOverride) => {
+  const jobTitles = titlesOverride && titlesOverride.length > 0 ? titlesOverride : [
     'Software Engineer',
     'Frontend Developer',
     'Backend Developer',
@@ -46,66 +46,105 @@ const generateSavedJobs = (companyName, count) => {
   return jobs;
 };
 
+// Roles per company (from user request)
+const companyRoles = {
+  Google: ['Software Engineer', 'Data Scientist', 'SRE', 'ML Engineer'],
+  Amazon: ['SDE', 'Product Manager', 'Data Engineer'],
+  Apple: ['iOS Developer', 'Hardware Engineer', 'Software Engineer'],
+  Microsoft: ['Software Engineer', 'Cloud Engineer', 'Security Engineer'],
+  Meta: ['Frontend Engineer', 'Data Engineer', 'AR/VR Engineer'],
+  AMD: ['Hardware Engineer', 'Software Engineer', 'Verification Engineer'],
+  NVIDIA: ['AI Engineer', 'Graphics Engineer', 'Systems Engineer'],
+  Yahoo: ['Full Stack Developer', 'Frontend Developer'],
+  Stripe: ['Backend Engineer', 'Infrastructure Engineer'],
+  Tesla: ['Autopilot Engineer', 'Battery Engineer', 'Software Engineer'],
+  Airbnb: ['Frontend Engineer', 'Full Stack Engineer'],
+  Spotify: ['Backend Engineer', 'Data Engineer']
+};
+
 const companies = [
-  { 
-    name: 'Microsoft', 
-    logo: '/logos/microsoft-only.svg', 
-    views: 10,
-    savedJobs: generateSavedJobs('Microsoft', 10)
-  },
-  { 
-    name: 'Spotify', 
-    logo: '/logos/spotify-only.svg', 
-    views: 2,
-    savedJobs: generateSavedJobs('Spotify', 2)
-  },
-  { 
-    name: 'Slack', 
-    logo: '/logos/slack-only.svg', 
-    views: 6,
-    savedJobs: generateSavedJobs('Slack', 6)
-  },
-  { 
-    name: 'Adobe', 
-    logo: '/logos/adobe-only.svg', 
-    views: 19,
-    savedJobs: generateSavedJobs('Adobe', 19)
-  },
-  { 
-    name: 'WhatsApp', 
-    logo: '/logos/whatsapp-only.svg', 
-    views: 8,
-    savedJobs: generateSavedJobs('WhatsApp', 8)
-  },
-  { 
-    name: 'Atlassian', 
-    logo: '/logos/Atlassian-only.svg', 
-    views: 5,
-    savedJobs: generateSavedJobs('Atlassian', 5)
-  },
-  { 
-    name: 'Razorpay', 
-    logo: '/logos/razorpay-only.svg', 
-    views: 12,
-    savedJobs: generateSavedJobs('Razorpay', 12)
-  },
-  { 
-    name: 'Loom', 
-    logo: '/logos/loom-only.svg', 
-    views: 3,
-    savedJobs: generateSavedJobs('Loom', 3)
-  },
+  { name: 'Google', logo: '/logos/google-only.svg', views: 14, savedJobs: generateSavedJobs('Google', 8, companyRoles.Google) },
+  { name: 'Amazon', logo: '/logos/amazon-only.svg', views: 12, savedJobs: generateSavedJobs('Amazon', 8, companyRoles.Amazon) },
+  { name: 'Apple', logo: '/logos/apple-only.svg', views: 11, savedJobs: generateSavedJobs('Apple', 8, companyRoles.Apple) },
+  { name: 'Microsoft', logo: '/logos/microsoft-only.svg', views: 16, savedJobs: generateSavedJobs('Microsoft', 10, companyRoles.Microsoft) },
+  { name: 'Meta', logo: '/logos/meta-only.svg', views: 9, savedJobs: generateSavedJobs('Meta', 8, companyRoles.Meta) },
+  { name: 'AMD', logo: '/logos/amd-only.svg', views: 7, savedJobs: generateSavedJobs('AMD', 6, companyRoles.AMD) },
+  { name: 'NVIDIA', logo: '/logos/nvidia-only.svg', views: 18, savedJobs: generateSavedJobs('NVIDIA', 12, companyRoles.NVIDIA) },
+  { name: 'Yahoo', logo: '/logos/yahoo-only.svg', views: 4, savedJobs: generateSavedJobs('Yahoo', 4, companyRoles.Yahoo) },
+  { name: 'Stripe', logo: '/logos/stripe-only.svg', views: 5, savedJobs: generateSavedJobs('Stripe', 5, companyRoles.Stripe) },
+  { name: 'Tesla', logo: '/logos/tesla-only.svg', views: 8, savedJobs: generateSavedJobs('Tesla', 6, companyRoles.Tesla) },
+  { name: 'Airbnb', logo: '/logos/airbnb-only.svg', views: 6, savedJobs: generateSavedJobs('Airbnb', 5, companyRoles.Airbnb) },
+  { name: 'Spotify', logo: '/logos/spotify-only.svg', views: 10, savedJobs: generateSavedJobs('Spotify', 6, companyRoles.Spotify) }
 ];
 
 export default function FavCompanies() {
   const [activeTab, setActiveTab] = useState('saved');
   const [selectedCompany, setSelectedCompany] = useState(null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [modalSavedJobs, setModalSavedJobs] = useState([]);
+  const [savedCounts, setSavedCounts] = useState(() => {
+    try {
+      const raw = localStorage.getItem('wb_saved_jobs');
+      const saved = raw ? JSON.parse(raw) : {};
+      const counts = {};
+      Object.keys(saved).forEach((company) => {
+        counts[company] = Object.keys(saved[company] || {}).length;
+      });
+      return counts;
+    } catch {
+      return {};
+    }
+  });
+
+  // Listen for updates from dashboard when user saves/unsaves jobs
+  React.useEffect(() => {
+    const handler = () => {
+      try {
+        const raw = localStorage.getItem('wb_saved_jobs');
+        const saved = raw ? JSON.parse(raw) : {};
+        const counts = {};
+        Object.keys(saved).forEach((company) => {
+          counts[company] = Object.keys(saved[company] || {}).length;
+        });
+        setSavedCounts(counts);
+      } catch {}
+    };
+    window.addEventListener('wb:saved-jobs-updated', handler);
+    // Also refresh when page becomes visible again
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) handler();
+    });
+    return () => window.removeEventListener('wb:saved-jobs-updated', handler);
+  }, []);
+
+  const getSavedJobsFor = (companyName) => {
+    try {
+      const raw = localStorage.getItem('wb_saved_jobs');
+      const saved = raw ? JSON.parse(raw) : {};
+      const companyMap = saved[companyName] || {};
+      return Object.values(companyMap);
+    } catch {
+      return [];
+    }
+  };
 
   const handleCompanyClick = (company) => {
     setSelectedCompany(company);
+    setModalSavedJobs(getSavedJobsFor(company.name));
     setIsPopupOpen(true);
   };
+
+  // When saved jobs change, update selected company job list shown in modal
+  React.useEffect(() => {
+    const syncSelected = () => {
+      if (!selectedCompany) return;
+      setModalSavedJobs(getSavedJobsFor(selectedCompany.name));
+    };
+    const listener = () => syncSelected();
+    window.addEventListener('wb:saved-jobs-updated', listener);
+    if (isPopupOpen) syncSelected();
+    return () => window.removeEventListener('wb:saved-jobs-updated', listener);
+  }, [isPopupOpen, selectedCompany?.name]);
 
   const handleClosePopup = () => {
     setIsPopupOpen(false);
@@ -162,7 +201,7 @@ export default function FavCompanies() {
                 </div>
               </div>
               <div className="flex items-end gap-2 text-black/70">
-                <div className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-none">{c.savedJobs.length}</div>
+                <div className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-none">{savedCounts[c.name] || 0}</div>
                 <div className="flex flex-col leading-tight">
                   <span className="text-xs sm:text-sm">View</span>
                   <span className="text-[10px] md:text-xs text-black/60">Saved Jobs</span>
@@ -178,7 +217,7 @@ export default function FavCompanies() {
         isOpen={isPopupOpen}
         onClose={handleClosePopup}
         company={selectedCompany}
-        savedJobs={selectedCompany?.savedJobs || []}
+        savedJobs={modalSavedJobs}
       />
 
       <GlassFooter activeTab={activeTab} setActiveTab={setActiveTab} />

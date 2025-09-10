@@ -8,3 +8,12 @@
     font-weight: 400;
     font-style: normal;
   }
+
+/* Hide vertical scrollbars while preserving scrollability */
+.no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}

@@ -64,16 +64,16 @@ const companyRoles = {
 
 const companies = [
   { name: 'Google', logo: '/logos/google-only.svg', views: 14, savedJobs: generateSavedJobs('Google', 8, companyRoles.Google) },
-  { name: 'Amazon', logo: '/logos/amazon-only.svg', views: 12, savedJobs: generateSavedJobs('Amazon', 8, companyRoles.Amazon) },
-  { name: 'Apple', logo: '/logos/apple-only.svg', views: 11, savedJobs: generateSavedJobs('Apple', 8, companyRoles.Apple) },
+  { name: 'Amazon', logo: '/logos/amazon.png', views: 12, savedJobs: generateSavedJobs('Amazon', 8, companyRoles.Amazon) },
+  { name: 'Apple', logo: '/logos/apple-logo.svg', views: 11, savedJobs: generateSavedJobs('Apple', 8, companyRoles.Apple) },
   { name: 'Microsoft', logo: '/logos/microsoft-only.svg', views: 16, savedJobs: generateSavedJobs('Microsoft', 10, companyRoles.Microsoft) },
   { name: 'Meta', logo: '/logos/meta-only.svg', views: 9, savedJobs: generateSavedJobs('Meta', 8, companyRoles.Meta) },
-  { name: 'AMD', logo: '/logos/amd-only.svg', views: 7, savedJobs: generateSavedJobs('AMD', 6, companyRoles.AMD) },
+  { name: 'AMD', logo: '/logos/amd.png', views: 7, savedJobs: generateSavedJobs('AMD', 6, companyRoles.AMD) },
   { name: 'NVIDIA', logo: '/logos/nvidia-only.svg', views: 18, savedJobs: generateSavedJobs('NVIDIA', 12, companyRoles.NVIDIA) },
-  { name: 'Yahoo', logo: '/logos/yahoo-only.svg', views: 4, savedJobs: generateSavedJobs('Yahoo', 4, companyRoles.Yahoo) },
-  { name: 'Stripe', logo: '/logos/stripe-only.svg', views: 5, savedJobs: generateSavedJobs('Stripe', 5, companyRoles.Stripe) },
-  { name: 'Tesla', logo: '/logos/tesla-only.svg', views: 8, savedJobs: generateSavedJobs('Tesla', 6, companyRoles.Tesla) },
-  { name: 'Airbnb', logo: '/logos/airbnb-only.svg', views: 6, savedJobs: generateSavedJobs('Airbnb', 5, companyRoles.Airbnb) },
+  { name: 'Yahoo', logo: '/logos/yahoo.png', views: 4, savedJobs: generateSavedJobs('Yahoo', 4, companyRoles.Yahoo) },
+  { name: 'Stripe', logo: '/logos/stripe-logo.svg', views: 5, savedJobs: generateSavedJobs('Stripe', 5, companyRoles.Stripe) },
+  { name: 'Tesla', logo: '/logos/tesla-logo.svg', views: 8, savedJobs: generateSavedJobs('Tesla', 6, companyRoles.Tesla) },
+  { name: 'Airbnb', logo: '/logos/airbnb-logo.svg', views: 6, savedJobs: generateSavedJobs('Airbnb', 5, companyRoles.Airbnb) },
   { name: 'Spotify', logo: '/logos/spotify-only.svg', views: 10, savedJobs: generateSavedJobs('Spotify', 6, companyRoles.Spotify) }
 ];
 

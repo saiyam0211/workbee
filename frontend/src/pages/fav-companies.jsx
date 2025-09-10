@@ -1,104 +1,30 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import GlassFooter from '@/components/ui/GlassFooter';
 import SavedJobsPopup from '@/components/ui/saved-jobs-popup';
 
-// Sample saved jobs data - this would come from your backend/API
-const generateSavedJobs = (companyName, count, titlesOverride) => {
-  const jobTitles = titlesOverride && titlesOverride.length > 0 ? titlesOverride : [
-    'Software Engineer',
-    'Frontend Developer',
-    'Backend Developer',
-    'Full Stack Developer',
-    'DevOps Engineer',
-    'Product Manager',
-    'UI/UX Designer',
-    'Data Scientist',
-    'Machine Learning Engineer',
-    'Cloud Architect'
-  ];
-
-  const locations = [
-    'Seattle, Washington, USA',
-    'San Francisco, California, USA',
-    'New York, New York, USA',
-    'London, UK',
-    'Berlin, Germany',
-    'Bangalore, Karnataka, India',
-    'Mumbai, Maharashtra, India',
-    'Stockholm, Sweden',
-    'Sydney, Australia',
-    'Toronto, Canada'
-  ];
-
-  const levels = ['Entry', 'Mid', 'Senior', 'Lead', 'Principal'];
-
-  const jobs = [];
-  for (let i = 0; i < count; i++) {
-    jobs.push({
-      id: `${companyName.toLowerCase()}-job-${i + 1}`,
-      title: jobTitles[Math.floor(Math.random() * jobTitles.length)],
-      location: locations[Math.floor(Math.random() * locations.length)],
-      level: levels[Math.floor(Math.random() * levels.length)],
-      postedDate: `${Math.floor(Math.random() * 30) + 1} days ago`,
-      description: `Join ${companyName} as a talented professional to work on cutting-edge projects and help shape the future of technology. This role offers excellent growth opportunities and competitive compensation.`
-    });
-  }
-  return jobs;
-};
-
-// Roles per company (from user request)
-const companyRoles = {
-  Google: ['Software Engineer', 'Data Scientist', 'SRE', 'ML Engineer'],
-  Amazon: ['SDE', 'Product Manager', 'Data Engineer'],
-  Apple: ['iOS Developer', 'Hardware Engineer', 'Software Engineer'],
-  Microsoft: ['Software Engineer', 'Cloud Engineer', 'Security Engineer'],
-  Meta: ['Frontend Engineer', 'Data Engineer', 'AR/VR Engineer'],
-  AMD: ['Hardware Engineer', 'Software Engineer', 'Verification Engineer'],
-  NVIDIA: ['AI Engineer', 'Graphics Engineer', 'Systems Engineer'],
-  Yahoo: ['Full Stack Developer', 'Frontend Developer'],
-  Stripe: ['Backend Engineer', 'Infrastructure Engineer'],
-  Tesla: ['Autopilot Engineer', 'Battery Engineer', 'Software Engineer'],
-  Airbnb: ['Frontend Engineer', 'Full Stack Engineer'],
-  Spotify: ['Backend Engineer', 'Data Engineer']
-};
-
 const companies = [
-  { name: 'Google', logo: '/logos/google-only.svg', views: 14, savedJobs: generateSavedJobs('Google', 8, companyRoles.Google) },
-  { name: 'Amazon', logo: '/logos/amazon.png', views: 12, savedJobs: generateSavedJobs('Amazon', 8, companyRoles.Amazon) },
-  { name: 'Apple', logo: '/logos/apple-logo.svg', views: 11, savedJobs: generateSavedJobs('Apple', 8, companyRoles.Apple) },
-  { name: 'Microsoft', logo: '/logos/microsoft-only.svg', views: 16, savedJobs: generateSavedJobs('Microsoft', 10, companyRoles.Microsoft) },
-  { name: 'Meta', logo: '/logos/meta-only.svg', views: 9, savedJobs: generateSavedJobs('Meta', 8, companyRoles.Meta) },
-  { name: 'AMD', logo: '/logos/amd.png', views: 7, savedJobs: generateSavedJobs('AMD', 6, companyRoles.AMD) },
-  { name: 'NVIDIA', logo: '/logos/nvidia-only.svg', views: 18, savedJobs: generateSavedJobs('NVIDIA', 12, companyRoles.NVIDIA) },
-  { name: 'Yahoo', logo: '/logos/yahoo.png', views: 4, savedJobs: generateSavedJobs('Yahoo', 4, companyRoles.Yahoo) },
-  { name: 'Stripe', logo: '/logos/stripe-logo.svg', views: 5, savedJobs: generateSavedJobs('Stripe', 5, companyRoles.Stripe) },
-  { name: 'Tesla', logo: '/logos/tesla-logo.svg', views: 8, savedJobs: generateSavedJobs('Tesla', 6, companyRoles.Tesla) },
-  { name: 'Airbnb', logo: '/logos/airbnb-logo.svg', views: 6, savedJobs: generateSavedJobs('Airbnb', 5, companyRoles.Airbnb) },
-  { name: 'Spotify', logo: '/logos/spotify-only.svg', views: 10, savedJobs: generateSavedJobs('Spotify', 6, companyRoles.Spotify) }
+  { name: 'Google', logo: '/logos/google-only.svg' },
+  { name: 'Amazon', logo: '/logos/amazon.png' },
+  { name: 'Apple', logo: '/logos/apple-logo.svg' },
+  { name: 'Microsoft', logo: '/logos/microsoft-only.svg' },
+  { name: 'Meta', logo: '/logos/meta-only.svg' },
+  { name: 'AMD', logo: '/logos/amd.png' },
+  { name: 'NVIDIA', logo: '/logos/nvidia-only.svg' },
+  { name: 'Yahoo', logo: '/logos/yahoo.png' },
+  { name: 'Stripe', logo: '/logos/stripe-logo.svg' },
+  { name: 'Tesla', logo: '/logos/tesla-logo.svg' },
+  { name: 'Airbnb', logo: '/logos/airbnb-only.svg' },
+  { name: 'Spotify', logo: '/logos/spotify-only.svg' }
 ];
 
 export default function FavCompanies() {
   const [activeTab, setActiveTab] = useState('saved');
   const [selectedCompany, setSelectedCompany] = useState(null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const [modalSavedJobs, setModalSavedJobs] = useState([]);
-  const [savedCounts, setSavedCounts] = useState(() => {
-    try {
-      const raw = localStorage.getItem('wb_saved_jobs');
-      const saved = raw ? JSON.parse(raw) : {};
-      const counts = {};
-      Object.keys(saved).forEach((company) => {
-        counts[company] = Object.keys(saved[company] || {}).length;
-      });
-      return counts;
-    } catch {
-      return {};
-    }
-  });
+  const [savedCounts, setSavedCounts] = useState({});
 
-  // Listen for updates from dashboard when user saves/unsaves jobs
-  React.useEffect(() => {
-    const handler = () => {
+  useEffect(() => {
+    const updateCounts = () => {
       try {
         const raw = localStorage.getItem('wb_saved_jobs');
         const saved = raw ? JSON.parse(raw) : {};
@@ -109,20 +35,17 @@ export default function FavCompanies() {
         setSavedCounts(counts);
       } catch {}
     };
-    window.addEventListener('wb:saved-jobs-updated', handler);
-    // Also refresh when page becomes visible again
-    document.addEventListener('visibilitychange', () => {
-      if (!document.hidden) handler();
-    });
-    return () => window.removeEventListener('wb:saved-jobs-updated', handler);
+
+    updateCounts();
+    window.addEventListener('wb:saved-jobs-updated', updateCounts);
+    return () => window.removeEventListener('wb:saved-jobs-updated', updateCounts);
   }, []);
 
   const getSavedJobsFor = (companyName) => {
     try {
       const raw = localStorage.getItem('wb_saved_jobs');
       const saved = raw ? JSON.parse(raw) : {};
-      const companyMap = saved[companyName] || {};
-      return Object.values(companyMap);
+      return Object.values(saved[companyName] || {});
     } catch {
       return [];
     }
@@ -130,21 +53,8 @@ export default function FavCompanies() {
 
   const handleCompanyClick = (company) => {
     setSelectedCompany(company);
-    setModalSavedJobs(getSavedJobsFor(company.name));
     setIsPopupOpen(true);
   };
-
-  // When saved jobs change, update selected company job list shown in modal
-  React.useEffect(() => {
-    const syncSelected = () => {
-      if (!selectedCompany) return;
-      setModalSavedJobs(getSavedJobsFor(selectedCompany.name));
-    };
-    const listener = () => syncSelected();
-    window.addEventListener('wb:saved-jobs-updated', listener);
-    if (isPopupOpen) syncSelected();
-    return () => window.removeEventListener('wb:saved-jobs-updated', listener);
-  }, [isPopupOpen, selectedCompany?.name]);
 
   const handleClosePopup = () => {
     setIsPopupOpen(false);
@@ -217,7 +127,7 @@ export default function FavCompanies() {
         isOpen={isPopupOpen}
         onClose={handleClosePopup}
         company={selectedCompany}
-        savedJobs={modalSavedJobs}
+        savedJobs={selectedCompany ? getSavedJobsFor(selectedCompany.name) : []}
       />
 
       <GlassFooter activeTab={activeTab} setActiveTab={setActiveTab} />

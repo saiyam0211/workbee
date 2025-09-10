@@ -62,7 +62,7 @@ function Connect() {
           data-aos="fade-down"
         >
           <HighlighterItem className="rounded-3xl p-6">
-            <div className="relative z-20  overflow-hidden rounded-3xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-black">
+            <div className="relative z-20  overflow-hidden rounded-3xl border border-slate-200 bg-[#000000] dark:border-slate-800 dark:bg-[#000000]">
               <Particles
                 className="absolute inset-0 -z-10 opacity-10 transition-opacity duration-1000 ease-in-out group-hover/item:opacity-100"
                 quantity={200}
@@ -78,25 +78,25 @@ function Connect() {
                     <DIcons.Designali className="absolute left-1/2 top-1/2 h-6 w-6 -translate-x-1/2 -translate-y-1/2" />
                     <div
                       id="next-js"
-                      className="absolute bottom-12 left-14 rounded-3xl border border-slate-400 bg-slate-200 px-2 py-1.5 text-xs opacity-50 dark:border-slate-600 dark:bg-slate-800"
+                      className="absolute bottom-12 left-14 rounded-3xl border border-slate-400 bg-gray-800 px-2 py-1.5 text-xs text-white dark:border-slate-600 dark:bg-gray-800"
                     >
                      Resume Building
                     </div>
                     <div
                       id="react-js"
-                      className="absolute left-2 top-20 rounded-3xl border border-slate-400 bg-slate-200 px-2 py-1.5 text-xs opacity-50 dark:border-slate-600 dark:bg-slate-800"
+                      className="absolute left-2 top-20 rounded-3xl border border-slate-400 bg-gray-800 px-2 py-1.5 text-xs text-white dark:border-slate-600 dark:bg-gray-800"
                     >
                      Job Alerts
                     </div>
                     <div
                       id="typescript"
-                      className="absolute bottom-20 right-1 rounded-3xl border border-slate-400 bg-slate-200 px-2 py-1.5 text-xs opacity-50 dark:border-slate-600 dark:bg-slate-800"
+                      className="absolute bottom-20 right-1 rounded-3xl border border-slate-400 bg-gray-800 px-2 py-1.5 text-xs text-white dark:border-slate-600 dark:bg-gray-800"
                     >
                       Career Counseling
                     </div>
                     <div
                       id="javascript"
-                      className="absolute right-12 top-10 rounded-3xl border border-slate-400 bg-slate-200 px-2 py-1.5 text-xs opacity-50 dark:border-slate-600 dark:bg-slate-800"
+                      className="absolute right-12 top-10 rounded-3xl border border-slate-400 bg-gray-800 px-2 py-1.5 text-xs text-white dark:border-slate-600 dark:bg-gray-800"
                     >
                      Internships
                     </div>
@@ -125,13 +125,13 @@ function Connect() {
 
                   <div className="-mt-20 flex h-full flex-col justify-center p-2 md:-mt-4 md:ml-10 md:w-[400px]">
                     <div className="flex flex-col items-center">
-                      <h3 className="mt-6 pb-1 font-bold">
+                      <h3 className="mt-6 pb-1 font-bold text-white">
                         <span className="text-2xl md:text-4xl">
                         Ready to unlock your dream career?
                         </span>
                       </h3>
                     </div>
-                    <p className="mb-4 text-slate-400">
+                    <p className="mb-4 text-white">
                       Feel free to reach out to Us!
                     </p>
                     <div className="flex flex-wrap gap-2">

@@ -91,9 +91,7 @@ html {
   }
 }
 
-.marquee:hover {
-  animation-play-state: paused;
-}
+/* Removed hover pause for upper marquee - it should continue scrolling on hover */
 
 @media (prefers-reduced-motion: reduce) {
   .marquee {

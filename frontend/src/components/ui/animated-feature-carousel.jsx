@@ -171,7 +171,7 @@ function FeatureCard({ children, step }) {
       onMouseMove={handleMouseMove}
       style={{ "--x": useMotionTemplate`${mouseX}px`, "--y": useMotionTemplate`${mouseY}px` }}
     >
-      <div  className="relative w-full overflow-hidden rounded-3xl border border-neutral-200 bg-white transition-colors duration-300 dark:border-neutral-800 dark:bg-neutral-900">
+              <div  className="relative w-full overflow-hidden rounded-3xl border border-neutral-200 bg-[#000000] transition-colors duration-300 dark:border-neutral-800 dark:bg-[#000000]">
         <div className="m-10 min-h-[550px] w-full">
           <AnimatePresence mode="wait">
             <motion.div
@@ -190,23 +190,23 @@ function FeatureCard({ children, step }) {
               >
                 {steps[step].name}
               </motion.div>
-              <motion.h2
-                className="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 md:text-3xl"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.1, duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              >
-                {steps[step].title}
-              </motion.h2>
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.15, duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              >
-                <p className="text-base leading-relaxed text-neutral-700 dark:text-neutral-400">
-                  {steps[step].description}
-                </p>
-              </motion.div>
+                             <motion.h2
+                 className="text-2xl font-bold tracking-tight text-white md:text-3xl"
+                 initial={{ opacity: 0, x: -20 }}
+                 animate={{ opacity: 1, x: 0 }}
+                 transition={{ delay: 0.1, duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+               >
+                 {steps[step].title}
+               </motion.h2>
+               <motion.div
+                 initial={{ opacity: 0, x: -20 }}
+                 animate={{ opacity: 1, x: 0 }}
+                 transition={{ delay: 0.15, duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+               >
+                 <p className="text-base leading-relaxed text-gray-300">
+                   {steps[step].description}
+                 </p>
+               </motion.div>
             </motion.div>
           </AnimatePresence>
           {children}

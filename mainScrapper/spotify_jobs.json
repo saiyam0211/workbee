@@ -1,5 +1,45 @@
 [
   {
+    "title": "Senior Machine Learning Engineer, Ads R&D",
+    "location": "",
+    "experience_required": "",
+    "job_description": "Engineering\nMachine Learning\nPermanent\nNew York\nOur mission on the Advertising Product & Technology team is to build a next generation advertising platform that aligns with our unique value proposition for audio and video. We work to scale the user experience for hundreds of millions of fans and hundreds of thousands of advertisers. This scale brings unique challenges as well as tremendous opportunities for our artists and creators.\n\nWe are seeking a Senior Machine Learning Engineer to join the Ad Engagement squad. Ad Engagement focuses on using machine learning to accurately predict how Spotify listeners will react to ads, helping advertisers minimize their costs while delivering a more relevant and enjoyable ad experience for listeners. Our core innovations include Multi-Task Learning models (MTL), and we are expanding into scalable sequence modeling with complex transformer architectures. Recently, we presented a paper about this in KDD Toronto and you can check out the latest details in the blog post here.\n\nWe are also seeking a Senior Machine Learning Engineer to join the Supply Personalization squad. Supply Personalization focuses on optimizing the volume, timing, and types of ad loads a user receives. By leveraging data, machine learning, causal inference, and large scale online experimentation, we aim to uncover and learn the most effective strategies for enhancing user experiences and driving business outcomes.\n\nWe are looking for someone with strong expertise in data analysis, online experimentation techniques, and large-scale ML and engineering systems; someone who is motivated by user and business problems as much as they are by technical problems, and who thrives under ambiguity, experimentation, and iteration. You will work directly on an array of product features that drive the optimal user experience for our ads. You will collaborate with our cross-functional teams to ideate, develop, and own complex technical solutions on our ad services technology platforms. As someone who shares our passion for building innovative ad experiences, you'll have a direct impact on how the world uses Spotify.\nWhat You'll Do\nDesign and implement machine learning systems for ad performance optimization.\nResearch and apply ML optimization strategies to balance multiple objectives effectively.\nWork on a paradigm shift modeling work for Ads that involves working on Sequence Transformer model for User-Ad Interaction, that works along a MTL model\nAnalyze data and use machine learning techniques to understand user behavior and improve ad experiences.\nCollaborate with backend engineers, data scientists, data engineers, and product managers to establish baselines, inform product decisions, and develop new technologies.\nWho You Are\nYou have professional experience in applied machine learning.\nYou have strong technical expertise in software engineering, data analysis, and machine learning.\nYou are proficient in programming languages such as Python, Java, or Scala.\nExperienced in Tensorflow or PyTorch and working with various aspects of the ML lifecycle\nYou have expertise in developing data pipelines using tools like Apache Beam or Spark.\nAs a plus, you may have experience with any of the following - LLMs, Ray, Adtech, or Recommender Systems.\nWhere You'll Be\nWe offer you the flexibility to work where you work best! For this role, you can be within the Americas region as long as we have a work location.\nThis team operates within the U.S. Eastern time zone for collaboration.\nLearn about life at Spotify\nThe United States base range for this position is $176,166.00 - $251,666.00, plus equity. The benefits available for this position include health insurance, six month paid parental leave, 401(k) retirement plan, monthly meal allowance, 23 paid days off, 13 paid flexible holidays, paid sick leave. This range encompasses multiple levels. Leveling is determined during the interview process. Placement in a level depends on relevant work history and interview performance. These ranges may be modified in the future.\n\nSpotify is an equal opportunity employer. You are welcome at Spotify for who you are, no matter where you come from, what you look like, or what’s playing in your headphones. Our platform is for everyone, and so is our workplace. The more voices we have represented and amplified in our business, the more we will all thrive, contribute, and be forward-thinking! So bring us your personal experience, your perspectives, and your background. It’s in our differences that we will find the power to keep revolutionizing the way the world listens.\n\nAt Spotify, we are passionate about inclusivity and making sure our entire recruitment process is accessible to everyone. We have ways to request reasonable accommodations during the interview process and help assist in what you need. If you need accommodations at any stage of the application or interview process, please let us know - we’re here to support you in any way we can.\n\nSpotify transformed music listening forever when we launched in 2008. Our mission is to unlock the potential of human creativity by giving a million creative artists the opportunity to live off their art and billions of fans the chance to enjoy and be passionate about these creators. Everything we do is driven by our love for music and podcasting. Today, we are the world’s most popular audio streaming subscription service.\n\nOur global benefits\nExtensive learning opportunities, through our dedicated team, GreenHouse.\nFlexible share incentives letting you choose how you share in our success.\nGlobal parental leave, six months off - for all new parents.\nAll The Feels, our employee assistance program and self-care hub.\nFlexible public holidays, swap days off according to your values and beliefs.",
+    "job_link": "https://www.lifeatspotify.com/jobs/senior-machine-learning-engineer-ads-rd",
+    "posted_date": "",
+    "company": "Spotify",
+    "scraped_at": "2025-09-11T02:59:14.898835"
+  },
+  {
+    "title": "Senior Media Backend Engineer, Content Platform",
+    "location": "",
+    "experience_required": "",
+    "job_description": "Engineering\nBackend\nPermanent\nStockholm or London\nJoin us to build products impacting over half a billion users globally, shaping their audio and video consumption one stream at a time. Your contributions will have significant impact at scale.\n\nSpotify's backend media transcoding teams are responsible for processing all audio, video, and image content on the platform. We handle diverse media files and are committed to delivering a high-quality user experience through our large-scale, high-performance cloud-based services.\n\nOur team fosters a collaborative and passionate environment where a deep interest in technical details like timestamps, codecs, and video quality is highly valued. We encourage in-depth exploration, critical thinking, and collaborative problem-solving. We offer a flexible hybrid work model and prioritize genuine work over performative actions. Here, what you create and how you create it are paramount.\n\nWhat You’ll Do\nDesign, develop, deploy, maintain, and support backend media processing and packaging services - with a sharp eye on performance, scalability, and maintainability.\nWork primarily with Rust, Python, and a bit of Java, leveraging C/C++ libraries - all running smoothly in Google Kubernetes Engine.\nTake operational ownership of your team’s services, including participating in an on-call rotation (because you care about what you build).\nDive deep into media technologies and optimize video/audio processing\nCollaborate with a dedicated team of media tech enthusiasts who think reading a 200-page ISO specification is a good day.\n\nWho You Are\nFluent in systems-level engineering (think highly-optimized, cross-platform C/C++ libraries).\nExperience in media formats, codecs (audio & video), containers - and you love knowing why they work the way they do.\nWorked with open Source tools like FFmpeg (and yes, we mean libav*), Shaka Packager, and friends.\nExperienced in data structures, algorithms, CPUs, caches, RAM and how to leverage them to maximize performance.\nHas experience building high-throughput networking services that don’t flinch under load.\nYou get a thrill from optimizing media delivery - whether that’s tweaking transcoding pipelines, improving playback start times, or debating progressive download vs adaptive HTTP streaming.\nYou’re comfy in Linux environments and know your way around container-based infrastructure.\nYou care about the craft of software engineering: continuous delivery, defensive programming, automated testing, and writing code your future self will thank you for.\nYou’re curious, always keeping up with the latest in media codecs and high-performance backend trends.\nBonus points if you’ve contributed to Open Source media projects, compiled your own FFmpeg, or can explain why pixels aren’t always square.\nYou architect, design, develop, test, and maintain reliable, high-throughput backend services.\n\nWhere You´ll Be\nThis role is based in Stockholm or London.\nWe offer you the flexibility to work where you work best! There will be some in person meetings, but still allows for flexibility to work from home.\nLearn about life at Spotify\nSpotify is an equal opportunity employer. You are welcome at Spotify for who you are, no matter where you come from, what you look like, or what’s playing in your headphones. Our platform is for everyone, and so is our workplace. The more voices we have represented and amplified in our business, the more we will all thrive, contribute, and be forward-thinking! So bring us your personal experience, your perspectives, and your background. It’s in our differences that we will find the power to keep revolutionizing the way the world listens.\n\nAt Spotify, we are passionate about inclusivity and making sure our entire recruitment process is accessible to everyone. We have ways to request reasonable accommodations during the interview process and help assist in what you need. If you need accommodations at any stage of the application or interview process, please let us know - we’re here to support you in any way we can.\n\nSpotify transformed music listening forever when we launched in 2008. Our mission is to unlock the potential of human creativity by giving a million creative artists the opportunity to live off their art and billions of fans the chance to enjoy and be passionate about these creators. Everything we do is driven by our love for music and podcasting. Today, we are the world’s most popular audio streaming subscription service.\nOur global benefits\nExtensive learning opportunities, through our dedicated team, GreenHouse.\nFlexible share incentives letting you choose how you share in our success.\nGlobal parental leave, six months off - for all new parents.\nAll The Feels, our employee assistance program and self-care hub.\nFlexible public holidays, swap days off according to your values and beliefs.",
+    "job_link": "https://www.lifeatspotify.com/jobs/senior-media-backend-engineer-content-platform",
+    "posted_date": "",
+    "company": "Spotify",
+    "scraped_at": "2025-09-11T02:59:17.606528"
+  },
+  {
+    "title": "Senior Visual Designer, Design Systems",
+    "location": "",
+    "experience_required": "",
+    "job_description": "Design\nPermanent\nToronto\nWe’re looking for a Senior Visual Designer to join Spotify’s central Design Systems team. In this role, you’ll help shape the future of Encore—Spotify’s design system that powers both our design tools and accessibility efforts. You’ll bring ideas to life with excellent visual design, and find smart, practical ways to improve how designers work—through better tooling, AI, and more efficient ways of building.\n\nYou care deeply about graphic design and user interfaces, and understand how they are served by design systems. You listen closely to your teammates and the people who use your work, and you lead with thoughtful, high-quality design that sets a strong example for others.\nWhat You'll Do\nWork day-to-day in a cross-functional team of engineers, designers including content designer and staff typographer, producers and product managers to build and maintain the foundational building blocks of Spotify’s digital applications.\nSet new standards for visual craft and execution across our product.\nProactively explore and implement AI-driven solutions — you understand how to use AI to input the right context to create desirable design outputs.\nPartner with product designers around the company to develop and improve styles and patterns.\nBuild work that scales and flexes across a variety of audiences, devices, platforms and form factors ranging from phones over laptop computers to game consoles, connected fridges and cars\nEmpower our internal community of 100+ globally distributed designers by providing resources and clarity around Spotify’s design and accessibility best practices.\nBe autonomous. You take full ownership of your work and drive your personal development. You care for every last detail, every step of the way.\nWho You Are\nYou demonstrate exceptional visual design skills with a keen eye for craft, clarity, and consistency - bringing innovation to interaction, spacing, and visual storytelling.\nYou embrace the usage AI and new technologies, and have experience building workflow automations and creative tooling.\nYou are familiar and comfortable working within and contributing to large design systems that you may or may not own directly.\nYou have experience working in-house for consumer-facing digital product companies.\nYou value inclusive design and accessibility and don’t believe it has to mean compromising aesthetics.\nYou are a thoughtful designer and problem solver who questions the status quo and strives for improvement.\nYou have an online portfolio or PDF that you can share with us.\nWhere You'll Be\nThis role is based in Toronto, Canada.\nWe offer you the flexibility to work where you work best! There will be some in person meetings, but still allows for flexibility to work from home.\nLearn about life at Spotify\nSpotify is an equal opportunity employer. You are welcome at Spotify for who you are, no matter where you come from, what you look like, or what’s playing in your headphones. Our platform is for everyone, and so is our workplace. The more voices we have represented and amplified in our business, the more we will all thrive, contribute, and be forward-thinking! So bring us your personal experience, your perspectives, and your background. It’s in our differences that we will find the power to keep revolutionizing the way the world listens.\n\nAt Spotify, we are passionate about inclusivity and making sure our entire recruitment process is accessible to everyone. We have ways to request reasonable accommodations during the interview process and help assist in what you need. If you need accommodations at any stage of the application or interview process, please let us know - we’re here to support you in any way we can.\n\nSpotify transformed music listening forever when we launched in 2008. Our mission is to unlock the potential of human creativity by giving a million creative artists the opportunity to live off their art and billions of fans the chance to enjoy and be passionate about these creators. Everything we do is driven by our love for music and podcasting. Today, we are the world’s most popular audio streaming subscription service.\nOur global benefits\nExtensive learning opportunities, through our dedicated team, GreenHouse.\nFlexible share incentives letting you choose how you share in our success.\nGlobal parental leave, six months off - for all new parents.\nAll The Feels, our employee assistance program and self-care hub.\nFlexible public holidays, swap days off according to your values and beliefs.",
+    "job_link": "https://www.lifeatspotify.com/jobs/senior-visual-designer-design-systems",
+    "posted_date": "",
+    "company": "Spotify",
+    "scraped_at": "2025-09-11T02:59:19.720507"
+  },
+  {
+    "title": "Annotation QA Analyst, Content Platform",
+    "location": "",
+    "experience_required": "",
+    "job_description": "Support & Operations\nTrust & Safety\nPermanent\nNew York\nTo power the best audio network in the world by enabling creators and content distributors to deliver their content frictionlessly and equip Spotify teams with the richest possible catalog. That’s what the Content Platform team is all about. We use our deep understanding of consumer expectations to enrich the lives of millions of our users worldwide, bringing the music and audio they love to the devices, apps and platforms they use every day.\n\nThe Annotation Platform Ops team works alongside Product and Engineering teams at the heart of the Content Platform R&D studio to develop rich and interconnected datasets to enable delightful consumer experiences through a fusion of machine and human expertise. We focus on use cases across all of Spotify’s verticals - Music, Podcasts, and Audiobooks, with an emphasis on the safety and moderation of our catalogs in accordance with Spotify policies.\n\nWe are seeking an Annotation QA Analyst to contribute their human expert knowledge to the wide collection of labeled datasets that Content Platform teams use to train, evaluate, and better understand machine learning models and systems. This is an exciting opportunity to work at the center of ML and AI-driven development. \nWhat You'll Do\nProactively review and ensure annotated data is in line with Spotify’s standards and policies, including running quality reviews prioritized by business needs.\nEnsure high-quality and timely results for R&D collaborator teams (Product and Engineering) via established quality framework / quality assurance processes, using metrics such as agreement rates and consensus.\nRun QA expert reviews on the most difficult edge cases in projects in order to address and resolve ambiguity.\nSurface themes, suggestions, and feedback for the annotation team per project. Communicate complex concepts and findings in a clear and effective manner to non-technical and technical audiences.\nContribute to feedback loops between annotation teams, R&D collaborator teams (Product and Engineering), content policy experts and/or Trust & Safety policy experts, in order to continuously iterate on data analysis workflows.\nCollaborate with R&D collaborator teams (Product and Engineering) to ensure proper project guidelines exist per use case prior to annotator training (e.g. ensuring proper in scope vs out of scope examples are generated). If necessary, update or revise project guidelines based on results from initial rounds of annotations.\nProactive collaborate with other members of the Annotation Platform Ops team across all in-flight projects.\nWho You Are\nWell-versed in annotation, data analysis, quality assurance, and human-in-the-loop best practices.\nFamiliar with AI / LLM-driven workflows.\nComfortable with large-scale review and contributing to very large datasets across multi-modal content types (e.g., text, audio, images, video).\nPassionate about catalog safety and moderation (e.g., Trust & Safety) and a desire to apply QA frameworks across diverse domains.\nSelf-starter who can collaborate with cross-functional partners in a dynamic environment and deliver results.\nExcellent verbal and written communication skills.\nExperience working outside of the safety and moderation space is a plus.\nGood grasp of machine learning lifecycles from goal setting to data collection/labeling to model development and deployment is a plus.\nBasic knowledge of SQL is a plus.\nWhere You'll Be\nThis role is based in New York.\nWe offer you the flexibility to work where you work best! There will be some in person meetings, but still allows for flexibility to work from home.\nLearn about life at Spotify\nThe United States base range for this position is $82 921,00 - 118 459,00 plus equity. The benefits available for this position include health insurance, six month paid parental leave, 401(k) retirement plan, monthly meal allowance, 23 paid days off, 13 paid flexible holidays. These ranges may be modified in the future.\nOur global benefits\nExtensive learning opportunities, through our dedicated team, GreenHouse.\nFlexible share incentives letting you choose how you share in our success.\nGlobal parental leave, six months off - for all new parents.\nAll The Feels, our employee assistance program and self-care hub.\nFlexible public holidays, swap days off according to your values and beliefs.",
+    "job_link": "https://www.lifeatspotify.com/jobs/annotation-qa-analyst-content-platform",
+    "posted_date": "",
+    "company": "Spotify",
+    "scraped_at": "2025-09-11T02:59:21.963530"
+  },
+  {
     "title": "Senior Full Stack Engineer",
     "location": "",
     "experience_required": "",
@@ -7,7 +47,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/senior-full-stack-engineer-2",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:43:38.862883"
+    "scraped_at": "2025-09-11T02:59:24.828500"
   },
   {
     "title": "Data Scientist, Advertising",
@@ -17,7 +57,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/data-scientist-advertising",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:43:40.783509"
+    "scraped_at": "2025-09-11T02:59:27.911933"
   },
   {
     "title": "Senior Analyst, Sales Operations",
@@ -27,7 +67,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/senior-analyst-sales-operations",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:43:41.757427"
+    "scraped_at": "2025-09-11T02:59:28.909822"
   },
   {
     "title": "Senior Full Stack Engineer",
@@ -37,7 +77,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/senior-full-stack-engineer",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:43:42.728752"
+    "scraped_at": "2025-09-11T02:59:31.089136"
   },
   {
     "title": "Backend Engineer, Personalization",
@@ -47,7 +87,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/backend-engineer-personalization",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:43:43.987656"
+    "scraped_at": "2025-09-11T02:59:34.905172"
   },
   {
     "title": "Machine Learning Engineer, ML/AI Platform",
@@ -57,7 +97,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/machine-learning-engineer-ml-ai-platform",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:43:44.996388"
+    "scraped_at": "2025-09-11T02:59:36.965812"
   },
   {
     "title": "Junior Data Engineer, Revenue Platform",
@@ -67,17 +107,17 @@
     "job_link": "https://www.lifeatspotify.com/jobs/junior-data-engineer-revenue-platform",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:43:46.605786"
+    "scraped_at": "2025-09-11T02:59:39.906943"
   },
   {
     "title": "Engineering Manager, Experience",
     "location": "",
     "experience_required": "",
-    "job_description": "Engineering\nEngineering Leadership\nPermanent\nStockholm or London\nThe Stencil Squad, part of the Core Experience Studio, is looking for a new Engineering Manager to take us into 2026 and beyond.\n\nOur team is responsible for the Creative Works Platform (CWP) and the Creator System, which together underpin key pages in our mobile apps for the exploration and playback of core content types - music, audiobooks, and podcasts. We use our diverse set of skills, experiences, and tools, to identify, design, develop, test, and deploy solutions that help meet user and business needs.\n\nAs the Engineering Manager of the squad, you will play a pivotal role in leading this talented team of engineers, located across multiple European countries (some remotely and others in-office). Working with them, as well as your counterparts in Product, Design and Insights, you will help us design, build and deliver the right features, with the right level of quality, while fostering a collaborative and supportive work environment. You will also be ensuring the squad's sustaining success by ensuring timely delivery, effective risk management, and efficient mitigation of issues.\nWhat You'll Do\nLead and manage our squad of engineers, providing guidance and support to ensure high-quality delivery, including exploring and implementing intelligent solutions (such as AI) to enhance team efficiency and development.\nCollaborate with the Product Manager to prioritise the work and maintain a roadmap that aligns with business priorities, using advanced data analysis to inform prioritization and resource allocation.\nEnsure the squad operates with speed, resilience, and reliability, meeting the engineering expectations of the company. This involves using all the means at your disposal from people and processes to automation and AI.\nProvide timely reporting of delivery progress against commitments, dependencies, issues, risks, and pro-active mitigations.\nEncourage the use of lean approaches such as MVP (minimum viable product) and A/B testing to ensure we deliver the right experiences, and explore how innovative technologies can accelerate or augment these methodologies.\nPromote good citizenship in the Spotify engineering ecosystem by following standard methodologies, and staying abreast of emerging trends and opportunities.\nFoster a culture of continuous improvement, encouraging the squad members to own and evolve their ways of working. Additionally, and just as importantly, provide support and development to every engineer through the highs and lows of working life.\nWho You Are\nYou have demonstrable success in engineering management and leadership, with an awareness of how emerging technologies, such as AI, can enhance engineering processes and team effectiveness.\nYou have an experienced understanding of software engineering practices and agile methodologies and can discuss the pros and cons of common approaches in each area, including the responsible and effective integration of systems, tools, and automations.\nYour leadership and communication skills enable you to succinctly drive clarity and insight, across a diverse range of audiences, and the ability to inspire and motivate your team to a shared vision and goals, including the adoption of new, data-informed workflows.\nYou can discuss your experiences working with multi-functional teams and managing complex projects, sharing both what has worked well and reflecting on what has not.\nAs the squad building the foundations for many of our key mobile experiences, we need you to help us create the best experience, not just for our listeners, but also for our developers, product managers and designers.\nYou are comfortable using the state-of-the-art AI tooling in a software engineering domain, and curious and engaged with emerging technologies in this space. You are be able to advocate, and demonstrate, the value of such tools and can reason about the relative merits of each.\nWhere You'll Be\nThis role is based in London or Stockholm.\nWe offer you the flexibility to work where you work best! There will be some in-person meetings, but still allows for flexibility to work from home.\nOur global benefits\nExtensive learning opportunities, through our dedicated team, GreenHouse.\nFlexible share incentives letting you choose how you share in our success.\nGlobal parental leave, six months off - for all new parents.\nAll The Feels, our employee assistance program and self-care hub.\nFlexible public holidays, swap days off according to your values and beliefs.",
+    "job_description": "Engineering\nEngineering Leadership\nPermanent\nStockholm or London\nThe Stencil Squad, part of the Core Experience Studio, is looking for a new Engineering Manager to take us into 2026 and beyond.\n\nOur team is responsible for the Creative Works Platform (CWP) and the Creator System, which together underpin key pages in our mobile apps for the exploration and playback of core content types - music, audiobooks, and podcasts. We use our diverse set of skills, experiences, and tools, to identify, design, develop, test, and deploy solutions that help meet user and business needs.\n\nAs the Engineering Manager of the squad, you will play a pivotal role in leading this talented team of engineers, located across multiple European countries (some remotely and others in-office). Working with them, as well as your counterparts in Product, Design and Insights, you will help us design, build and deliver the right features, with the right level of quality, while fostering a collaborative and supportive work environment. You will also be ensuring the squad's sustaining success by ensuring timely delivery, effective risk management, and efficient mitigation of issues.\nWhat You'll Do\nLead and manage our squad of engineers, providing guidance and support to ensure high-quality delivery, including exploring and implementing intelligent solutions (such as AI) to enhance team efficiency and development.\nCollaborate with the Product Manager to prioritise the work and maintain a roadmap that aligns with business priorities, using advanced data analysis to inform prioritization and resource allocation.\nEnsure the squad operates with speed, resilience, and reliability, meeting the engineering expectations of the company. This involves using all the means at your disposal from people and processes to automation and AI.\nProvide timely reporting of delivery progress against commitments, dependencies, issues, risks, and pro-active mitigations.\nEncourage the use of lean approaches such as MVP (minimum viable product) and A/B testing to ensure we deliver the right experiences, and explore how innovative technologies can accelerate or augment these methodologies.\nPromote good citizenship in the Spotify engineering ecosystem by following standard methodologies, and staying abreast of emerging trends and opportunities.\nFoster a culture of continuous improvement, encouraging the squad members to own and evolve their ways of working. Additionally, and just as importantly, provide support and development to every engineer through the highs and lows of working life.\nWho You Are\nYou have demonstrable success in engineering management and leadership, with an awareness of how emerging technologies, such as AI, can enhance engineering processes and team effectiveness.\nYou have an experienced understanding of software engineering practices and agile methodologies and can discuss the pros and cons of common approaches in each area, including the responsible and effective integration of systems, tools, and automations.\nYour leadership and communication skills enable you to succinctly drive clarity and insight, across a diverse range of audiences, and the ability to inspire and motivate your team to a shared vision and goals, including the adoption of new, data-informed workflows.\nYou can discuss your experiences working with multi-functional teams and managing complex projects, sharing both what has worked well and reflecting on what has not.\nAs the squad building the foundations for many of our key mobile experiences, we need you to help us create the best experience, not just for our listeners, but also for our developers, product managers and designers.\nYou are comfortable using the state-of-the-art AI tooling in a software engineering domain, and curious and engaged with emerging technologies in this space. You are be able to advocate, and demonstrate, the value of such tools and can reason about the relative merits of each.\nWhere You'll Be\nThis role is based in London or Stockholm.\nWe offer you the flexibility to work where you work best! There will be some in-person meetings, but still allows for flexibility to work from home.\nLearn about life at Spotify\nSpotify is an equal opportunity employer. You are welcome at Spotify for who you are, no matter where you come from, what you look like, or what’s playing in your headphones. Our platform is for everyone, and so is our workplace. The more voices we have represented and amplified in our business, the more we will all thrive, contribute, and be forward-thinking! So bring us your personal experience, your perspectives, and your background. It’s in our differences that we will find the power to keep revolutionizing the way the world listens.\n\nAt Spotify, we are passionate about inclusivity and making sure our entire recruitment process is accessible to everyone. We have ways to request reasonable accommodations during the interview process and help assist in what you need. If you need accommodations at any stage of the application or interview process, please let us know - we’re here to support you in any way we can.\n\nSpotify transformed music listening forever when we launched in 2008. Our mission is to unlock the potential of human creativity by giving a million creative artists the opportunity to live off their art and billions of fans the chance to enjoy and be passionate about these creators. Everything we do is driven by our love for music and podcasting. Today, we are the world’s most popular audio streaming subscription service.\nOur global benefits\nExtensive learning opportunities, through our dedicated team, GreenHouse.\nFlexible share incentives letting you choose how you share in our success.\nGlobal parental leave, six months off - for all new parents.\nAll The Feels, our employee assistance program and self-care hub.\nFlexible public holidays, swap days off according to your values and beliefs.",
     "job_link": "https://www.lifeatspotify.com/jobs/engineering-manager-experience",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:43:47.553560"
+    "scraped_at": "2025-09-11T02:59:41.699868"
   },
   {
     "title": "Data Scientist II, Platform Developer Experience",
@@ -87,7 +127,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/data-scientist-ii-platform-developer-experience",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:43:49.143505"
+    "scraped_at": "2025-09-11T02:59:42.685838"
   },
   {
     "title": "Director & Global Process Owner, Procure to Pay",
@@ -97,7 +137,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/director-global-process-owner-procure-to-pay",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:43:50.111478"
+    "scraped_at": "2025-09-11T02:59:44.677362"
   },
   {
     "title": "Senior Partner Manager, Outsourcing Operations",
@@ -107,7 +147,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/senior-partner-manager-outsourcing-operations-2",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:43:51.834679"
+    "scraped_at": "2025-09-11T02:59:45.870129"
   },
   {
     "title": "Senior Partner Manager, Outsourcing Operations",
@@ -117,7 +157,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/senior-partner-manager-outsourcing-operations",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:43:54.109931"
+    "scraped_at": "2025-09-11T02:59:47.710618"
   },
   {
     "title": "Podcast Client Partner, UK (12 Months Fixed Term)",
@@ -127,7 +167,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/podcast-client-partner-uk-12-months-fixed-term",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:43:55.816226"
+    "scraped_at": "2025-09-11T02:59:48.872177"
   },
   {
     "title": "Research Scientist, Personalization",
@@ -137,7 +177,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/research-scientist-personalization",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:43:57.580380"
+    "scraped_at": "2025-09-11T02:59:50.206352"
   },
   {
     "title": "Senior Growth Marketing Manager, Backstage",
@@ -147,7 +187,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/senior-growth-marketing-manager-backstage",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:43:58.866610"
+    "scraped_at": "2025-09-11T02:59:51.627654"
   },
   {
     "title": "Global Law Enforcement Response Specialist",
@@ -157,7 +197,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/global-law-enforcement-response-specialist",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:44:30.427546"
+    "scraped_at": "2025-09-11T02:59:53.608065"
   },
   {
     "title": "Senior Machine Learning Engineer, Podcast",
@@ -167,7 +207,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/senior-machine-learning-engineer-podcast",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:44:32.234543"
+    "scraped_at": "2025-09-11T02:59:56.247872"
   },
   {
     "title": "Client Partner, CPG",
@@ -177,7 +217,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/client-partner-cpg",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:44:33.292905"
+    "scraped_at": "2025-09-11T02:59:57.410644"
   },
   {
     "title": "Director, Consumer Product Marketing",
@@ -187,7 +227,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/director-consumer-product-marketing",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:44:35.147376"
+    "scraped_at": "2025-09-11T02:59:58.415355"
   },
   {
     "title": "Senior Engineer (C++ / Java / Mobile), User Platform",
@@ -197,7 +237,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/senior-engineer-c-java-mobile-user-platform",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:44:36.515521"
+    "scraped_at": "2025-09-11T02:59:59.357555"
   },
   {
     "title": "Mobile Engineer (Android / C++), User Platform",
@@ -207,7 +247,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/mobile-engineer-android-c-user-platform",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:44:37.542418"
+    "scraped_at": "2025-09-11T03:00:00.653459"
   },
   {
     "title": "Mobile Engineer (C++ / iOS), User Platform",
@@ -217,7 +257,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/mobile-engineer-c-ios-user-platform",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:44:38.751821"
+    "scraped_at": "2025-09-11T03:00:02.481438"
   },
   {
     "title": "Workday Payroll Specialist",
@@ -227,7 +267,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/workday-payroll-specialist",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:44:39.683675"
+    "scraped_at": "2025-09-11T03:00:03.682913"
   },
   {
     "title": "Associate Client Partner, Emerging & Scaled (Growth)",
@@ -237,7 +277,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/associate-client-partner-emerging-scaled-growth",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:44:41.685427"
+    "scraped_at": "2025-09-11T03:00:05.914551"
   },
   {
     "title": "Senior Data Engineer, AdTech",
@@ -247,7 +287,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/senior-data-engineer-adtech",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:44:42.839138"
+    "scraped_at": "2025-09-11T03:00:08.671656"
   },
   {
     "title": "Legal Counsel, Platform Liability",
@@ -257,7 +297,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/legal-counsel-platform-liability-2",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:44:44.662074"
+    "scraped_at": "2025-09-11T03:00:11.732212"
   },
   {
     "title": "Customer Success Engineer I, Backstage",
@@ -267,7 +307,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/customer-success-engineer-i-backstage",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:44:46.448344"
+    "scraped_at": "2025-09-11T03:00:14.738517"
   },
   {
     "title": "Legal Counsel, Platform Liability",
@@ -277,7 +317,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/legal-counsel-platform-liability",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:44:49.239428"
+    "scraped_at": "2025-09-11T03:00:17.429236"
   },
   {
     "title": "Editor Music & Culture Punjabi",
@@ -287,7 +327,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/editor-music-culture-punjabi",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:44:50.414685"
+    "scraped_at": "2025-09-11T03:00:20.537393"
   },
   {
     "title": "Manager, Monetization Strategy",
@@ -297,7 +337,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/manager-monetization-strategy",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:44:52.051860"
+    "scraped_at": "2025-09-11T03:00:22.531127"
   },
   {
     "title": "Fullstack Engineer, Platform Developer Experience",
@@ -307,7 +347,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/fullstack-engineer-platform-developer-experience",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:44:53.193177"
+    "scraped_at": "2025-09-11T03:00:23.619480"
   },
   {
     "title": "Senior Backend/Data Hybrid Engineer, GenRecs, Personalization",
@@ -317,7 +357,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/senior-backend-data-hybrid-engineer-genrecs-personalization",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:44:54.964832"
+    "scraped_at": "2025-09-11T03:00:25.480372"
   },
   {
     "title": "FP&A Analyst, Product & Technology",
@@ -327,7 +367,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/fpa-analyst-product-technology",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:44:55.909160"
+    "scraped_at": "2025-09-11T03:00:28.174805"
   },
   {
     "title": "Commerce Partnership Lead- 12m FTC",
@@ -337,7 +377,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/commerce-partnership-lead-12m-ftc",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:44:57.428949"
+    "scraped_at": "2025-09-11T03:00:30.059008"
   },
   {
     "title": "FP&A Analyst, Audiobooks",
@@ -347,7 +387,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/fpa-analyst-audiobooks",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:44:59.547691"
+    "scraped_at": "2025-09-11T03:00:32.438995"
   },
   {
     "title": "Senior Revenue Accountant",
@@ -357,7 +397,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/senior-revenue-accountant",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:45:01.341180"
+    "scraped_at": "2025-09-11T03:00:34.194129"
   },
   {
     "title": "Social Marketing Lead, South Korea",
@@ -367,7 +407,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/social-marketing-lead-south-korea",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:45:02.616347"
+    "scraped_at": "2025-09-11T03:00:41.216154"
   },
   {
     "title": "Policy Support Specialist",
@@ -377,7 +417,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/policy-support-specialist-2",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:45:03.869003"
+    "scraped_at": "2025-09-11T03:00:43.208867"
   },
   {
     "title": "Senior Product Designer, AI & Learning",
@@ -387,17 +427,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/senior-product-designer-ai-learning",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:45:04.959993"
-  },
-  {
-    "title": "Senior Fullstack Engineer, Advertising",
-    "location": "",
-    "experience_required": "",
-    "job_description": "Engineering\nBackend\nPermanent\nNew York\nOur mission on the Advertising Product & Technology team is to build a next generation advertising platform that aligns with our unique value proposition for audio and video. We work to scale the user experience for hundreds of millions of fans and hundreds of thousands of advertisers. This scale brings unique challenges as well as tremendous opportunities for our artists and creators.\n\nWe are looking for a Senior Fullstack Engineer to join our Advertising Product & Technology organization. Our teams are charged with scaling Spotify's Free Product and our Podcast Monetization Mission. You will work directly on an array of product features, advertiser publishing tools, and insights and reporting functionalities. You will collaborate  with our cross-functional teams to ideate, develop, and own complex technical solutions on our fast-paced podcast and ad services technology platforms. You will architect and develop custom backend solutions to complex business problems, leveraging Spotify’s proprietary infrastructure while working within our existing Salesforce ecosystem. We are seeking someone adept at building both inside and outside of Salesforce.\nWhat You'll Do\nWork in the Advertising domain, where you’ll spend time learning about Advertising Sales, Marketing, and other go-to-market (GTM) functions.\nDesign, develop and deliver new functionality using Spotify golden path technologies.\nCollaborate closely with other engineers, business stakeholders, engineering and product managers to understand problems and design solutions.\nChallenge yourself as an engineer by growing and developing new skills.\nFostering strong team dynamics by holding squad members and yourself accountable to deliver high quality products and solutions. \nContinuously improve our foundational systems and services to resiliently serve our customers.\nWho You Are\nBachelor’s degree in Computer Science or equivalent professional experience\nExperience supporting Sales and Marketing functions\n2+ years of hands-on experience working with the Salesforce platform\nFamiliarity with Salesforce standard APIs and platform eventing\nProven experience integrating Salesforce with third-party APIs and external systems\nProficient in developing synchronous and asynchronous Apex and Triggers, with strong awareness of governor limits\nProfessional experience with Salesforce sandbox environments and package-based development\nComfortable using terminal-based tools and the Salesforce CLI\nExperience with source-controlled Salesforce development and deployment workflows\nDeep understanding of Salesforce platform limitations and constraints\nFamiliar with Salesforce administration, including configuration, standard data model, security, validation rules, workflows, and flow automation\nExperience working within complex Salesforce orgs and environments\nAbility to manage multiple projects, self-QA, and follow established best practices\nCommitted to writing maintainable, well-tested, and well-documented code\nOpen to giving and receiving constructive feedback through code and architecture reviews\nExperienced in authoring user documentation and visualizing process flows\nFamiliar with declarative CI/CD pipelines using tools such as Jenkins or GitHub Workflows\nProfessional experience with modern frontend frameworks such as React, or Angular\nYou have experience working on sophisticated frontends built with JavaScript and TypeScript, and aren’t intimidated by large, legacy codebases\nFamiliarity with frontend build tooling and bundlers like Webpack\nProficient in writing unit and integration tests using Jest or similar frameworks\nStrong understanding of dependency injection principles and mocking strategies\nFamiliarity with JVM-based languages and tooling such as Java, Kotlin, or Scala\nExperience with backend development outside of Salesforce, particularly in service-oriented or API-driven architectures\nKnowledge of API paradigms such as GraphQL, REST, and gRPC\nComfort working across the full stack and collaborating closely with backend engineering teams\nWhere You'll Be\nWe offer you the flexibility to work where you work best! For this role, you can be within the Americas region as long as we have a work location.\nThis team operates within the Eastern time zone for collaboration.\nLearn about life at Spotify\nThe United States base range for this position is $160,091- $228,702 plus equity. The benefits available for this position include health insurance, six month paid parental leave, 401(k) retirement plan, monthly meal allowance, 23 paid days off, 13 paid flexible holidays, paid sick leave. These ranges may be modified in the future.\n\nSpotify is an equal opportunity employer. You are welcome at Spotify for who you are, no matter where you come from, what you look like, or what’s playing in your headphones. Our platform is for everyone, and so is our workplace. The more voices we have represented and amplified in our business, the more we will all thrive, contribute, and be forward-thinking! So bring us your personal experience, your perspectives, and your background. It’s in our differences that we will find the power to keep revolutionizing the way the world listens.\n\nAt Spotify, we are passionate about inclusivity and making sure our entire recruitment process is accessible to everyone. We have ways to request reasonable accommodations during the interview process and help assist in what you need. If you need accommodations at any stage of the application or interview process, please let us know - we’re here to support you in any way we can.\n\nSpotify transformed music listening forever when we launched in 2008. Our mission is to unlock the potential of human creativity by giving a million creative artists the opportunity to live off their art and billions of fans the chance to enjoy and be passionate about these creators. Everything we do is driven by our love for music and podcasting. Today, we are the world’s most popular audio streaming subscription service.\n\nOur global benefits\nExtensive learning opportunities, through our dedicated team, GreenHouse.\nFlexible share incentives letting you choose how you share in our success.\nGlobal parental leave, six months off - for all new parents.\nAll The Feels, our employee assistance program and self-care hub.\nFlexible public holidays, swap days off according to your values and beliefs.",
-    "job_link": "https://www.lifeatspotify.com/jobs/senior-fullstack-engineer-advertising",
-    "posted_date": "",
-    "company": "Spotify",
-    "scraped_at": "2025-09-10T15:45:06.188162"
+    "scraped_at": "2025-09-11T03:00:45.386684"
   },
   {
     "title": "Staff Backend Engineer, Home Foundations, Personalization",
@@ -407,7 +437,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/staff-backend-engineer-home-foundations-personalization",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:45:07.728669"
+    "scraped_at": "2025-09-11T03:00:47.879231"
   },
   {
     "title": "Staff Backend Engineer, Prolific, Personalization",
@@ -417,7 +447,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/staff-backend-engineer-prolific-personalization",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:45:09.618381"
+    "scraped_at": "2025-09-11T03:00:50.853523"
   },
   {
     "title": "Client Partner, Emerging & Scaled",
@@ -427,7 +457,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/client-partner-emerging-scaled",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:45:10.773633"
+    "scraped_at": "2025-09-11T03:00:53.354157"
   },
   {
     "title": "Country Manager, Sweden",
@@ -437,7 +467,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/country-manager-sweden",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:45:12.320864"
+    "scraped_at": "2025-09-11T03:00:55.819295"
   },
   {
     "title": "Editor, Music Editorial, Egypt",
@@ -447,7 +477,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/editor-music-editorial-egypt",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:45:19.027876"
+    "scraped_at": "2025-09-11T03:00:56.990264"
   },
   {
     "title": "Agency Partner Japan (6-Month Contract)",
@@ -457,7 +487,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/agency-partner-japan-6-month-contract",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:45:20.893067"
+    "scraped_at": "2025-09-11T03:00:59.161469"
   },
   {
     "title": "Senior Manager, Platform Intelligence",
@@ -467,7 +497,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/senior-manager-platform-intelligence",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:45:23.001701"
+    "scraped_at": "2025-09-11T03:01:01.501374"
   },
   {
     "title": "Head of Creative Strategy, APAC",
@@ -477,7 +507,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/head-of-creative-strategy-apac",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:45:24.979270"
+    "scraped_at": "2025-09-11T03:01:09.267270"
   },
   {
     "title": "Staff Machine Learning Engineer, NativeAds",
@@ -487,7 +517,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/staff-machine-learning-engineer-nativeads",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:45:26.880443"
+    "scraped_at": "2025-09-11T03:01:11.742632"
   },
   {
     "title": "Government Affairs Manager, Canada",
@@ -497,7 +527,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/government-affairs-manager-canada",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:45:28.025779"
+    "scraped_at": "2025-09-11T03:01:23.016024"
   },
   {
     "title": "Senior Data Engineer, Financial Data Platform",
@@ -507,17 +537,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/senior-data-engineer-financial-data-platform",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:45:29.197750"
-  },
-  {
-    "title": "Customer Success Engineer II, Backstage",
-    "location": "",
-    "experience_required": "",
-    "job_description": "Customer Service\nPermanent\nNew York\nInterested in driving Spotify’s developer portal philosophy among some of the largest and most advanced tech companies? We in Spotify’s Backstage team are looking for a Customer Success Engineer with a unique balance of technical knowledge, an eye for business, and interpersonal skills to kick start the area focused on providing strategic guidance to our customers and automating problem-solving.\n\nWe’re seeking versatile engineers skilled in web development and customer interaction. Your primary responsibility will be to build and maintain strong relationships with our current customers, ensuring their success and satisfaction with our commercial Backstage products and services. Ideal candidates have a strong background in developer productivity and/or infrastructure, technical consulting, and customer management or similar roles.\n\nJoin a high-paced, startup-like team of engineers, marketers, business developers, and product managers to drive an entirely new technology-focused business line and distribution channel. We want someone passionate about that type of environment. \nWhat You'll Do\nNurture strong relationships with our mid-market segment by providing tools, information & training needed to achieve their desired outcomes\nCapture customer objectives, map out a pathway to achieving them, and measure success using data-driven feedback loops\nOnboard new customers through the implementation process, ensuring a smooth transition\nIdentify points of friction in the onboarding and adoption experience\nRepresent the voice of the customer with internal teams, including sales, product, marketing, engineering, and customer support to ensure customer satisfaction and resolve any problems or concerns.\nDevelop and maintain features on our open source platform, Backstage, collaborating with internal teams and the broader open source community to enhance developer experience and platform capabilities.\nWho You Are\nYou have an understanding of how developers work and collaborate within an enterprise environment as well as extensive experience with modern web development and infrastructure\nReact, TypeScript, GraphQL, and Node are a part of your tool belt\nStrong analytical and problem-solving skills, with a proactive approach to identifying and addressing customer issues\nExcellent communicator with a strong focus on customer needs & able to explain complex technical concepts to non-technical users\nHaving worked in tech consulting or customer management is a bonus\nExperience working with/contributing to backstage.io is a bonus\nWhere You'll Be\nThis role is based in New York City\nWe offer you the flexibility to work where you work best! There will be some in person meetings, but still allows for flexibility to work from home.\nLearn about life at Spotify\nThe United States base range for this position is $125,562-179,374 plus equity. The benefits available for this position include health insurance, six month paid parental leave, 401(k) retirement plan, monthly meal allowance, 23 paid days off, 13 paid flexible holidays, paid sick leave. These ranges may be modified in the future.\n\nSpotify is an equal opportunity employer. You are welcome at Spotify for who you are, no matter where you come from, what you look like, or what’s playing in your headphones. Our platform is for everyone, and so is our workplace. The more voices we have represented and amplified in our business, the more we will all thrive, contribute, and be forward-thinking! So bring us your personal experience, your perspectives, and your background. It’s in our differences that we will find the power to keep revolutionizing the way the world listens.\n\nAt Spotify, we are passionate about inclusivity and making sure our entire recruitment process is accessible to everyone. We have ways to request reasonable accommodations during the interview process and help assist in what you need. If you need accommodations at any stage of the application or interview process, please let us know - we’re here to support you in any way we can.\n\nSpotify transformed music listening forever when we launched in 2008. Our mission is to unlock the potential of human creativity by giving a million creative artists the opportunity to live off their art and billions of fans the chance to enjoy and be passionate about these creators. Everything we do is driven by our love for music and podcasting. Today, we are the world’s most popular audio streaming subscription service.\nOur global benefits\nExtensive learning opportunities, through our dedicated team, GreenHouse.\nFlexible share incentives letting you choose how you share in our success.\nGlobal parental leave, six months off - for all new parents.\nAll The Feels, our employee assistance program and self-care hub.\nFlexible public holidays, swap days off according to your values and beliefs.",
-    "job_link": "https://www.lifeatspotify.com/jobs/customer-success-engineer-ii-backstage",
-    "posted_date": "",
-    "company": "Spotify",
-    "scraped_at": "2025-09-10T15:45:30.257428"
+    "scraped_at": "2025-09-11T03:01:24.907246"
   },
   {
     "title": "Consumer Marketing Manager Japan (6-Month Contract)",
@@ -527,7 +547,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/consumer-marketing-manager-japan-6-month-contract",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:45:32.173004"
+    "scraped_at": "2025-09-11T03:01:32.173830"
   },
   {
     "title": "Engineering Manager, Customer Service Platform",
@@ -537,7 +557,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/engineering-manager-customer-service-platform",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:45:33.816040"
+    "scraped_at": "2025-09-11T03:01:40.811926"
   },
   {
     "title": "Analyst, Advertising Finance",
@@ -547,7 +567,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/analyst-advertising-finance",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:45:35.005004"
+    "scraped_at": "2025-09-11T03:01:45.062193"
   },
   {
     "title": "Head of Editorial SEA",
@@ -557,7 +577,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/head-of-editorial-sea",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:45:36.191187"
+    "scraped_at": "2025-09-11T03:01:47.782600"
   },
   {
     "title": "Machine Learning Engineering Manager, Personalization",
@@ -567,7 +587,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/machine-learning-engineering-manager-personalization",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:45:38.089420"
+    "scraped_at": "2025-09-11T03:01:50.915676"
   },
   {
     "title": "Editor Music & Culture Telugu",
@@ -577,7 +597,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/editor-music-culture-telugu",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:45:39.002961"
+    "scraped_at": "2025-09-11T03:01:53.036900"
   },
   {
     "title": "Machine Learning Engineer, GenRecs, Personalization",
@@ -587,7 +607,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/machine-learning-engineer-genrecs-personalization-2",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:45:40.132708"
+    "scraped_at": "2025-09-11T03:01:54.772414"
   },
   {
     "title": "Machine Learning Engineer, Personalization",
@@ -597,7 +617,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/machine-learning-engineer-personalization",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:45:45.822304"
+    "scraped_at": "2025-09-11T03:01:55.741811"
   },
   {
     "title": "Senior Machine Learning Engineer, Rewards",
@@ -607,7 +627,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/senior-machine-learning-engineer-rewards",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:45:47.097651"
+    "scraped_at": "2025-09-11T03:01:59.010608"
   },
   {
     "title": "Head of Sales Japan",
@@ -617,7 +637,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/head-of-sales-japan",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:45:48.938321"
+    "scraped_at": "2025-09-11T03:01:59.948564"
   },
   {
     "title": "Backend Engineer, AdTech",
@@ -627,7 +647,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/backend-engineer-adtech",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:45:50.941373"
+    "scraped_at": "2025-09-11T03:02:01.171542"
   },
   {
     "title": "Senior Machine Learning Engineer, Personalization",
@@ -637,7 +657,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/senior-machine-learning-engineer-personalization-3",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:45:52.757085"
+    "scraped_at": "2025-09-11T03:02:04.011226"
   },
   {
     "title": "Staff Machine Learning Engineer, GenRecs",
@@ -647,7 +667,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/staff-machine-learning-engineer-genrecs",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:45:54.021253"
+    "scraped_at": "2025-09-11T03:02:06.629774"
   },
   {
     "title": "Senior Machine Learning Engineer, GenRecs, Personalization",
@@ -657,7 +677,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/senior-machine-learning-engineer-personalization-2",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:45:55.678486"
+    "scraped_at": "2025-09-11T03:02:07.731891"
   },
   {
     "title": "Legal Counsel, Regulatory",
@@ -667,7 +687,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/legal-counsel-regulatory",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:45:57.303311"
+    "scraped_at": "2025-09-11T03:02:08.921278"
   },
   {
     "title": "Junior Data Engineer, Financial Data Platform",
@@ -677,7 +697,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/data-engineer-financial-data-platform",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:45:58.295648"
+    "scraped_at": "2025-09-11T03:02:09.864401"
   },
   {
     "title": "Editorial Lead India",
@@ -687,7 +707,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/editorial-lead-india",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:46:00.119377"
+    "scraped_at": "2025-09-11T03:02:11.526446"
   },
   {
     "title": "Artist & Label Partnerships Manager, Thailand",
@@ -697,7 +717,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/artist-label-partnerships-manager-thailand",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:46:01.847076"
+    "scraped_at": "2025-09-11T03:02:14.023390"
   },
   {
     "title": "Senior Software Engineer (low level Video Experience)",
@@ -707,7 +727,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/senior-video-specialist-consumer-experience",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:46:03.805413"
+    "scraped_at": "2025-09-11T03:02:16.621954"
   },
   {
     "title": "Corporate Tax Manager, Asia-Pacific",
@@ -717,7 +737,7 @@
     "job_link": "https://www.lifeatspotify.com/jobs/tax-manager-asia-pacific",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:46:05.399110"
+    "scraped_at": "2025-09-11T03:02:17.964039"
   },
   {
     "title": "Media Manager, Korea and SEA",
@@ -727,6 +747,6 @@
     "job_link": "https://www.lifeatspotify.com/jobs/media-manager-korea-and-sea",
     "posted_date": "",
     "company": "Spotify",
-    "scraped_at": "2025-09-10T15:46:06.623407"
+    "scraped_at": "2025-09-11T03:02:19.798139"
   }
 ]

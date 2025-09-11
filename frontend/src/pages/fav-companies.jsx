@@ -3,7 +3,7 @@ import GlassFooter from '@/components/ui/GlassFooter';
 import SavedJobsPopup from '@/components/ui/saved-jobs-popup';
 import { storageUtils } from '../utils/storage';
 
-// Sample saved jobs data - this would come from your backend/API
+
 const generateSavedJobs = (companyName, count, titlesOverride) => {
   const jobTitles = titlesOverride && titlesOverride.length > 0 ? titlesOverride : [
     'Software Engineer',

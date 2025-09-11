@@ -12,9 +12,7 @@ fi
 
 # Build the frontend
 echo "📦 Building frontend..."
-cd frontend
 npm run build
-cd ..
 
 # Deploy to Vercel
 echo "🚀 Deploying to Vercel..."

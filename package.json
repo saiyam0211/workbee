@@ -1,0 +1,14 @@
+{
+  "name": "workbee",
+  "version": "1.0.0",
+  "description": "WorkBee - Job Search Platform",
+  "scripts": {
+    "build": "cd frontend && npm run build",
+    "dev": "cd frontend && npm run dev",
+    "install": "cd frontend && npm install",
+    "preview": "cd frontend && npm run preview"
+  },
+  "keywords": ["jobs", "career", "search", "workbee"],
+  "author": "Saiyam",
+  "license": "MIT"
+}

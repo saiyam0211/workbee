@@ -4,7 +4,7 @@ import { driver } from 'driver.js';
 import 'driver.js/dist/driver.css';
 import GlassFooter from './GlassFooter';
 import JobDetailsModal from './JobDetailsModal';
-import nvidiaJobs from '@/nvidia_jobs.json';
+import allJobs from '../../../../mainScrapper/all_jobs.json';
 import { storageUtils } from '../../utils/storage';
 
 
@@ -13,6 +13,7 @@ import { storageUtils } from '../../utils/storage';
 const companyLogos = {
   'NVIDIA': '/logos/nvidia.svg',
   'Microsoft': '/logos/microsoft.svg',
+  'MICROSOFT': '/logos/microsoft.svg', // Handle all caps version
   'Google': '/logos/google-only.svg',
   'Apple': '/logos/apple-only.svg',
   'Amazon': '/logos/amazon.png',
@@ -31,11 +32,11 @@ const companyLogos = {
   'Loom': '/logos/loom-only.svg'
 };
 
-// Build job data from NVIDIA JSON
-const jobData = (Array.isArray(nvidiaJobs) ? nvidiaJobs : []).map((job, idx) => ({
+// Build job data from all jobs JSON
+const jobData = (Array.isArray(allJobs) ? allJobs : []).map((job, idx) => ({
   id: idx + 1,
-  company: job.company || 'NVIDIA',
-  logo: companyLogos[job.company] || companyLogos['NVIDIA'],
+  company: job.company || 'Unknown',
+  logo: companyLogos[job.company] || companyLogos['NVIDIA'], // Default to NVIDIA logo if company not found
   title: job.title || 'Untitled Role',
   location: job.location || 'Location not specified',
   level: job.experience_required || 'Not specified',

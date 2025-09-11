@@ -33,19 +33,19 @@ const steps = [
     id: "1",
     name: "Step 1",
     title: "Get Started Instantly",
-    description: "Sign up with your email or social accounts and unlock access to thousands of curated job opportunities. No lengthy forms, just quick access to your career path.",
+    description: "Access thousands of curated job opportunities right away. No accounts, no forms—just explore your career path instantly.",
   },
   {
     id: "2",
     name: "Step 2",
-    title: "Personalize Your Experience",
-    description: "Create a profile highlighting your skills, experience, and career goals. Our system uses this to tailor job recommendations just for you",
+    title: "Build Your Favorites",
+    description: "See something interesting? Tap the heart and keep all your top opportunities in one place—your Favorites page.",
   },
   {
     id: "3",
     name: "Step 3",
     title: "Discover Curated Opportunities",
-    description: "Navigate through a personalized job feed updated in real-time from company career pages. Use smart filters to zero in on roles that fit your aspirations.",
+    description: "Browse a real-time job feed sourced directly from company career pages, or use the search page to quickly find the roles that matter most to you..",
   },
   {
     id: "4",

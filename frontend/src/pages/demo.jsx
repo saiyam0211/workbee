@@ -142,7 +142,7 @@ export function Demo() {
               <img className="rounded-full" src="/images/janvi.jpg" alt="Janvi Yadav" />
             </div>
             <div className="text-white text-2xl font-semibold">Janvi Yadav</div>
-            <div className="text-gray-300 text-m mb-2">API Builder</div>
+            <div className="text-gray-300 text-m mb-2">Frontend Developer</div>
             <div className="flex mt-3 gap-8">
               <a href="https://www.instagram.com/janvi__yadav1205/">
                 <img className="h-7" src="/logos/linkdin.png" alt="LinkedIn" />
@@ -161,7 +161,7 @@ export function Demo() {
               <img className="rounded-full" src="/images/ronak.jpg" alt="Ronak Jain" />
             </div>
             <div className="text-white text-2xl font-semibold">Ronak Jain</div>
-            <div className="text-gray-300 text-m mb-2">Code Commander</div>
+            <div className="text-gray-300 text-m mb-2">API Integrator</div>
             <div className="flex mt-3 gap-8">
               <a href="https://www.instagram.com/ronak_._jain/">
                 <img className="h-7" src="/logos/linkdin.png" alt="LinkedIn" />
@@ -180,7 +180,7 @@ export function Demo() {
               <img className="rounded-full" src="/images/sonal.png" alt="Sonal Sonal" />
             </div>
             <div className="text-white text-2xl font-semibold">Sonal Sonal</div>
-            <div className="text-gray-300 text-m mb-2">UI Ninja</div>
+            <div className="text-gray-300 text-m mb-2">Presenter</div>
             <div className="flex mt-3 gap-8">
               <a href="https://www.instagram.com/sonal__2810/">
                 <img className="h-7" src="/logos/linkdin.png" alt="LinkedIn" />

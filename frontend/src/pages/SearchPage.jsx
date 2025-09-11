@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
-import nvidiaJobs from '../nvidia_jobs.json';
+import allJobs from '../../../mainScrapper/all_jobs.json';
 import GlassFooter from '../components/ui/GlassFooter';
 import JobDetailsModal from '../components/ui/JobDetailsModal';
 
@@ -18,6 +18,7 @@ const SearchPage = () => {
     'Apple': '/logos/apple-only.svg',
     'Google': '/logos/google-only.svg',
     'Microsoft': '/logos/microsoft-only.svg',
+    'MICROSOFT': '/logos/microsoft-only.svg', // Handle all caps version
     'Meta': '/logos/meta-only.svg',
     'Amazon': '/logos/amazon.png',
     'Netflix': '/logos/netflix-only.svg',
@@ -38,7 +39,7 @@ const SearchPage = () => {
   };
 
   // Process job data with company logos
-  const jobData = nvidiaJobs.map(job => ({
+  const jobData = allJobs.map(job => ({
     ...job,
     logo: companyLogos[job.company] || `/logos/${(job.company || '').toLowerCase().replace(/\s+/g, '-')}.svg`
   }));

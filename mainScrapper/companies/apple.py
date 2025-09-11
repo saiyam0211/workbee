@@ -23,7 +23,7 @@ class AppleScraper(BaseJobScraper):
             base_url="https://jobs.apple.com/en-in/search?location=india-INDC",
             headless=headless
         )
-    
+        
     def scrape_jobs(self, max_pages: int = 1) -> list[JobData]:
         """Scrape Apple jobs with proper pagination"""
         logger.info(f"🚀 Starting to scrape {self.company_name} jobs (max {max_pages} pages)...")
@@ -135,11 +135,11 @@ class AppleScraper(BaseJobScraper):
                             # Limit per page to avoid too many results
                             if real_jobs_found_on_page >= 100:
                                 break
-                                    
+                            
                     except Exception as e:
                         logger.warning(f"Error processing job {i+1}: {str(e)}")
                         continue
-                
+                        
                 logger.info(f"📊 Page {page_num + 1}: Found {real_jobs_found_on_page} new jobs (Total unique: {len(self.jobs_data)})")
                 
                 # Try to go to next page if not on last page

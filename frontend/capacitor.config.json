@@ -3,7 +3,7 @@
   "appName": "WorkBee",
   "webDir": "dist",
   "server": {
-    "url": "https://workbee.vercel.app/redirect",
+    "url": "https://workbee.vercel.app/dashboard",
     "cleartext": true
   },
   "plugins": {

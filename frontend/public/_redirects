@@ -1,1 +1,6 @@
+# Redirect all routes to index.html for SPA routing
+/dashboard    /index.html   200
+/fav-companies    /index.html   200
+/notifications    /index.html   200
+/search    /index.html   200
 /*    /index.html   200

@@ -186,14 +186,14 @@ export function HeroSection() {
                                 <div className="mt-30 inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl border p-4 shadow-lg shadow-zinc-950/15 ring-1">
                                     <img
                                         className="bg-background aspect-15/8 relative hidden rounded-2xl dark:block"
-                                        src="public/images/image.png"
+                                        src="/images/landing.png"
                                         alt="app screen"
                                         width={2700}
                                         height={1440}
                                     />
                                     <img
                                         className="z-2 border-border/25 aspect-15/8 relative rounded-2xl border dark:hidden"
-                                        src="public/images/image.png"
+                                        src="/images/landing.png"
                                         alt="app screen"
                                         width={2700}
                                         height={1440}
@@ -370,7 +370,7 @@ const HeroHeader = () => {
 const Logo = ({ className }) => {
     return (
     <>
-        <span className='text-xl h-10 font-bold'><img className='w-40 h-50 -mt-18' src="public/logos/workbeelogo.svg" alt="" /></span>
+        <span className='text-xl h-10 font-bold'><img className='w-40 h-50 -mt-18' src="/logos/workbeelogo.svg" alt="" /></span>
         </>
     )
 }

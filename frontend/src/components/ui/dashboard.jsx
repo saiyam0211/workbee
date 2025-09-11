@@ -4,7 +4,7 @@ import { driver } from 'driver.js';
 import 'driver.js/dist/driver.css';
 import GlassFooter from './GlassFooter';
 import JobDetailsModal from './JobDetailsModal';
-import allJobs from '../../../../mainScrapper/all_jobs.json';
+import allJobs from '../../nvidia_jobs.json';
 import { storageUtils } from '../../utils/storage';
 
 
@@ -12,10 +12,10 @@ import { storageUtils } from '../../utils/storage';
 // Company logo mapping
 const companyLogos = {
   'NVIDIA': '/logos/nvidia.svg',
-  'Microsoft': '/logos/microsoft.svg',
+  'Microsoft': '/logos/microsoft-only.svg',
   'MICROSOFT': '/logos/microsoft.svg', // Handle all caps version
   'Google': '/logos/google-only.svg',
-  'Apple': '/logos/apple-only.svg',
+  'Apple': '/logos/apple-logo.svg',
   'Amazon': '/logos/amazon.png',
   'Meta': '/logos/meta-only.svg',
   'AMD': '/logos/amd.png',
@@ -32,18 +32,79 @@ const companyLogos = {
   'Loom': '/logos/loom-only.svg'
 };
 
-// Build job data from all jobs JSON
-const jobData = (Array.isArray(allJobs) ? allJobs : []).map((job, idx) => ({
-  id: idx + 1,
-  company: job.company || 'Unknown',
-  logo: companyLogos[job.company] || companyLogos['NVIDIA'], // Default to NVIDIA logo if company not found
-  title: job.title || 'Untitled Role',
-  location: job.location || 'Location not specified',
-  level: job.experience_required || 'Not specified',
-  description: job.job_description || job.description || '',
-  job_link: job.job_link || '',
-  postedDate: job.posted_date || ''
-}));
+// Build job data from all jobs JSON with randomization and company distribution
+const createRandomizedJobData = (jobs) => {
+  if (!Array.isArray(jobs) || jobs.length === 0) return [];
+  
+  // Map jobs to our format
+  const mappedJobs = jobs.map((job, idx) => ({
+    id: idx + 1,
+    company: job.company || 'Unknown',
+    logo: companyLogos[job.company] || companyLogos['NVIDIA'],
+    title: job.title || 'Untitled Role',
+    location: job.location || 'Location not specified',
+    level: job.experience_required || 'Not specified',
+    description: job.job_description || job.description || '',
+    job_link: job.job_link || '',
+    postedDate: job.posted_date || ''
+  }));
+  
+  // Group jobs by company
+  const jobsByCompany = {};
+  mappedJobs.forEach(job => {
+    if (!jobsByCompany[job.company]) {
+      jobsByCompany[job.company] = [];
+    }
+    jobsByCompany[job.company].push(job);
+  });
+  
+  // Shuffle jobs within each company
+  Object.keys(jobsByCompany).forEach(company => {
+    jobsByCompany[company] = jobsByCompany[company].sort(() => Math.random() - 0.5);
+  });
+  
+  // Create a distributed array ensuring no company appears more than 3 times consecutively
+  const distributedJobs = [];
+  const companyQueues = { ...jobsByCompany };
+  const maxConsecutive = 3;
+  let lastCompany = null;
+  let consecutiveCount = 0;
+  
+  while (Object.values(companyQueues).some(queue => queue.length > 0)) {
+    // Get available companies (those with remaining jobs)
+    const availableCompanies = Object.keys(companyQueues).filter(company => 
+      companyQueues[company].length > 0
+    );
+    
+    if (availableCompanies.length === 0) break;
+    
+    let selectedCompany;
+    
+    // If we have 3 consecutive jobs from the same company, force a different company
+    if (consecutiveCount >= maxConsecutive && lastCompany && availableCompanies.includes(lastCompany)) {
+      selectedCompany = availableCompanies.find(company => company !== lastCompany) || availableCompanies[0];
+    } else {
+      // Randomly select from available companies
+      selectedCompany = availableCompanies[Math.floor(Math.random() * availableCompanies.length)];
+    }
+    
+    // Add job from selected company
+    const job = companyQueues[selectedCompany].shift();
+    distributedJobs.push(job);
+    
+    // Update consecutive count
+    if (lastCompany === selectedCompany) {
+      consecutiveCount++;
+    } else {
+      consecutiveCount = 1;
+      lastCompany = selectedCompany;
+    }
+  }
+  
+  return distributedJobs;
+};
+
+const jobData = createRandomizedJobData(allJobs);
 
 const WorkBeeJobCard = () => {
   useEffect(() => {
@@ -399,6 +460,7 @@ const WorkBeeJobCard = () => {
   const [isFavorited, setIsFavorited] = useState(null); // null = loading, true/false = loaded
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedJob, setSelectedJob] = useState(null);
+  const [isShuffling, setIsShuffling] = useState(false);
   const touchStartXRef = useRef(null);
   const touchStartYRef = useRef(null);
 
@@ -510,6 +572,31 @@ const WorkBeeJobCard = () => {
       }
     }
   }, [visibleJobs.length, currentJobIndex]);
+
+  // Add a function to reshuffle jobs periodically for more variety
+  const reshuffleJobs = useCallback(() => {
+    if (visibleJobs.length > 0) {
+      setIsShuffling(true);
+      const randomIndex = Math.floor(Math.random() * visibleJobs.length);
+      setCurrentJobIndex(randomIndex);
+      
+      // Reset shuffling state after a short delay
+      setTimeout(() => {
+        setIsShuffling(false);
+      }, 500);
+    }
+  }, [visibleJobs.length]);
+
+  // Reshuffle every 30 seconds for more variety (optional)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (visibleJobs.length > 0) {
+        reshuffleJobs();
+      }
+    }, 30000); // 30 seconds
+
+    return () => clearInterval(interval);
+  }, [reshuffleJobs, visibleJobs.length]);
   return (
     <div className="min-h-screen bg-background text-foreground font-sans pb-20">
       {/* Background Effects */}
@@ -523,7 +610,7 @@ const WorkBeeJobCard = () => {
       <div aria-hidden className="absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--background)_75%)]" />
 
       {/* Header */}
-      <div className="flex items-center mb-10 justify-between p-4 relative z-10">
+      <div className="flex items-center md:mb-10 ml-28 sm:ml-0 justify-between p-4 relative z-10">
         <div className="ml-0 sm:ml-20 flex items-center" style={{ height: "100px", width: "200px" }}>
           <svg
             width="1000"
@@ -551,14 +638,14 @@ const WorkBeeJobCard = () => {
       {/* Tour Control Buttons - Positioned absolutely to avoid layout interference */}
       <div className="fixed top-4 right-24 sm:right-32 z-50 flex flex-col gap-2 max-w-[180px] sm:max-w-none">
         {/* Tour Button - Always show for users who want to retake the tour */}
-        <button
+        {/* <button
           onClick={startTour}
           className="flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors shadow-lg text-xs sm:text-sm"
         >
           <Play className="w-3 h-3 sm:w-4 sm:h-4" />
           <span className="hidden sm:inline">Retake Tour</span>
           <span className="sm:hidden">Tour</span>
-        </button>
+        </button> */}
 
         {/* Reset Tour Button - For testing purposes 
         <button
@@ -638,7 +725,8 @@ const WorkBeeJobCard = () => {
               <button
               id="navigation-arrows"
                 onClick={handleNext}
-                className="absolute cursor-pointer -right-16 top-1/2 transform -translate-y-1/2 w-12 h-12 sm:w-16 sm:h-16 glassmorphic-base border border-gray-600 rounded-full items-center justify-center hover:bg-gray-700 transition-colors -mr-95">
+                className="absolute cursor-pointer -right-16 top-1/2 transform -translate-y-1/2 w-12 h-12 sm:w-16 sm:h-16 glassmorphic-base border border-gray-600 rounded-full items-center justify-center hover:bg-gray-700 transition-colors -mr-95"
+                >
             <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M36.4587 50H63.542M63.542 50L53.1253 60.4167M63.542 50L53.1253 39.5833" stroke="#CDCDCD" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               <path d="M29.1667 81.1852C35.1254 85.1739 42.2911 87.5 50 87.5C70.7107 87.5 87.5 70.7107 87.5 50C87.5 29.2893 70.7107 12.5 50 12.5C29.2893 12.5 12.5 29.2893 12.5 50C12.5 56.8304 14.3261 63.2343 17.5168 68.75" stroke="#CDCDCD" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -650,7 +738,9 @@ const WorkBeeJobCard = () => {
           {/* Job Card */}
           <div
             key={currentJob.id || currentJob.title}
-            className="bg-gradient-to-br from-[#D9D9D9] to-[#737373] rounded-3xl sm:rounded-[60px] p-6 sm:p-8 text-black shadow-2xl border-4 w-full sm:w-230 h-auto sm:h-140 ml-0 sm:-ml-55 sm:-mt-17 select-none touch-pan-y"
+            className={`bg-gradient-to-br from-[#D9D9D9] to-[#737373] rounded-3xl sm:rounded-[60px] p-6 sm:p-8 text-black shadow-2xl border-4 w-full sm:w-230 h-auto sm:h-140 ml-0 sm:-ml-55 sm:-mt-17 select-none touch-pan-y transition-all duration-500 ${
+              isShuffling ? 'opacity-50 scale-95' : 'opacity-100 scale-100'
+            }`}
           >
             {/* Header with Company Logo and Job Title */}
             <div className="flex items-start justify-between mb-6">
@@ -762,7 +852,7 @@ const WorkBeeJobCard = () => {
                 <button
                   id="apply-button"
                   onClick={(e) => { e.stopPropagation(); handleApply(); }}
-                  className="flex-1 sm:flex-none sm:px-8 py-3 sm:py-4 bg-black hover:bg-gray-800 text-white rounded-xl sm:rounded-full font-semibold transition-all duration-200 shadow-lg hover:shadow-xl text-base sm:text-lg ml-3"
+                  className="flex-1 sm:flex-none p-5 py-3 bg-black hover:bg-gray-800 text-white rounded-xl sm:rounded-full font-semibold transition-all duration-200 shadow-lg hover:shadow-xl text-base sm:text-lg ml-3"
                 >
                   Apply Now
                 </button>
@@ -799,7 +889,7 @@ const WorkBeeJobCard = () => {
       </div>
 
       {/* Glass Footer Navigation */}
-      <div id="bottom-navigation">
+      <div id="bottom-navigation" className="">
         <GlassFooter activeTab={activeTab} setActiveTab={setActiveTab} onJobSelect={handleJobSelect} />
       </div>
       {/* Details Modal */}

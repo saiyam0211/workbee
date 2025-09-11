@@ -123,27 +123,26 @@ export default function FavCompanies() {
   }, [savedCounts]);
 
   return (
-    <div className="min-h-screen bg-[#09090b] text-foreground relative ">
-      <div className="px-4 sm:px-6 max-w-6xl mx-auto min-h-[80vh] flex flex-col items-center justify-start pt-8 pb-40">
-        <h1 className="text-center text-3xl sm:text-5xl md:text-6xl font-extrabold notification-text tracking-tight opacity-90"
-        >
+    <div className="min-h-screen bg-[#09090b] text-foreground relative">
+      <div className="px-4 sm:px-6 max-w-6xl mx-auto min-h-[80vh] flex flex-col items-center justify-start pt-6 sm:pt-8 pb-40">
+        <h1 className="text-center text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold notification-text tracking-tight opacity-90 px-4">
           Your Dream Companies
         </h1>
         {companiesWithSavedJobs.length === 0 ? (
-          <div className="flex flex-col items-center justify-center mt-20 text-center">
-            <div className="text-6xl mb-4">💼</div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white/80 mb-2">No Saved Jobs Yet</h2>
-            <p className="text-white/60 text-lg">Start exploring jobs and save your favorites to see them here!</p>
+          <div className="flex flex-col items-center justify-center mt-12 sm:mt-20 text-center px-4">
+            <div className="text-5xl sm:text-6xl mb-4">💼</div>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white/80 mb-2">No Saved Jobs Yet</h2>
+            <p className="text-white/60 text-base sm:text-lg max-w-md">Start exploring jobs and save your favorites to see them here!</p>
           </div>
         ) : (
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-8 mt-8 sm:mt-20 w-full ">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mt-6 sm:mt-12 lg:mt-20 w-full max-w-7xl">
             {companiesWithSavedJobs.map((c) => (
             <div 
               key={c.name} 
-              className="relative rounded-3xl sm:rounded-[50px] bg-gradient-to-b from-[#D9D9D9] to-[#8A8A8A] p-3 sm:p-4 shadow-2xl border border-white/20 aspect-square flex flex-col cursor-pointer hover:scale-105 transition-transform duration-200"
+              className="relative rounded-2xl sm:rounded-3xl lg:rounded-[50px] bg-gradient-to-b from-[#D9D9D9] to-[#8A8A8A] p-4 sm:p-5 lg:p-6 shadow-2xl border border-white/20 aspect-square flex flex-col cursor-pointer hover:scale-105 transition-transform duration-200 min-h-[200px] sm:min-h-[220px]"
               onClick={() => handleCompanyClick(c)}
             >
-              <div className="absolute right-3 sm:right-4 top-3 sm:top-4 w-8 h-8 sm:w-10 sm:h-10 bg-white/40 backdrop-blur-sm rounded-full flex items-center justify-center shadow-md border border-white/30">
+              <div className="absolute right-3 sm:right-4 top-3 sm:top-4 w-10 h-10 sm:w-12 sm:h-12 bg-white/40 backdrop-blur-sm rounded-full flex items-center justify-center shadow-md border border-white/30">
                 <img
                   src={c.logo}
                   alt={`${c.name} logo`}
@@ -156,9 +155,9 @@ export default function FavCompanies() {
                   }}
                 />
               </div>
-              <div className="flex-1 flex items-start justify-center">
+              <div className="flex-1 flex items-center justify-center">
                 <div
-                  className="fav-companies-text mt-4 sm:mt-8 text-center"
+                  className="fav-companies-text text-center"
                   style={{
                     background: 'linear-gradient(270deg, rgba(102, 102, 102, 0.25) 23.08%, rgba(0, 0, 0, 0.25) 60.1%)',
                     WebkitBackgroundClip: 'text',
@@ -168,7 +167,7 @@ export default function FavCompanies() {
                     fontFamily: "SF Pro, SF Pro Display, SF Pro Text, -apple-system, 'Helvetica Neue', Arial, sans-serif",
                     fontStyle: 'normal',
                     fontWeight: 510,
-                    fontSize: 'clamp(18px, 6vw, 44px)',
+                    fontSize: 'clamp(20px, 5vw, 36px)',
                     lineHeight: 1.1,
                     display: 'flex',
                     alignItems: 'center',
@@ -178,11 +177,11 @@ export default function FavCompanies() {
                   {c.name}
                 </div>
               </div>
-              <div className="flex items-end gap-2 text-black/70">
-                <div className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-none">{savedCounts[c.name] || 0}</div>
+              <div className="flex items-end justify-center gap-2 text-black/70">
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold leading-none">{savedCounts[c.name] || 0}</div>
                 <div className="flex flex-col leading-tight">
-                  <span className="text-xs sm:text-sm">View</span>
-                  <span className="text-[10px] md:text-xs text-black/60">Saved Jobs</span>
+                  <span className="text-xs sm:text-sm font-medium">View</span>
+                  <span className="text-[10px] sm:text-xs text-black/60">Saved Jobs</span>
                 </div>
               </div>
             </div>

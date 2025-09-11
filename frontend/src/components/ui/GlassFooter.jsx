@@ -13,7 +13,7 @@ const GlassFooter = ({ activeTab, setActiveTab, onJobSelect }) => {
   ];
 
   return (
-    <div id="bottom-navigation" className="fixed bottom-0  inset-x-0 md:inset-x-auto md:left-1/2 md:-translate-x-1/2 md:bottom-6 z-50 px-3 md:px-0 pb-[max(env(safe-area-inset-bottom),0.5rem)] sm:pb-6">
+    <div id="bottom-navigation" className="fixed bottom-10  inset-x-0 md:inset-x-auto md:left-1/2 md:-translate-x-1/2 md:bottom-6 z-50 px-3 md:px-0 pb-[max(env(safe-area-inset-bottom),0.5rem)] sm:pb-6">
       <div className="glass-footer-container mx-auto md:mx-0 max-w-md">
         <div className="glass-footer-background"></div>
         <div className="grid grid-cols-3 items-center px-4 sm:px-8 py-2 sm:py-4 gap-6 sm:gap-12">

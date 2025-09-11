@@ -1,0 +1,44 @@
+{
+  "buildCommand": "cd frontend && npm run build",
+  "outputDirectory": "frontend/dist",
+  "devCommand": "cd frontend && npm run dev",
+  "installCommand": "cd frontend && npm install",
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/dashboard",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/fav-companies",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/notifications",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/search",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/redirect",
+      "destination": "/redirect.html"
+    },
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    }
+  ]
+}

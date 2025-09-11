@@ -6,6 +6,10 @@
   "framework": "vite",
   "rewrites": [
     {
+      "source": "/redirect.html",
+      "destination": "/redirect.html"
+    },
+    {
       "source": "/dashboard",
       "destination": "/index.html"
     },
